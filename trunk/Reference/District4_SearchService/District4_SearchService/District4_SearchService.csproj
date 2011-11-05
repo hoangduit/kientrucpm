@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EF10F9D1-2DEB-4981-BC65-D0905C86FCD7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>District4_SearchService</RootNamespace>
+    <AssemblyName>District4_SearchService</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChiTiet.Designer.cs">
+      <DependentUpon>frmChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDanhSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDanhSach.designer.cs">
+      <DependentUpon>frmDanhSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimKiem.designer.cs">
+      <DependentUpon>frmTimKiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmChiTiet.resx">
+      <DependentUpon>frmChiTiet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDanhSach.resx">
+      <DependentUpon>frmDanhSach.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimKiem.resx">
+      <DependentUpon>frmTimKiem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_capnhatdulieu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_googlemap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_inketqua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_quaylai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_tim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\combobox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\datagrid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descript_atm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descript_benhvien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descript_buudien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descript_cayxang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descript_nganhang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descript_nhahang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descript_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descript_rapchieuphim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descript_sieuthi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descript_tatca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_atm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_atm_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_benhvien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_benhvien_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_buudien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_buudien_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cayxang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cayxang_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_nganhang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_nganhang_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_nhahang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_nhahang_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_rapchieuphim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_rapchieuphim_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_sieuthi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_sieuthi_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_tatca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_tatca_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item_atm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item_benhvien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item_buudien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item_cayxang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item_nganhang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item_nhahang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item_rapchieuphim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item_sieuthi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item_tatca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ketquakhac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu _trogiup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_chucnang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_congcu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification_ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staticbutton2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staticbutton2_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staticbutton4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staticbutton5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staticbutton6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staticbutton6_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status_tatca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\textbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timkiem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{9547E559-134B-41EA-B516-B67DA30C104B}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{2A192624-18E7-41ED-BA5B-AF69E30AEA6D}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{DA920AD0-6D8A-4B34-A8A6-8A3AE88C5B1E}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\all2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atm2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bank2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busstop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cafe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fashionshop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hairsalon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hospital2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\karaoke.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\market2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\park.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\postoffice2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurant2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seftroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smallrestaurant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stadium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\station2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theatre2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="anh\0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\17.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\18.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="anh\bank2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
