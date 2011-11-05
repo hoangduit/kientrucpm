@@ -1,0 +1,11 @@
+D:\QLBSX_BUS_WS\QLBSX_BUS_WS\obj\Debug\ResolveAssemblyReference.cache
+D:\QLBSX (3-tier 3-layer)\QLBSX_BUS_WS\QLBSX_BUS_WS\obj\Debug\ResolveAssemblyReference.cache
+D:\QLBSX (3-tier 3-layer)\QLBSX_BUS_WS\QLBSX_BUS_WS\bin\QLBSX_BUS_WS.dll
+D:\QLBSX (3-tier 3-layer)\QLBSX_BUS_WS\QLBSX_BUS_WS\bin\QLBSX_BUS_WS.pdb
+D:\QLBSX (3-tier 3-layer)\QLBSX_BUS_WS\QLBSX_BUS_WS\obj\Debug\QLBSX_BUS_WS.dll
+D:\QLBSX (3-tier 3-layer)\QLBSX_BUS_WS\QLBSX_BUS_WS\obj\Debug\QLBSX_BUS_WS.pdb
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX_BUS_WS\QLBSX_BUS_WS\bin\QLBSX_BUS_WS.dll
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX_BUS_WS\QLBSX_BUS_WS\bin\QLBSX_BUS_WS.pdb
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX_BUS_WS\QLBSX_BUS_WS\obj\Debug\ResolveAssemblyReference.cache
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX_BUS_WS\QLBSX_BUS_WS\obj\Debug\QLBSX_BUS_WS.dll
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX_BUS_WS\QLBSX_BUS_WS\obj\Debug\QLBSX_BUS_WS.pdb

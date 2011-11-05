@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Presentation.F_About" Collapsed="true">
+    <Position X="7.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAACAAABAAAAyAAAACAAAIAAAAAEAAAQAAAAA=</HashCode>
+      <FileName>F_About.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.F_AMain_QLBSX" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>LTCJT/0BOW1A0hqSDGDKAhwGBAEYpARAA2rURZwBfCA=</HashCode>
+      <FileName>F_AMain_QLBSX.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.F_CapNhatBienSoXe" Collapsed="true">
+    <Position X="11.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>/0gIgCwVICAAAhD5YAKCZgATyAEAQAFADSAJCSAoSDA=</HashCode>
+      <FileName>F_CapNhatBienSoXe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.F_CapNhatLoiVP" Collapsed="true">
+    <Position X="13.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAQABAGAAARAgAACBAAQCAIAAAAAAAQhAAQAAAAA=</HashCode>
+      <FileName>F_CapNhatLoiVP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.F_CapNhatXuPhat" Collapsed="true">
+    <Position X="7.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBAQCAABI2YAABAAIBCQAAQSBAAYoAAAAQBCARiAAAA=</HashCode>
+      <FileName>F_CapNhatXuPhat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.F_ThemBienSo" Collapsed="true">
+    <Position X="9.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/2gIgCxVISACAhD7MAKCYgBT6AUAQAEEFSAJCTAoSbA=</HashCode>
+      <FileName>F_ThemBienSo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.F_ThemLoiVP" Collapsed="true">
+    <Position X="13" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAABAGAAABAAAACAAAACACAAIAAACUAAAQAAAAA=</HashCode>
+      <FileName>F_ThemLoiVP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.F_ThemXuPhat" Collapsed="true">
+    <Position X="7.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAACAAhI3IBABAAAACAAARCQAAIAgAAAUBAAQAIAAA=</HashCode>
+      <FileName>F_ThemXuPhat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.F_ThongKeLoiVP" Collapsed="true">
+    <Position X="9.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAwCAGAGEBACAACAAgACAAAAAAAAFQACARAoIAA=</HashCode>
+      <FileName>F_ThongKeLoiVP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.F_ThongKeXe" Collapsed="true">
+    <Position X="11.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQAAQAgAEGAAABACACCAAACCAAAIAAAAAUAAAQghIAA=</HashCode>
+      <FileName>F_ThongKeXe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.F_TraCuuBSX" Collapsed="true">
+    <Position X="13" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/0AIgBwRACBAABD5AAKCYAATjAAIQAFABWEJCSAISDA=</HashCode>
+      <FileName>F_TraCuuBSX.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.F_TraCuuXuPhat" Collapsed="true">
+    <Position X="11.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAiQAABAAAACAAAQSJEA4IAAAAVBKARAAAAA=</HashCode>
+      <FileName>F_TraCuuXuPhat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.F_XoaBienSo" Collapsed="true">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACMAAAAAACAAAhAAAACAAAACAAAAAAAAAQBAAQAAAAA=</HashCode>
+      <FileName>F_XoaBienSo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.F_XoaLoiVP" Collapsed="true">
+    <Position X="11.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAgAGAIQBAAAACAAAwCAAAAAAAAAQAAAQAAAAA=</HashCode>
+      <FileName>F_XoaLoiVP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.Program" Collapsed="true">
+    <Position X="9.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.Properties.Resources" Collapsed="true">
+    <Position X="13" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.Properties.Settings" Collapsed="true">
+    <Position X="7.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.QLBSX_BUS_WebService.BienSoXeDTO" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAADCAAAAAAAAAAwAAAAEgAAACGQkIIACABIBAQo=</HashCode>
+      <FileName>Service References\QLBSX_BUS_WebService\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Presentation.QLBSX_BUS_WebService.BienSoXeRomoocDTO" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAgBAABBAAQAAAAAAAAACAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Service References\QLBSX_BUS_WebService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.QLBSX_BUS_WebService.BienSoXeOtoDTO" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkABAAAgBAFAAACQIEQgAAAAACAACAAAAAQAAAIYQCI=</HashCode>
+      <FileName>Service References\QLBSX_BUS_WebService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAFAAACAIAAgAAAAAAAACAAAAAQEAAIAAAA=</HashCode>
+      <FileName>Service References\QLBSX_BUS_WebService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Presentation.QLBSX_BUS_WebService.QLBSX_BUS_WebServiceSoapClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="4.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>EEIJCSWQAgCAQUAgACIWIiIgQAAARAUAMAAIAaBBQBA=</HashCode>
+      <FileName>Service References\QLBSX_BUS_WebService\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="Presentation.QLBSX_BUS_WebService.QLBSX_BUS_WebServiceSoap" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EEABACUQAgAAQEAgAAIQAAIgQAAAAAAAIAAIAQBAABA=</HashCode>
+      <FileName>Service References\QLBSX_BUS_WebService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Presentation.QLBSX_BUS_WebService.QLBSX_BUS_WebServiceSoapChannel" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\QLBSX_BUS_WebService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

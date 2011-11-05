@@ -1,0 +1,31 @@
+D:\QLBSX\Presentation\bin\Debug\Presentation.exe
+D:\QLBSX\Presentation\bin\Debug\Presentation.pdb
+D:\QLBSX\Presentation\obj\Debug\ResolveAssemblyReference.cache
+D:\QLBSX\Presentation\obj\Debug\Presentation.Properties.Resources.resources
+D:\QLBSX\Presentation\obj\Debug\Presentation.csproj.GenerateResource.Cache
+D:\QLBSX\Presentation\obj\Debug\Presentation.exe
+D:\QLBSX\Presentation\obj\Debug\Presentation.pdb
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\bin\Debug\Presentation.exe.config
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\bin\Debug\Vehicle.ico
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\bin\Debug\Help.chm
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\bin\Debug\Presentation.exe
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\bin\Debug\Presentation.pdb
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\ResolveAssemblyReference.cache
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\Presentation.F_About.resources
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\Presentation.F_CapNhatBienSoXe.resources
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\Presentation.F_CapNhatXuPhat.resources
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\Presentation.F_AMain_QLBSX.resources
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\Presentation.F_CapNhatLoiVP.resources
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\Presentation.F_ThemBienSo.resources
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\Presentation.F_ThemXuPhat.resources
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\Presentation.F_ThemLoiVP.resources
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\Presentation.F_ThongKeLoiVP.resources
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\Presentation.F_ThongKeXe.resources
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\Presentation.F_TraCuuBSX.resources
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\Presentation.F_TraCuuXuPhat.resources
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\Presentation.F_XoaBienSo.resources
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\Presentation.F_XoaLoiVP.resources
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\Presentation.Properties.Resources.resources
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\Presentation.csproj.GenerateResource.Cache
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\Presentation.exe
+D:\Thong tin mon hoc\Phan tich & thiet ke phan mem\TH2008\Bai tap 8 (nhom) - cuoi ky\0812515_0812527\Source code\QLBSX (3-tier 3-layer) v1.2\QLBSX\Presentation\obj\Debug\Presentation.pdb
