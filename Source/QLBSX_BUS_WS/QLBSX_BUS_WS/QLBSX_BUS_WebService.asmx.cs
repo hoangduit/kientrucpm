@@ -25,6 +25,19 @@ namespace QLBSX_BUS_WS
         [System.Xml.Serialization.XmlInclude(typeof(BienSoXeMotoDTO))]
         [System.Xml.Serialization.XmlInclude(typeof(BienSoXeOtoDTO))]
         [System.Xml.Serialization.XmlInclude(typeof(BienSoXeRomoocDTO))]
+
+        [WebMethod]
+        public void Connect()
+        {
+            DataProviderBUS dp = new DataProviderBUS();
+            dp.Connect();
+        }
+        [WebMethod]
+        public void Disconnect()
+        {
+            DataProviderBUS dp = new DataProviderBUS();
+            dp.Disconnect();
+        }
         /////////////////////////////////////////////////////////
         //////////          Biển số xe              /////////////
         /////////////////////////////////////////////////////////

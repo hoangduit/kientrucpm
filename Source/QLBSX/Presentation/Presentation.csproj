@@ -234,6 +234,30 @@
     <None Include="Help.chm">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Service References\QLBSX_BUS_WebService\Presentation.QLBSX_BUS_WebService.BienSoXeDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLBSX_BUS_WebService\Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLBSX_BUS_WebService\Presentation.QLBSX_BUS_WebService.BienSoXeOtoDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLBSX_BUS_WebService\Presentation.QLBSX_BUS_WebService.BienSoXeRomoocDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLBSX_BUS_WebService\Presentation.QLBSX_BUS_WebService.ChiTietHVVPDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLBSX_BUS_WebService\Presentation.QLBSX_BUS_WebService.HanhViViPhamDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLBSX_BUS_WebService\Presentation.QLBSX_BUS_WebService.KichThuocBao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QLBSX_BUS_WebService\Presentation.QLBSX_BUS_WebService.SoCho.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\QLBSX_BUS_WebService\QLBSX_BUS_WebService.disco" />
     <None Include="Service References\QLBSX_BUS_WebService\QLBSX_BUS_WebService.wsdl" />
     <None Include="Service References\QLBSX_BUS_WebService\configuration.svcinfo" />
@@ -241,6 +265,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Service References\QLBSX_BUS_WebService\configuration91.svcinfo" />
     <Content Include="Vehicle.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

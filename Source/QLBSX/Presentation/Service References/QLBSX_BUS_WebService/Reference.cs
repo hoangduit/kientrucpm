@@ -18,8 +18,8 @@ namespace Presentation.QLBSX_BUS_WebService {
     [System.Runtime.Serialization.DataContractAttribute(Name="BienSoXeDTO", Namespace="http://tempuri.org/")]
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeRomoocDTO))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeOtoDTO))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeOtoDTO))]
     public partial class BienSoXeDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -301,6 +301,90 @@ namespace Presentation.QLBSX_BUS_WebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BienSoXeMotoDTO", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class BienSoXeMotoDTO : Presentation.QLBSX_BUS_WebService.BienSoXeDTO {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LoaiXeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SoMayField;
+        
+        private int DungTichField;
+        
+        private int CongSuatField;
+        
+        private int SoNguoiDuocPhepChoField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string LoaiXe {
+            get {
+                return this.LoaiXeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LoaiXeField, value) != true)) {
+                    this.LoaiXeField = value;
+                    this.RaisePropertyChanged("LoaiXe");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string SoMay {
+            get {
+                return this.SoMayField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SoMayField, value) != true)) {
+                    this.SoMayField = value;
+                    this.RaisePropertyChanged("SoMay");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public int DungTich {
+            get {
+                return this.DungTichField;
+            }
+            set {
+                if ((this.DungTichField.Equals(value) != true)) {
+                    this.DungTichField = value;
+                    this.RaisePropertyChanged("DungTich");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+        public int CongSuat {
+            get {
+                return this.CongSuatField;
+            }
+            set {
+                if ((this.CongSuatField.Equals(value) != true)) {
+                    this.CongSuatField = value;
+                    this.RaisePropertyChanged("CongSuat");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
+        public int SoNguoiDuocPhepCho {
+            get {
+                return this.SoNguoiDuocPhepChoField;
+            }
+            set {
+                if ((this.SoNguoiDuocPhepChoField.Equals(value) != true)) {
+                    this.SoNguoiDuocPhepChoField = value;
+                    this.RaisePropertyChanged("SoNguoiDuocPhepCho");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BienSoXeOtoDTO", Namespace="http://tempuri.org/")]
     [System.SerializableAttribute()]
     public partial class BienSoXeOtoDTO : Presentation.QLBSX_BUS_WebService.BienSoXeDTO {
@@ -472,90 +556,6 @@ namespace Presentation.QLBSX_BUS_WebService {
                 if ((this.NgayHetHanField.Equals(value) != true)) {
                     this.NgayHetHanField = value;
                     this.RaisePropertyChanged("NgayHetHan");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BienSoXeMotoDTO", Namespace="http://tempuri.org/")]
-    [System.SerializableAttribute()]
-    public partial class BienSoXeMotoDTO : Presentation.QLBSX_BUS_WebService.BienSoXeDTO {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LoaiXeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SoMayField;
-        
-        private int DungTichField;
-        
-        private int CongSuatField;
-        
-        private int SoNguoiDuocPhepChoField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string LoaiXe {
-            get {
-                return this.LoaiXeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LoaiXeField, value) != true)) {
-                    this.LoaiXeField = value;
-                    this.RaisePropertyChanged("LoaiXe");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string SoMay {
-            get {
-                return this.SoMayField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SoMayField, value) != true)) {
-                    this.SoMayField = value;
-                    this.RaisePropertyChanged("SoMay");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public int DungTich {
-            get {
-                return this.DungTichField;
-            }
-            set {
-                if ((this.DungTichField.Equals(value) != true)) {
-                    this.DungTichField = value;
-                    this.RaisePropertyChanged("DungTich");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
-        public int CongSuat {
-            get {
-                return this.CongSuatField;
-            }
-            set {
-                if ((this.CongSuatField.Equals(value) != true)) {
-                    this.CongSuatField = value;
-                    this.RaisePropertyChanged("CongSuat");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
-        public int SoNguoiDuocPhepCho {
-            get {
-                return this.SoNguoiDuocPhepChoField;
-            }
-            set {
-                if ((this.SoNguoiDuocPhepChoField.Equals(value) != true)) {
-                    this.SoNguoiDuocPhepChoField = value;
-                    this.RaisePropertyChanged("SoNguoiDuocPhepCho");
                 }
             }
         }
@@ -841,9 +841,9 @@ namespace Presentation.QLBSX_BUS_WebService {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.ExtensionDataObject))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeRomoocDTO))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.KichThuocBao))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeOtoDTO))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.SoCho))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.HanhViViPhamDTO))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<Presentation.QLBSX_BUS_WebService.HanhViViPhamDTO>))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<Presentation.QLBSX_BUS_WebService.ChiTietHVVPDTO>))]
@@ -985,6 +985,12 @@ namespace Presentation.QLBSX_BUS_WebService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="QLBSX_BUS_WebService.QLBSX_BUS_WebServiceSoap")]
     public interface QLBSX_BUS_WebServiceSoap {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Connect", ReplyAction="*")]
+        void Connect();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Disconnect", ReplyAction="*")]
+        void Disconnect();
+        
         // CODEGEN: Generating message contract since element name LayDanhSachBienSoXeResult from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/LayDanhSachBienSoXe", ReplyAction="*")]
         Presentation.QLBSX_BUS_WebService.LayDanhSachBienSoXeResponse LayDanhSachBienSoXe(Presentation.QLBSX_BUS_WebService.LayDanhSachBienSoXeRequest request);
@@ -1000,9 +1006,9 @@ namespace Presentation.QLBSX_BUS_WebService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.ExtensionDataObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeRomoocDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.KichThuocBao))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeOtoDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.SoCho))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.HanhViViPhamDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<Presentation.QLBSX_BUS_WebService.HanhViViPhamDTO>))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.ChiTietHVVPDTO))]
@@ -1016,9 +1022,9 @@ namespace Presentation.QLBSX_BUS_WebService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.ExtensionDataObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeRomoocDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.KichThuocBao))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeOtoDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.SoCho))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.HanhViViPhamDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<Presentation.QLBSX_BUS_WebService.HanhViViPhamDTO>))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.ChiTietHVVPDTO))]
@@ -1032,9 +1038,9 @@ namespace Presentation.QLBSX_BUS_WebService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.ExtensionDataObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeRomoocDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.KichThuocBao))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeOtoDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.SoCho))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.HanhViViPhamDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<Presentation.QLBSX_BUS_WebService.HanhViViPhamDTO>))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.ChiTietHVVPDTO))]
@@ -1056,9 +1062,9 @@ namespace Presentation.QLBSX_BUS_WebService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.ExtensionDataObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeRomoocDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.KichThuocBao))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeOtoDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.SoCho))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.HanhViViPhamDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<Presentation.QLBSX_BUS_WebService.HanhViViPhamDTO>))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.ChiTietHVVPDTO))]
@@ -1072,9 +1078,9 @@ namespace Presentation.QLBSX_BUS_WebService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.ExtensionDataObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeRomoocDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.KichThuocBao))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeOtoDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.SoCho))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.HanhViViPhamDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<Presentation.QLBSX_BUS_WebService.HanhViViPhamDTO>))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.ChiTietHVVPDTO))]
@@ -1088,9 +1094,9 @@ namespace Presentation.QLBSX_BUS_WebService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.ExtensionDataObject))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeRomoocDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.KichThuocBao))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeOtoDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.SoCho))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.HanhViViPhamDTO))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<Presentation.QLBSX_BUS_WebService.HanhViViPhamDTO>))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(Presentation.QLBSX_BUS_WebService.ChiTietHVVPDTO))]
@@ -2871,6 +2877,14 @@ namespace Presentation.QLBSX_BUS_WebService {
         
         public QLBSX_BUS_WebServiceSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public void Connect() {
+            base.Channel.Connect();
+        }
+        
+        public void Disconnect() {
+            base.Channel.Disconnect();
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

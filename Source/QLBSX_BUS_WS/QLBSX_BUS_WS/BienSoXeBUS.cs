@@ -16,11 +16,10 @@ namespace QLBSX_BUS_WS
 {
     public class BienSoXeBUS
     {
-        private QLBSX_DAL_WebServiceSoapClient ws = new QLBSX_DAL_WebServiceSoapClient();
-
+        private QLBSX_DAL_WebServiceSoapClient ws = new QLBSX_DAL_WebServiceSoapClient();        
         public List<BienSoXeDTO> LayDanhSachBienSoXe()
         {
-            return ws.LayDanhSachBSX();
+            return ws.LayDanhSachBSX();            
         }
         public List<BienSoXeDTO> LayDanhSachTongQuat()
         {

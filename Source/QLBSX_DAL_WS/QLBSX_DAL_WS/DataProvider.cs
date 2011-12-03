@@ -16,16 +16,31 @@ namespace QLBSX_DAL_WS
     public class DataProvider
     {
         private static string chuoiKetNoi = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=|DataDirectory|\QLBSX_DB.mdb";
-        private static OleDbConnection ketNoi;
-        public static OleDbConnection KetNoi()
-        {
-            if (ketNoi != null) //Đã tạo
-                if(ketNoi.State == System.Data.ConnectionState.Open)    //Đang mở kết nối thì không mở nữa
-                    return null;
+        private static OleDbConnection _connection;
 
-            ketNoi = new OleDbConnection(chuoiKetNoi);
-            ketNoi.Open();
-            return ketNoi;
+        public static OleDbConnection Connection
+        {
+            get { return DataProvider._connection; }
+            //set { DataProvider._connection = value; }
         }
+        public static void Connect()
+        {
+            if (_connection != null) //Đã tạo
+                if (_connection.State == System.Data.ConnectionState.Open)    //Đang mở kết nối thì không mở nữa
+                    return;
+
+            _connection = new OleDbConnection(chuoiKetNoi);
+            _connection.Open();
+            
+        }
+        public static void Disconnect()
+        {
+            if (_connection != null)
+            {
+                if (_connection.State == System.Data.ConnectionState.Open)
+                    _connection.Close();
+            }
+        }
+        
     }
 }

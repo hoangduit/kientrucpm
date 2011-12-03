@@ -13,17 +13,16 @@ using System.Data.OleDb;
  **/
 namespace QLBSX_DAL_WS
 {
-    public class ChiTietHVVPDAO : DataProvider
+    public class ChiTietHVVPDAO
     {
         public static List<ChiTietHVVPDTO> LayDanhSachChiTietHanhVi()
         {
-            OleDbConnection ketNoi = null;
             List<ChiTietHVVPDTO> ds = new List<ChiTietHVVPDTO>();
             try
             {
-                ketNoi = KetNoi();
+                DataProvider.Connect();
                 string chuoiLenh = "SELECT * FROM ChiTietHVVP";
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
 
                 OleDbDataReader boDoc = lenh.ExecuteReader();
                 while (boDoc.Read())
@@ -57,20 +56,18 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+                //DataProvider.Disconnect();
             }
             return ds;
         }
         public static bool ThemChiTietHanhVi(ChiTietHVVPDTO ct)
         {
-            OleDbConnection ketNoi = null;
             try
             {
-                ketNoi = KetNoi();
+                DataProvider.Connect();
                 string chuoiLenh = "INSERT INTO ChiTietHVVP(MaHanhVi,MaBienSo,ThoiGian,NguoiLapBienBan,TienPhat) VALUES";
                 chuoiLenh += "(@mahv,@mabs,@thoigian,@nlbb,@tp)";
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
 
                 OleDbParameter thamSo;
                 thamSo = new OleDbParameter("@mahv", OleDbType.Integer);
@@ -102,17 +99,15 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+                //DataProvider.Disconnect();
             }
             return true;
         }
         public static bool CapNhatChiTietHanhVi(ChiTietHVVPDTO ct)
         {
-            OleDbConnection ketNoi = null;
             try
             {
-                ketNoi = KetNoi();
+                DataProvider.Connect();
                 BienSoXeDTO temp = (BienSoXeDTO)ct.BienSo;
                 string chuoiLenh = "UPDATE ChiTietHVVP SET "
                     + "MaHanhVi = " + ct.HanhVi.MaHanhVi + ", "
@@ -122,7 +117,7 @@ namespace QLBSX_DAL_WS
                     + "TienPhat = " + ct.TienPhat + " "
                     + "WHERE MaChiTietHVVP = " + ct.MaChiTiet;
 
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
                 lenh.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -132,23 +127,22 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+                //DataProvider.Disconnect();
             }
             return true;
         }
         public static List<ChiTietHVVPDTO> TraCuuTheoBienSo(string bienso)
-        { 
-            OleDbConnection ketNoi = null;
+        {
+
             List<ChiTietHVVPDTO> ds = new List<ChiTietHVVPDTO>();
-            
+
             BienSoXeDTO bs = (BienSoXeDTO)BienSoXeDAO.TraCuuTheoBienSo(bienso);
             try
             {
-                ketNoi = KetNoi();
+                DataProvider.Connect();
                 string chuoiLenh = "SELECT * FROM ChiTietHVVP WHERE MaBienSo = @mabs";
 
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
                 OleDbParameter thamSo;
                 thamSo = new OleDbParameter("@mabs", OleDbType.Integer);
                 thamSo.Value = bs.MaBienSo;
@@ -186,22 +180,22 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+
+                //DataProvider.Disconnect();
             }
             return ds;
         }
         public static List<ChiTietHVVPDTO> TraCuuTheoMaBienSo(int _mabs)
         {
-            OleDbConnection ketNoi = null;
+
             List<ChiTietHVVPDTO> ds = new List<ChiTietHVVPDTO>();
 
             try
             {
-                ketNoi = KetNoi();
+                DataProvider.Connect();
                 string chuoiLenh = "SELECT * FROM ChiTietHVVP WHERE MaBienSo = @mabs";
 
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
                 OleDbParameter thamSo;
                 thamSo = new OleDbParameter("@mabs", OleDbType.Integer);
                 thamSo.Value = _mabs;
@@ -210,7 +204,7 @@ namespace QLBSX_DAL_WS
                 OleDbDataReader boDoc = lenh.ExecuteReader();
                 while (boDoc.Read())
                 {
-                    ChiTietHVVPDTO ct = new ChiTietHVVPDTO();            
+                    ChiTietHVVPDTO ct = new ChiTietHVVPDTO();
                     ct.MaChiTiet = boDoc.GetInt32(0);
                     if (!boDoc.IsDBNull(1))
                     {
@@ -239,23 +233,23 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+
+                //DataProvider.Disconnect();
             }
             return ds;
         }
         public static List<ChiTietHVVPDTO> TraCuuTheoTenHanhVi(string tenhv)
         {
-            OleDbConnection ketNoi = null;
+
             List<ChiTietHVVPDTO> ds = new List<ChiTietHVVPDTO>();
-            
+
             HanhViViPhamDTO hv = HanhViViPhamDAO.TraCuuTheoTenHanhVi(tenhv);
             try
             {
-                ketNoi = KetNoi();
+                DataProvider.Connect();
                 string chuoiLenh = "SELECT * FROM ChiTietHVVP WHERE MaHanhVi = @mahv";
 
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
                 OleDbParameter thamSo;
                 thamSo = new OleDbParameter("@mahv", OleDbType.Integer);
                 thamSo.Value = hv.MaHanhVi;
@@ -292,22 +286,21 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+                //DataProvider.Disconnect();
             }
             return ds;
         }
         public static List<ChiTietHVVPDTO> TraCuuTheoMaHanhVi(int _mahv)
         {
-            OleDbConnection ketNoi = null;
+
             List<ChiTietHVVPDTO> ds = new List<ChiTietHVVPDTO>();
-            
+
             try
             {
-                ketNoi = KetNoi();
+                DataProvider.Connect();
                 string chuoiLenh = "SELECT * FROM ChiTietHVVP WHERE MaHanhVi = @mahv";
 
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
                 OleDbParameter thamSo;
                 thamSo = new OleDbParameter("@mahv", OleDbType.Integer);
                 thamSo.Value = _mahv;
@@ -344,8 +337,8 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+
+                //DataProvider.Disconnect();
             }
             return ds;
         }

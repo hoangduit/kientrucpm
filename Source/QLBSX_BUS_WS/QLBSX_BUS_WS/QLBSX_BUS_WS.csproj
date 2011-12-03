@@ -103,6 +103,7 @@
   <ItemGroup>
     <Compile Include="BienSoXeBUS.cs" />
     <Compile Include="ChiTietHVVPBUS.cs" />
+    <Compile Include="DataProviderBUS.cs" />
     <Compile Include="HanhViViPhamBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLBSX_BUS_WebService.asmx.cs">
