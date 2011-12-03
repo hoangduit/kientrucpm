@@ -69,5 +69,10 @@ namespace Presentation
             foreach (var ct in query)
                 cbb.Items.Add(ct.TenHanhVi);
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
