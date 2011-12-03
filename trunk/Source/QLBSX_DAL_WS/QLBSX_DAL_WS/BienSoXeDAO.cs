@@ -15,17 +15,17 @@ using System.Data.OleDb;
  **/
 namespace QLBSX_DAL_WS
 {
-    public class BienSoXeDAO : DataProvider
+    public class BienSoXeDAO
     {
         public static List<BienSoXeDTO> LayDanhSachBienSoXe()
         {
-            OleDbConnection ketNoi = null;
+            DataProvider.Connect();
             List<BienSoXeDTO> ds = new List<BienSoXeDTO>();
             try
             {
-                ketNoi = KetNoi();
+                DataProvider.Connect();
                 string chuoiLenh = "SELECT * FROM BienSoXe";
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
 
                 OleDbDataReader boDoc = lenh.ExecuteReader();
                 while (boDoc.Read())
@@ -115,20 +115,19 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+                //DataProvider.Disconnect();
             }
             return ds;
         }
         public static List<BienSoXeDTO> LayDanhSachTongQuat()
         {
-            OleDbConnection ketNoi = null;
+            
             List<BienSoXeDTO> ds = new List<BienSoXeDTO>();
             try
             {
-                ketNoi = KetNoi();
+                DataProvider.Connect();
                 string chuoiLenh = "SELECT * FROM BienSoXe";
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
 
                 OleDbDataReader boDoc = lenh.ExecuteReader();
                 while (boDoc.Read())
@@ -162,8 +161,8 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+                
+                    //DataProvider.Disconnect();
             }
             return ds;
         }
@@ -226,13 +225,13 @@ namespace QLBSX_DAL_WS
             else
                 return false;
 
-            OleDbConnection ketNoi = null;
+            
             try
             {
-                ketNoi = KetNoi();
+                DataProvider.Connect();
                 string chuoiLenh = "INSERT INTO BienSoXe(TenChuXe, DiaChi, NhanHieu, MauSon, SoKhung, BienSo, NgayDangKyLanDau, VoHieuHoa, ThongTinRieng) VALUES";
                 chuoiLenh += "(@ten,@diachi,@nhanhieu,@mauson,@sokhung,@bienso, @ngaydangkylandau,@vohieuhoa,@thongtinrieng)";
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
 
                 OleDbParameter thamSo;
                 thamSo = new OleDbParameter("@ten", OleDbType.VarChar);
@@ -280,8 +279,8 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+                
+                    //DataProvider.Disconnect();
             }
             return true;
         }
@@ -344,10 +343,10 @@ namespace QLBSX_DAL_WS
             else
                 return false;
 
-            OleDbConnection ketNoi = null;
+            
             try
             {
-                ketNoi = KetNoi();
+                DataProvider.Connect();
                 string chuoiLenh = "UPDATE BienSoXe SET "
                     + "TenChuXe = '" + general.TenChuXe + "', "
                     + "DiaChi = '" + general.DiaChi + "', "
@@ -360,7 +359,7 @@ namespace QLBSX_DAL_WS
                     + "ThongTinRieng = @info "
                     + "WHERE MaBienSo = " + general.MaBienSo;
 
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
                 OleDbParameter thamSo;
 
                 thamSo = new OleDbParameter("@vhh", OleDbType.Boolean);
@@ -380,8 +379,8 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+                
+                    //DataProvider.Disconnect();
             }
             return true;
         }
@@ -409,15 +408,15 @@ namespace QLBSX_DAL_WS
             else
                 return false;
 
-            OleDbConnection ketNoi = null;
+            
             try
             {
-                ketNoi = KetNoi();
+                DataProvider.Connect();
                 string chuoiLenh = "UPDATE BienSoXe SET "
                     + "VoHieuHoa = @vhh "
                     + "WHERE MaBienSo = " + maso;
 
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
                 OleDbParameter thamSo;
                 thamSo = new OleDbParameter("@vhh", OleDbType.Boolean);
                 thamSo.Value = true;
@@ -432,20 +431,20 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+                
+                    //DataProvider.Disconnect();
             }
             return true;
         }
         public static BienSoXeDTO TraCuuTheoBienSo(string bienso)
         {
-            OleDbConnection ketNoi = null;
+            
             try
             {
-                ketNoi = KetNoi();
+                DataProvider.Connect();
                 string chuoiLenh = "SELECT * FROM BienSoXe WHERE BienSo = @bs";
 
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
                 OleDbParameter thamSo;
                 thamSo = new OleDbParameter("@bs", OleDbType.VarChar);
                 thamSo.Value = bienso;
@@ -535,20 +534,20 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+                
+                    //DataProvider.Disconnect();
             }
             return null;
         }
         public static BienSoXeDTO TraCuuTheoMaBienSo(int mabienso)
         {
-            OleDbConnection ketNoi = null;
+            
             try
             {
-                ketNoi = KetNoi();
+                DataProvider.Connect();
                 string chuoiLenh = "SELECT * FROM BienSoXe WHERE MaBienSo = @mbs";
 
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
                 OleDbParameter thamSo;
                 thamSo = new OleDbParameter("@mbs", OleDbType.Integer);
                 thamSo.Value = mabienso;
@@ -638,8 +637,8 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+                
+                    //DataProvider.Disconnect();
             }
             return null;
         }

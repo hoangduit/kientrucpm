@@ -13,23 +13,22 @@ using System.Data.OleDb;
  **/
 namespace QLBSX_DAL_WS
 {
-    public class HanhViViPhamDAO : DataProvider
+    public class HanhViViPhamDAO
     {
         public static List<HanhViViPhamDTO> LayDanhSachHanhVi()
         {
-            OleDbConnection ketNoi = null;
             List<HanhViViPhamDTO> ds = new List<HanhViViPhamDTO>();
             try
             {
-                ketNoi = KetNoi();
+                DataProvider.Connect();
                 string chuoiLenh = "SELECT * FROM HanhViViPham";
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
 
                 OleDbDataReader boDoc = lenh.ExecuteReader();
                 while (boDoc.Read())
                 {
                     HanhViViPhamDTO hv = new HanhViViPhamDTO();
-                    hv.MaHanhVi= boDoc.GetInt32(0);
+                    hv.MaHanhVi = boDoc.GetInt32(0);
                     if (!boDoc.IsDBNull(1))
                         hv.TenHanhVi = boDoc.GetString(1);
                     if (!boDoc.IsDBNull(2))
@@ -44,25 +43,23 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+                //DataProvider.Disconnect();
             }
             return ds;
         }
         public static bool ThemHanhVi(HanhViViPhamDTO hv)
         {
-            OleDbConnection ketNoi = null;
             try
             {
-                ketNoi = KetNoi();
+                DataProvider.Connect();
                 string chuoiLenh = "INSERT INTO HanhViViPham(TenHanhVi) VALUES";
                 chuoiLenh += "(@ten)";
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
 
                 OleDbParameter thamSo;
                 thamSo = new OleDbParameter("@ten", OleDbType.VarChar);
                 thamSo.Value = hv.TenHanhVi;
-                lenh.Parameters.Add(thamSo);                
+                lenh.Parameters.Add(thamSo);
 
                 OleDbDataReader boDoc = lenh.ExecuteReader();
             }
@@ -72,22 +69,20 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+                //DataProvider.Disconnect();
             }
             return true;
         }
         public static bool VoHieuHoaHanhVi(HanhViViPhamDTO hv)
         {
-            OleDbConnection ketNoi = null;
             try
             {
-                ketNoi = KetNoi();
-                string chuoiLenh = "UPDATE HanhViViPham SET "                    
-                    + "VoHieuHoa = @vhh "                    
+                DataProvider.Connect();
+                string chuoiLenh = "UPDATE HanhViViPham SET "
+                    + "VoHieuHoa = @vhh "
                     + "WHERE MaHanhVi = " + hv.MaHanhVi;
 
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
                 OleDbParameter thamSo;
                 thamSo = new OleDbParameter("@vhh", OleDbType.Boolean);
                 thamSo.Value = true;
@@ -102,22 +97,20 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+                //DataProvider.Disconnect();
             }
             return true;
         }
         public static bool CapNhatHanhVi(HanhViViPhamDTO hv)
         {
-            OleDbConnection ketNoi = null;
             try
             {
-                ketNoi = KetNoi();
-                string chuoiLenh = "UPDATE HanhViViPham SET "                                        
+                DataProvider.Connect();
+                string chuoiLenh = "UPDATE HanhViViPham SET "
                     + "TenHanhVi = '" + hv.TenHanhVi + "' "
                     + "WHERE MaHanhVi = " + hv.MaHanhVi;
 
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
                 lenh.ExecuteNonQuery();
             }
             catch (Exception)
@@ -126,21 +119,20 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+                //DataProvider.Disconnect();
             }
             return true;
-        }        
+        }
         public static HanhViViPhamDTO TraCuuTheoTenHanhVi(string ten)
         {
-            OleDbConnection ketNoi = null;
+            
             HanhViViPhamDTO hv = new HanhViViPhamDTO();
             try
             {
-                ketNoi = KetNoi();
+                DataProvider.Connect();
                 string chuoiLenh = "SELECT * FROM HanhViViPham WHERE TenHanhVi = @ten";
 
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
                 OleDbParameter thamSo;
                 thamSo = new OleDbParameter("@ten", OleDbType.VarChar);
                 thamSo.Value = ten;
@@ -148,7 +140,7 @@ namespace QLBSX_DAL_WS
 
                 OleDbDataReader boDoc = lenh.ExecuteReader();
                 while (boDoc.Read())
-                {                    
+                {
                     hv.MaHanhVi = boDoc.GetInt32(0);
                     if (!boDoc.IsDBNull(1))
                         hv.TenHanhVi = boDoc.GetString(1);
@@ -162,21 +154,20 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+                
+                    //DataProvider.Disconnect();
             }
             return hv;
         }
         public static HanhViViPhamDTO TraCuuTheoMaHanhVi(int ma)
-        {
-            OleDbConnection ketNoi = null;
+        {            
             HanhViViPhamDTO hv = new HanhViViPhamDTO();
             try
             {
-                ketNoi = KetNoi();
+                DataProvider.Connect();
                 string chuoiLenh = "SELECT * FROM HanhViViPham WHERE MaHanhVi = @ma";
 
-                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, DataProvider.Connection);
                 OleDbParameter thamSo;
                 thamSo = new OleDbParameter("@ma", OleDbType.Integer);
                 thamSo.Value = ma;
@@ -198,8 +189,7 @@ namespace QLBSX_DAL_WS
             }
             finally
             {
-                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
-                    ketNoi.Close();
+                //DataProvider.Disconnect();
             }
             return hv;
         }

@@ -875,6 +875,12 @@ namespace QLBSX_BUS_WS.QLBSX_DAL_WebService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap")]
     public interface QLBSX_DAL_WebServiceSoap {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Connect", ReplyAction="*")]
+        void Connect();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Disconnect", ReplyAction="*")]
+        void Disconnect();
+        
         // CODEGEN: Generating message contract since element name LayDanhSachBSXResult from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/LayDanhSachBSX", ReplyAction="*")]
         QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXResponse LayDanhSachBSX(QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXRequest request);
@@ -2755,6 +2761,14 @@ namespace QLBSX_BUS_WS.QLBSX_DAL_WebService {
         
         public QLBSX_DAL_WebServiceSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public void Connect() {
+            base.Channel.Connect();
+        }
+        
+        public void Disconnect() {
+            base.Channel.Disconnect();
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

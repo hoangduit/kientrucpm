@@ -303,5 +303,10 @@ namespace Presentation
             foreach (var ct in query)                
                 cbb.Items.Add(ct.TenHanhVi);
         }
+
+        private void F_AMain_QLBSX_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ws.Disconnect();
+        }
     }
 }

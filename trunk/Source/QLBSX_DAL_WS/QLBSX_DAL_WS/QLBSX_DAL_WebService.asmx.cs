@@ -21,6 +21,16 @@ namespace QLBSX_DAL_WS
     // [System.Web.Script.Services.ScriptService]
     public class QLBSX_DAL_WebService : System.Web.Services.WebService
     {
+        [WebMethod]
+        public void Connect()
+        {
+            DataProvider.Connect();
+        }
+        [WebMethod]
+        public void Disconnect()
+        {
+            DataProvider.Disconnect();
+        }
         /////////////////////////////////////////////////////////
         //////////          Biển số xe              /////////////
         /////////////////////////////////////////////////////////

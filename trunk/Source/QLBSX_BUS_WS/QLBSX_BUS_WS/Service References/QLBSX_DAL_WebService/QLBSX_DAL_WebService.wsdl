@@ -2,6 +2,18 @@
 <wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Connect">
+        <s:complexType />
+      </s:element>
+      <s:element name="ConnectResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Disconnect">
+        <s:complexType />
+      </s:element>
+      <s:element name="DisconnectResponse">
+        <s:complexType />
+      </s:element>
       <s:element name="LayDanhSachBSX">
         <s:complexType />
       </s:element>
@@ -445,6 +457,18 @@
       </s:element>
     </s:schema>
   </wsdl:types>
+  <wsdl:message name="ConnectSoapIn">
+    <wsdl:part name="parameters" element="tns:Connect" />
+  </wsdl:message>
+  <wsdl:message name="ConnectSoapOut">
+    <wsdl:part name="parameters" element="tns:ConnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="DisconnectSoapIn">
+    <wsdl:part name="parameters" element="tns:Disconnect" />
+  </wsdl:message>
+  <wsdl:message name="DisconnectSoapOut">
+    <wsdl:part name="parameters" element="tns:DisconnectResponse" />
+  </wsdl:message>
   <wsdl:message name="LayDanhSachBSXSoapIn">
     <wsdl:part name="parameters" element="tns:LayDanhSachBSX" />
   </wsdl:message>
@@ -596,6 +620,14 @@
     <wsdl:part name="parameters" element="tns:TraCuuCTHVTheoMaHanhViResponse" />
   </wsdl:message>
   <wsdl:portType name="QLBSX_DAL_WebServiceSoap">
+    <wsdl:operation name="Connect">
+      <wsdl:input message="tns:ConnectSoapIn" />
+      <wsdl:output message="tns:ConnectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Disconnect">
+      <wsdl:input message="tns:DisconnectSoapIn" />
+      <wsdl:output message="tns:DisconnectSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="LayDanhSachBSX">
       <wsdl:input message="tns:LayDanhSachBSXSoapIn" />
       <wsdl:output message="tns:LayDanhSachBSXSoapOut" />
@@ -699,6 +731,24 @@
   </wsdl:portType>
   <wsdl:binding name="QLBSX_DAL_WebServiceSoap" type="tns:QLBSX_DAL_WebServiceSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Connect">
+      <soap:operation soapAction="http://tempuri.org/Connect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Disconnect">
+      <soap:operation soapAction="http://tempuri.org/Disconnect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="LayDanhSachBSX">
       <soap:operation soapAction="http://tempuri.org/LayDanhSachBSX" style="document" />
       <wsdl:input>
@@ -927,6 +977,24 @@
   </wsdl:binding>
   <wsdl:binding name="QLBSX_DAL_WebServiceSoap12" type="tns:QLBSX_DAL_WebServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Connect">
+      <soap12:operation soapAction="http://tempuri.org/Connect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Disconnect">
+      <soap12:operation soapAction="http://tempuri.org/Disconnect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="LayDanhSachBSX">
       <soap12:operation soapAction="http://tempuri.org/LayDanhSachBSX" style="document" />
       <wsdl:input>
