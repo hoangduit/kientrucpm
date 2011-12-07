@@ -35,64 +35,64 @@ namespace QLBSX_DAL_WS
         //////////          Biển số xe              /////////////
         /////////////////////////////////////////////////////////
         [WebMethod]
-        public List<BienSoXeDTO> LayDanhSachBSX()
-        {            
-            return BienSoXeDAO.LayDanhSachBienSoXe();
+        public List<BienSoXe> LayDanhSachBSX()
+        {
+            return BienSoXeFactory.GetAllPlates();
         }
         [WebMethod]
-        public List<BienSoXeDTO> LayDanhSachBSXTongQuat()
+        public List<BienSoXe> LayDanhSachBSXTongQuat()
         {
-            return BienSoXeDAO.LayDanhSachTongQuat();
+            return BienSoXeFactory.GetAllGeneralPlates();
         }
         [WebMethod]
         public bool ThemBienSoXe(object Xe)
         {
-            return BienSoXeDAO.ThemBienSoXe(Xe);
+            return BienSoXeFactory.AddPlate(Xe);
         }
         [WebMethod]
         public bool CapNhatBienSoXe(object Xe)
         {
-            return BienSoXeDAO.CapNhatBienSoXe(Xe);
+            return BienSoXeFactory.UpdatePlate(Xe);
         }
         [WebMethod]
         public bool VoHieuHoaBienSoXe(object bs)
         {
-            return BienSoXeDAO.VoHieuHoaBienSoXe(bs);
+            return BienSoXeFactory.RemovePlate(bs);
         }
         [WebMethod]
-        public BienSoXeDTO TraCuuBSXTheoBienSo(string bienso)
+        public BienSoXe TraCuuBSXTheoBienSo(string bienso)
         {
-            return BienSoXeDAO.TraCuuTheoBienSo(bienso);
+            return BienSoXeFactory.TraCuuTheoBienSo(bienso);
         }
         [WebMethod]
-        public BienSoXeDTO TraCuuBSXTheoMaBienSo(int mabienso)
+        public BienSoXe TraCuuBSXTheoMaBienSo(int mabienso)
         {
-            return BienSoXeDAO.TraCuuTheoMaBienSo(mabienso);
+            return BienSoXeFactory.TraCuuTheoMaBienSo(mabienso);
         }
         [WebMethod]
-        public BienSoXeMotoDTO LaMoto(object bs)
+        public BienSoXeMoto LaMoto(object bs)
         {
-            return BienSoXeDAO.LaMoto(bs);
+            return BienSoXeMoto.ConvertToMoto(bs);
         }
         [WebMethod]
-        public BienSoXeOtoDTO LaOto(object bs)
+        public BienSoXeOto LaOto(object bs)
         {
-            return BienSoXeDAO.LaOto(bs);
+            return BienSoXeOto.ConvertToOto(bs);
         }
         [WebMethod]
-        public BienSoXeRomoocDTO LaRomooc(object bs)
+        public BienSoXeRomooc LaRomooc(object bs)
         {
-            return BienSoXeDAO.LaRomooc(bs);
+            return BienSoXeRomooc.ConvertToRomooc(bs);
         }
         [WebMethod]
         public KichThuocBao TaoKichThuocBao(float d, float r, float c)
         {
-            return BienSoXeDAO.TaoKichThuocBao(d, r, c);
+            return BienSoXe.TaoKichThuocBao(d, r, c);
         }
         [WebMethod]
         public SoCho TaoSoCho(int ng, int d, int na)
         {
-            return BienSoXeDAO.TaoSoCho(ng, d, na);
+            return BienSoXe.TaoSoCho(ng, d, na);
         }
         /////////////////////////////////////////////////////////
         //////////          Hành vi vi phạm              ////////

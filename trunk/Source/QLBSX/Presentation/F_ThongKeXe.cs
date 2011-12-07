@@ -41,20 +41,20 @@ namespace Presentation
             int year = int.Parse(tb_Nam.Text);
             int MotoCount, OtoCount, RomoocCount;
 
-            List<BienSoXeDTO> ds = new List<BienSoXeDTO>();
-            ds = ws.LayDanhSachBienSoXe();
+            List<BienSoXe> ds = new List<BienSoXe>();
+            ds = ws.LayDanhSachBienSoXe().ToList();
             List<int> list = new List<int>() { 1, 2, 3 };
 
             var query = from n in ds
-                        where n is BienSoXeMotoDTO && n.VoHieuHoa == false && n.NgayDangKyLanDau.Year == year && n.NgayDangKyLanDau.Month == month
+                        where n is BienSoXeMoto && n.VoHieuHoa == false && n.NgayDangKyLanDau.Year == year && n.NgayDangKyLanDau.Month == month
                         select n;
             MotoCount = query.Count();
             query = from n in ds
-                    where n is BienSoXeOtoDTO && n.VoHieuHoa == false && n.NgayDangKyLanDau.Year == year && n.NgayDangKyLanDau.Month == month
+                    where n is BienSoXeOto && n.VoHieuHoa == false && n.NgayDangKyLanDau.Year == year && n.NgayDangKyLanDau.Month == month
                     select n;
             OtoCount = query.Count();
             query = from n in ds
-                    where n is BienSoXeRomoocDTO && n.VoHieuHoa == false && n.NgayDangKyLanDau.Year == year && n.NgayDangKyLanDau.Month == month
+                    where n is BienSoXeRomooc && n.VoHieuHoa == false && n.NgayDangKyLanDau.Year == year && n.NgayDangKyLanDau.Month == month
                     select n;
             RomoocCount = query.Count();
 
@@ -80,20 +80,20 @@ namespace Presentation
             int year = int.Parse(tb_Nam.Text);
             int MotoCount, OtoCount, RomoocCount;
 
-            List<BienSoXeDTO> ds = new List<BienSoXeDTO>();
-            ds = ws.LayDanhSachBienSoXe();
+            List<BienSoXe> ds = new List<BienSoXe>();
+            ds = ws.LayDanhSachBienSoXe().ToList();
             List<int> list = new List<int>() { 1, 2, 3 };
 
             var query = from n in ds
-                        where n is BienSoXeMotoDTO && n.VoHieuHoa == false && n.NgayDangKyLanDau.Year == year
+                        where n is BienSoXeMoto && n.VoHieuHoa == false && n.NgayDangKyLanDau.Year == year
                         select n;
             MotoCount = query.Count();
             query = from n in ds
-                    where n is BienSoXeOtoDTO && n.VoHieuHoa == false && n.NgayDangKyLanDau.Year == year
+                    where n is BienSoXeOto && n.VoHieuHoa == false && n.NgayDangKyLanDau.Year == year
                     select n;
             OtoCount = query.Count();
             query = from n in ds
-                    where n is BienSoXeRomoocDTO && n.VoHieuHoa == false && n.NgayDangKyLanDau.Year == year
+                    where n is BienSoXeRomooc && n.VoHieuHoa == false && n.NgayDangKyLanDau.Year == year
                     select n;
             RomoocCount = query.Count();
 

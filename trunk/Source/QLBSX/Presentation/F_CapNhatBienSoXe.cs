@@ -36,7 +36,7 @@ namespace Presentation
             {
                 if (cbbBienSo.Text != "")
                 {
-                    BienSoXeMotoDTO bs = new BienSoXeMotoDTO();
+                    BienSoXeMoto bs = new BienSoXeMoto();
                     bs.MaBienSo = iMaBienSoHienTai;
                     bs.BienSo = cbbBienSo.Text;
                     bs.CongSuat = int.Parse(tb_Moto_CongSuat.Text);
@@ -63,7 +63,7 @@ namespace Presentation
             {
                 if (cbbBienSo.Text != "")
                 {
-                    BienSoXeOtoDTO bs = new BienSoXeOtoDTO();
+                    BienSoXeOto bs = new BienSoXeOto();
                     bs.MaBienSo = iMaBienSoHienTai;
                     bs.BienSo = cbbBienSo.Text;
                     bs.CongSuat = int.Parse(tb_Oto_CongSuat.Text);
@@ -96,7 +96,7 @@ namespace Presentation
             {
                 if (cbbBienSo.Text != "")
                 {
-                    BienSoXeRomoocDTO bs = new BienSoXeRomoocDTO();
+                    BienSoXeRomooc bs = new BienSoXeRomooc();
                     bs.MaBienSo = iMaBienSoHienTai;
                     bs.BienSo = cbbBienSo.Text;
                     bs.DiaChi = tb_DiaChi.Text;
@@ -149,7 +149,7 @@ namespace Presentation
         }
         private void cbbBienSo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            BienSoXeDTO bs = ws.TraCuuBSXTheoBienSo(cbbBienSo.Text.Trim());
+            BienSoXe bs = ws.TraCuuBSXTheoBienSo(cbbBienSo.Text.Trim());
             iMaBienSoHienTai = bs.MaBienSo;
             tb_ChuXe.Text = bs.TenChuXe.Trim();
             tb_DiaChi.Text = bs.DiaChi.Trim();
@@ -159,7 +159,7 @@ namespace Presentation
 
             if (cbb_PhuongTien.SelectedIndex == 0)
             {
-                BienSoXeMotoDTO bsMoto = (BienSoXeMotoDTO)ws.TraCuuBSXTheoBienSo(cbbBienSo.Text.Trim());
+                BienSoXeMoto bsMoto = (BienSoXeMoto)ws.TraCuuBSXTheoBienSo(cbbBienSo.Text.Trim());
                 tb_SoNguoi.Text = bsMoto.SoNguoiDuocPhepCho.ToString();
                 tb_Moto_LoaiXe.Text = bsMoto.LoaiXe.Trim();
                 tb_Moto_DungTich.Text = bsMoto.DungTich.ToString().Trim();
@@ -170,7 +170,7 @@ namespace Presentation
             else
                 if (cbb_PhuongTien.SelectedIndex == 1)
                 {
-                    BienSoXeOtoDTO bsOto = (BienSoXeOtoDTO)ws.TraCuuBSXTheoBienSo(cbbBienSo.Text.Trim());
+                    BienSoXeOto bsOto = (BienSoXeOto)ws.TraCuuBSXTheoBienSo(cbbBienSo.Text.Trim());
                     tb_Oto_LoaiXe.Text = bsOto.LoaiXe.Trim(); ;
                     tb_Oto_DungTich.Text = bsOto.DungTich.ToString().Trim();
                     tb_Oto_TuTrong.Text = bsOto.TuTrong.Trim();
@@ -190,7 +190,7 @@ namespace Presentation
                 }
                 else
                 {
-                    BienSoXeRomoocDTO bsRM = (BienSoXeRomoocDTO)ws.TraCuuBSXTheoBienSo(cbbBienSo.Text.Trim());
+                    BienSoXeRomooc bsRM = (BienSoXeRomooc)ws.TraCuuBSXTheoBienSo(cbbBienSo.Text.Trim());
                     tb_Romooc_NamSanXuat.Text = bsRM.NamSanXuat.ToString().Trim();
                     tb_Romooc_TaiTrong.Text = bsRM.TaiTrong.ToString().Trim();
                     dtp_Romooc_NgayHetHan.Text = bsRM.NgayHetHan.ToString().Trim();
@@ -227,23 +227,23 @@ namespace Presentation
         private void NapDanhSachBienSo(ComboBox cbb, int loaiphuongtien)
         {
             cbb.Items.Clear();
-            List<BienSoXeDTO> dsBS = new List<BienSoXeDTO>();
-            dsBS = ws.LayDanhSachBienSoXe();
-            foreach (BienSoXeDTO bs in dsBS)
+            List<BienSoXe> dsBS = new List<BienSoXe>();
+            dsBS = ws.LayDanhSachBienSoXe().ToList();
+            foreach (BienSoXe bs in dsBS)
             {
                 if (loaiphuongtien == 0)
                 {
-                    if(bs is BienSoXeMotoDTO && bs.VoHieuHoa == false)
+                    if(bs is BienSoXeMoto && bs.VoHieuHoa == false)
                         cbbBienSo.Items.Add(bs.BienSo);
                 }
                 else if (loaiphuongtien == 1)
                 {
-                    if (bs is BienSoXeOtoDTO && bs.VoHieuHoa == false)
+                    if (bs is BienSoXeOto && bs.VoHieuHoa == false)
                         cbbBienSo.Items.Add(bs.BienSo);
                 }
                 else
                 {
-                    if (bs is BienSoXeRomoocDTO && bs.VoHieuHoa == false)
+                    if (bs is BienSoXeRomooc && bs.VoHieuHoa == false)
                         cbbBienSo.Items.Add(bs.BienSo);
                 }
             }

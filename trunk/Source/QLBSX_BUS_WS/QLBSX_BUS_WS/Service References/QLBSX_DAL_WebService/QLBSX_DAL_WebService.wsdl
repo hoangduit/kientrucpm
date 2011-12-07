@@ -20,16 +20,16 @@
       <s:element name="LayDanhSachBSXResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="LayDanhSachBSXResult" type="tns:ArrayOfBienSoXeDTO" />
+            <s:element minOccurs="0" maxOccurs="1" name="LayDanhSachBSXResult" type="tns:ArrayOfBienSoXe" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:complexType name="ArrayOfBienSoXeDTO">
+      <s:complexType name="ArrayOfBienSoXe">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="BienSoXeDTO" nillable="true" type="tns:BienSoXeDTO" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BienSoXe" nillable="true" type="tns:BienSoXe" />
         </s:sequence>
       </s:complexType>
-      <s:complexType name="BienSoXeDTO">
+      <s:complexType name="BienSoXe" abstract="true">
         <s:sequence>
           <s:element minOccurs="1" maxOccurs="1" name="MaBienSo" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="TenChuXe" type="s:string" />
@@ -42,71 +42,13 @@
           <s:element minOccurs="1" maxOccurs="1" name="VoHieuHoa" type="s:boolean" />
         </s:sequence>
       </s:complexType>
-      <s:complexType name="BienSoXeOtoDTO">
-        <s:complexContent mixed="false">
-          <s:extension base="tns:BienSoXeDTO">
-            <s:sequence>
-              <s:element minOccurs="0" maxOccurs="1" name="LoaiXe" type="s:string" />
-              <s:element minOccurs="0" maxOccurs="1" name="SoMay" type="s:string" />
-              <s:element minOccurs="1" maxOccurs="1" name="DungTich" type="s:int" />
-              <s:element minOccurs="1" maxOccurs="1" name="CongSuat" type="s:int" />
-              <s:element minOccurs="0" maxOccurs="1" name="TenDongCo" type="s:string" />
-              <s:element minOccurs="1" maxOccurs="1" name="NamSanXuat" type="s:int" />
-              <s:element minOccurs="0" maxOccurs="1" name="TuTrong" type="s:string" />
-              <s:element minOccurs="0" maxOccurs="1" name="Ktb" type="tns:KichThuocBao" />
-              <s:element minOccurs="0" maxOccurs="1" name="Sc" type="tns:SoCho" />
-              <s:element minOccurs="1" maxOccurs="1" name="TaiTrongHangHoa" type="s:int" />
-              <s:element minOccurs="1" maxOccurs="1" name="NgayHetHan" type="s:dateTime" />
-            </s:sequence>
-          </s:extension>
-        </s:complexContent>
-      </s:complexType>
-      <s:complexType name="KichThuocBao">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="Dai" type="s:float" />
-          <s:element minOccurs="1" maxOccurs="1" name="Rong" type="s:float" />
-          <s:element minOccurs="1" maxOccurs="1" name="Cao" type="s:float" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="SoCho">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="Ngoi" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="Dung" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="Nam" type="s:int" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="BienSoXeRomoocDTO">
-        <s:complexContent mixed="false">
-          <s:extension base="tns:BienSoXeDTO">
-            <s:sequence>
-              <s:element minOccurs="1" maxOccurs="1" name="NamSanXuat" type="s:int" />
-              <s:element minOccurs="0" maxOccurs="1" name="Ktb" type="tns:KichThuocBao" />
-              <s:element minOccurs="1" maxOccurs="1" name="TaiTrong" type="s:int" />
-              <s:element minOccurs="1" maxOccurs="1" name="NgayHetHan" type="s:dateTime" />
-            </s:sequence>
-          </s:extension>
-        </s:complexContent>
-      </s:complexType>
-      <s:complexType name="BienSoXeMotoDTO">
-        <s:complexContent mixed="false">
-          <s:extension base="tns:BienSoXeDTO">
-            <s:sequence>
-              <s:element minOccurs="0" maxOccurs="1" name="LoaiXe" type="s:string" />
-              <s:element minOccurs="0" maxOccurs="1" name="SoMay" type="s:string" />
-              <s:element minOccurs="1" maxOccurs="1" name="DungTich" type="s:int" />
-              <s:element minOccurs="1" maxOccurs="1" name="CongSuat" type="s:int" />
-              <s:element minOccurs="1" maxOccurs="1" name="SoNguoiDuocPhepCho" type="s:int" />
-            </s:sequence>
-          </s:extension>
-        </s:complexContent>
-      </s:complexType>
       <s:element name="LayDanhSachBSXTongQuat">
         <s:complexType />
       </s:element>
       <s:element name="LayDanhSachBSXTongQuatResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="LayDanhSachBSXTongQuatResult" type="tns:ArrayOfBienSoXeDTO" />
+            <s:element minOccurs="0" maxOccurs="1" name="LayDanhSachBSXTongQuatResult" type="tns:ArrayOfBienSoXe" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -162,7 +104,7 @@
       <s:element name="TraCuuBSXTheoBienSoResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="TraCuuBSXTheoBienSoResult" type="tns:BienSoXeDTO" />
+            <s:element minOccurs="0" maxOccurs="1" name="TraCuuBSXTheoBienSoResult" type="tns:BienSoXe" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -176,7 +118,7 @@
       <s:element name="TraCuuBSXTheoMaBienSoResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="TraCuuBSXTheoMaBienSoResult" type="tns:BienSoXeDTO" />
+            <s:element minOccurs="0" maxOccurs="1" name="TraCuuBSXTheoMaBienSoResult" type="tns:BienSoXe" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -190,10 +132,23 @@
       <s:element name="LaMotoResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="LaMotoResult" type="tns:BienSoXeMotoDTO" />
+            <s:element minOccurs="0" maxOccurs="1" name="LaMotoResult" type="tns:BienSoXeMoto" />
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:complexType name="BienSoXeMoto">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BienSoXe">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="LoaiXe" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SoMay" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DungTich" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CongSuat" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="SoNguoiDuocPhepCho" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
       <s:element name="LaOto">
         <s:complexType>
           <s:sequence>
@@ -201,13 +156,46 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:complexType name="SoCho">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Ngoi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dung" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nam" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="KichThuocBao">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Dai" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rong" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cao" type="s:float" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="LaOtoResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="LaOtoResult" type="tns:BienSoXeOtoDTO" />
+            <s:element minOccurs="0" maxOccurs="1" name="LaOtoResult" type="tns:BienSoXeOto" />
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:complexType name="BienSoXeOto">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BienSoXe">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="LoaiXe" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SoMay" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DungTich" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CongSuat" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="TenDongCo" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="NamSanXuat" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="TuTrong" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ktb" type="tns:KichThuocBao" />
+              <s:element minOccurs="0" maxOccurs="1" name="Sc" type="tns:SoCho" />
+              <s:element minOccurs="1" maxOccurs="1" name="TaiTrongHangHoa" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="NgayHetHan" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
       <s:element name="LaRomooc">
         <s:complexType>
           <s:sequence>
@@ -218,10 +206,22 @@
       <s:element name="LaRomoocResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="LaRomoocResult" type="tns:BienSoXeRomoocDTO" />
+            <s:element minOccurs="0" maxOccurs="1" name="LaRomoocResult" type="tns:BienSoXeRomooc" />
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:complexType name="BienSoXeRomooc">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BienSoXe">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="NamSanXuat" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ktb" type="tns:KichThuocBao" />
+              <s:element minOccurs="1" maxOccurs="1" name="TaiTrong" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="NgayHetHan" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
       <s:element name="TaoKichThuocBao">
         <s:complexType>
           <s:sequence>

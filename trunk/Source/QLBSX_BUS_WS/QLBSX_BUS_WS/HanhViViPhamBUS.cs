@@ -19,7 +19,7 @@ namespace QLBSX_BUS_WS
         private QLBSX_DAL_WebServiceSoapClient ws = new QLBSX_DAL_WebServiceSoapClient();
         public List<HanhViViPhamDTO> LayDanhSachHanhVi()
         {
-            return ws.LayDanhSachHanhVi();
+            return ws.LayDanhSachHanhVi().ToList();
         }
         public bool ThemHanhVi(HanhViViPhamDTO hv)
         {

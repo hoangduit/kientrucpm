@@ -27,9 +27,9 @@ namespace Presentation
         }
         private void F_XoaBienSo_Load(object sender, EventArgs e)
         {
-            List<BienSoXeDTO> dsBS = new List<BienSoXeDTO>();
-            dsBS = ws.LayDanhSachBSXTongQuat();
-            foreach (BienSoXeDTO bs in dsBS)
+            List<BienSoXe> dsBS = new List<BienSoXe>();
+            dsBS = ws.LayDanhSachBSXTongQuat().ToList();
+            foreach (BienSoXe bs in dsBS)
                 if(bs.VoHieuHoa == false)
                     cbb_BienSo.Items.Add(bs.BienSo);
         }
@@ -37,8 +37,7 @@ namespace Presentation
         {
             if (cbb_BienSo.Text != "")
             {
-                BienSoXeDTO bs = new BienSoXeDTO();                
-                bs = ws.TraCuuBSXTheoBienSo(cbb_BienSo.Text);
+                BienSoXe bs = ws.TraCuuBSXTheoBienSo(cbb_BienSo.Text);
 
                 if (MessageBox.Show("Bạn có thật sự muốn xóa biển số \"" + cbb_BienSo.Text + "\"?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {

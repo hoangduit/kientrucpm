@@ -17,13 +17,13 @@ namespace QLBSX_BUS_WS
     public class BienSoXeBUS
     {
         private QLBSX_DAL_WebServiceSoapClient ws = new QLBSX_DAL_WebServiceSoapClient();        
-        public List<BienSoXeDTO> LayDanhSachBienSoXe()
+        public List<BienSoXe> LayDanhSachBienSoXe()
         {
-            return ws.LayDanhSachBSX();            
+            return ws.LayDanhSachBSX().ToList();            
         }
-        public List<BienSoXeDTO> LayDanhSachTongQuat()
+        public List<BienSoXe> LayDanhSachTongQuat()
         {
-            return ws.LayDanhSachBSXTongQuat();
+            return ws.LayDanhSachBSXTongQuat().ToList();
         }
         public bool ThemBienSoXe(object bs)
         {
@@ -37,23 +37,23 @@ namespace QLBSX_BUS_WS
         {
             return ws.VoHieuHoaBienSoXe(bs);
         }
-        public BienSoXeDTO TraCuuTheoBienSo(string bienso)
+        public BienSoXe TraCuuTheoBienSo(string bienso)
         {
             return ws.TraCuuBSXTheoBienSo(bienso);
         }
-        public BienSoXeDTO TraCuuTheoMaBienSo(int mabienso)
+        public BienSoXe TraCuuTheoMaBienSo(int mabienso)
         {
             return ws.TraCuuBSXTheoMaBienSo(mabienso);
         }
-        public BienSoXeMotoDTO LaMoto(object bs)
+        public BienSoXeMoto LaMoto(object bs)
         {
             return ws.LaMoto(bs);
         }
-        public BienSoXeOtoDTO LaOto(object bs)
+        public BienSoXeOto LaOto(object bs)
         {
             return ws.LaOto(bs);
         }
-        public BienSoXeRomoocDTO LaRomooc(object bs)
+        public BienSoXeRomooc LaRomooc(object bs)
         {
             return ws.LaRomooc(bs);
         }

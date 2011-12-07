@@ -60,7 +60,7 @@ namespace Presentation
         {
             cbb.Items.Clear();
             List<HanhViViPhamDTO> chiTiet = new List<HanhViViPhamDTO>();
-            chiTiet = ws.LayDanhSachHanhVi();
+            chiTiet = ws.LayDanhSachHanhVi().ToList();
             var query = from n in chiTiet
                         where n.VoHieuHoa == false
                         orderby n.TenHanhVi

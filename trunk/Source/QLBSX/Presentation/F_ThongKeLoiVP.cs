@@ -50,7 +50,7 @@ namespace Presentation
             int year = int.Parse(tb_Nam.Text);
 
             List<ChiTietHVVPDTO> ct = new List<ChiTietHVVPDTO>();
-            ct = ws.LayDanhSachChiTietHanhVi();
+            ct = ws.LayDanhSachChiTietHanhVi().ToList();
             var query = from n in ct
                         where n.ThoiGian.Year == year && n.ThoiGian.Month == month
                         group n by n.HanhVi.MaHanhVi into gr
@@ -82,7 +82,7 @@ namespace Presentation
             int year = int.Parse(tb_Nam.Text);
 
             List<ChiTietHVVPDTO> ct = new List<ChiTietHVVPDTO>();
-            ct = ws.LayDanhSachChiTietHanhVi();
+            ct = ws.LayDanhSachChiTietHanhVi().ToList();
             var query = from n in ct
                         where n.ThoiGian.Year == year
                         group n by n.HanhVi.MaHanhVi into gr

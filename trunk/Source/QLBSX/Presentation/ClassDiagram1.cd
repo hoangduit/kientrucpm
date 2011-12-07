@@ -117,7 +117,7 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="Presentation.QLBSX_BUS_WebService.BienSoXeDTO" Collapsed="true">
+  <Class Name="Presentation.QLBSX_BUS_WebService.BienSoXe" Collapsed="true">
     <Position X="3" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAQAADCAAAAAAAAAAwAAAAEgAAACGQkIIACABIBAQo=</HashCode>
@@ -125,21 +125,21 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Presentation.QLBSX_BUS_WebService.BienSoXeRomoocDTO" Collapsed="true">
+  <Class Name="Presentation.QLBSX_BUS_WebService.BienSoXeRomooc" Collapsed="true">
     <Position X="0.75" Y="1.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAABAAAgBAABBAAQAAAAAAAAACAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Service References\QLBSX_BUS_WebService\Reference.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Presentation.QLBSX_BUS_WebService.BienSoXeOtoDTO" Collapsed="true">
+  <Class Name="Presentation.QLBSX_BUS_WebService.BienSoXeOto" Collapsed="true">
     <Position X="3" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AkABAAAgBAFAAACQIEQgAAAAACAACAAAAAQAAAIYQCI=</HashCode>
       <FileName>Service References\QLBSX_BUS_WebService\Reference.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO" Collapsed="true">
+  <Class Name="Presentation.QLBSX_BUS_WebService.BienSoXeMoto" Collapsed="true">
     <Position X="5" Y="1.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAFAAACAIAAgAAAAAAAACAAAAAQEAAIAAAA=</HashCode>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1bbbb3ab-e9f9-4fcb-bfc8-7f90130b389a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8f924c64-e168-4c50-b720-98083308d8fe" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
-    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
     <ExcludedTypes />
     <ImportXmlTypes>false</ImportXmlTypes>
@@ -23,8 +23,8 @@
     <MetadataSource Address="http://localhost:8888/QLBSX_DAL_WebService.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="QLBSX_DAL_WebService.disco" MetadataType="Disco" ID="0ee26d5e-5439-4000-a65a-71298c0ec56e" SourceId="1" SourceUrl="http://localhost:8888/QLBSX_DAL_WebService.asmx?disco" />
-    <MetadataFile FileName="QLBSX_DAL_WebService.wsdl" MetadataType="Wsdl" ID="4dc77993-d183-46af-95d8-33bec8dde62c" SourceId="1" SourceUrl="http://localhost:8888/QLBSX_DAL_WebService.asmx?wsdl" />
+    <MetadataFile FileName="QLBSX_DAL_WebService.disco" MetadataType="Disco" ID="e0bea8bf-a6ab-4097-bdea-57b47ae0f2e9" SourceId="1" SourceUrl="http://localhost:8888/QLBSX_DAL_WebService.asmx?disco" />
+    <MetadataFile FileName="QLBSX_DAL_WebService.wsdl" MetadataType="Wsdl" ID="bedb4fe1-9dd4-461c-8141-e4e99a6dad4d" SourceId="1" SourceUrl="http://localhost:8888/QLBSX_DAL_WebService.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
