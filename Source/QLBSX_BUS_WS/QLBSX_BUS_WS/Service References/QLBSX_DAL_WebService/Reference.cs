@@ -9,2730 +9,989 @@
 //------------------------------------------------------------------------------
 
 namespace QLBSX_BUS_WS.QLBSX_DAL_WebService {
-    using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BienSoXeDTO", Namespace="http://tempuri.org/")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOtoDTO))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomoocDTO))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMotoDTO))]
-    public partial class BienSoXeDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private int MaBienSoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TenChuXeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DiaChiField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NhanHieuField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MauSonField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SoKhungField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string BienSoField;
-        
-        private System.DateTime NgayDangKyLanDauField;
-        
-        private bool VoHieuHoaField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int MaBienSo {
-            get {
-                return this.MaBienSoField;
-            }
-            set {
-                if ((this.MaBienSoField.Equals(value) != true)) {
-                    this.MaBienSoField = value;
-                    this.RaisePropertyChanged("MaBienSo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string TenChuXe {
-            get {
-                return this.TenChuXeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TenChuXeField, value) != true)) {
-                    this.TenChuXeField = value;
-                    this.RaisePropertyChanged("TenChuXe");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string DiaChi {
-            get {
-                return this.DiaChiField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DiaChiField, value) != true)) {
-                    this.DiaChiField = value;
-                    this.RaisePropertyChanged("DiaChi");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string NhanHieu {
-            get {
-                return this.NhanHieuField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NhanHieuField, value) != true)) {
-                    this.NhanHieuField = value;
-                    this.RaisePropertyChanged("NhanHieu");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string MauSon {
-            get {
-                return this.MauSonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MauSonField, value) != true)) {
-                    this.MauSonField = value;
-                    this.RaisePropertyChanged("MauSon");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public string SoKhung {
-            get {
-                return this.SoKhungField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SoKhungField, value) != true)) {
-                    this.SoKhungField = value;
-                    this.RaisePropertyChanged("SoKhung");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
-        public string BienSo {
-            get {
-                return this.BienSoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.BienSoField, value) != true)) {
-                    this.BienSoField = value;
-                    this.RaisePropertyChanged("BienSo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
-        public System.DateTime NgayDangKyLanDau {
-            get {
-                return this.NgayDangKyLanDauField;
-            }
-            set {
-                if ((this.NgayDangKyLanDauField.Equals(value) != true)) {
-                    this.NgayDangKyLanDauField = value;
-                    this.RaisePropertyChanged("NgayDangKyLanDau");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=8)]
-        public bool VoHieuHoa {
-            get {
-                return this.VoHieuHoaField;
-            }
-            set {
-                if ((this.VoHieuHoaField.Equals(value) != true)) {
-                    this.VoHieuHoaField = value;
-                    this.RaisePropertyChanged("VoHieuHoa");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BienSoXeOtoDTO", Namespace="http://tempuri.org/")]
-    [System.SerializableAttribute()]
-    public partial class BienSoXeOtoDTO : QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LoaiXeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SoMayField;
-        
-        private int DungTichField;
-        
-        private int CongSuatField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TenDongCoField;
-        
-        private int NamSanXuatField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TuTrongField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao KtbField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private QLBSX_BUS_WS.QLBSX_DAL_WebService.SoCho ScField;
-        
-        private int TaiTrongHangHoaField;
-        
-        private System.DateTime NgayHetHanField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string LoaiXe {
-            get {
-                return this.LoaiXeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LoaiXeField, value) != true)) {
-                    this.LoaiXeField = value;
-                    this.RaisePropertyChanged("LoaiXe");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string SoMay {
-            get {
-                return this.SoMayField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SoMayField, value) != true)) {
-                    this.SoMayField = value;
-                    this.RaisePropertyChanged("SoMay");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public int DungTich {
-            get {
-                return this.DungTichField;
-            }
-            set {
-                if ((this.DungTichField.Equals(value) != true)) {
-                    this.DungTichField = value;
-                    this.RaisePropertyChanged("DungTich");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
-        public int CongSuat {
-            get {
-                return this.CongSuatField;
-            }
-            set {
-                if ((this.CongSuatField.Equals(value) != true)) {
-                    this.CongSuatField = value;
-                    this.RaisePropertyChanged("CongSuat");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string TenDongCo {
-            get {
-                return this.TenDongCoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TenDongCoField, value) != true)) {
-                    this.TenDongCoField = value;
-                    this.RaisePropertyChanged("TenDongCo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=5)]
-        public int NamSanXuat {
-            get {
-                return this.NamSanXuatField;
-            }
-            set {
-                if ((this.NamSanXuatField.Equals(value) != true)) {
-                    this.NamSanXuatField = value;
-                    this.RaisePropertyChanged("NamSanXuat");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
-        public string TuTrong {
-            get {
-                return this.TuTrongField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TuTrongField, value) != true)) {
-                    this.TuTrongField = value;
-                    this.RaisePropertyChanged("TuTrong");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao Ktb {
-            get {
-                return this.KtbField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KtbField, value) != true)) {
-                    this.KtbField = value;
-                    this.RaisePropertyChanged("Ktb");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.SoCho Sc {
-            get {
-                return this.ScField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ScField, value) != true)) {
-                    this.ScField = value;
-                    this.RaisePropertyChanged("Sc");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=9)]
-        public int TaiTrongHangHoa {
-            get {
-                return this.TaiTrongHangHoaField;
-            }
-            set {
-                if ((this.TaiTrongHangHoaField.Equals(value) != true)) {
-                    this.TaiTrongHangHoaField = value;
-                    this.RaisePropertyChanged("TaiTrongHangHoa");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=10)]
-        public System.DateTime NgayHetHan {
-            get {
-                return this.NgayHetHanField;
-            }
-            set {
-                if ((this.NgayHetHanField.Equals(value) != true)) {
-                    this.NgayHetHanField = value;
-                    this.RaisePropertyChanged("NgayHetHan");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BienSoXeRomoocDTO", Namespace="http://tempuri.org/")]
-    [System.SerializableAttribute()]
-    public partial class BienSoXeRomoocDTO : QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO {
-        
-        private int NamSanXuatField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao KtbField;
-        
-        private int TaiTrongField;
-        
-        private System.DateTime NgayHetHanField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int NamSanXuat {
-            get {
-                return this.NamSanXuatField;
-            }
-            set {
-                if ((this.NamSanXuatField.Equals(value) != true)) {
-                    this.NamSanXuatField = value;
-                    this.RaisePropertyChanged("NamSanXuat");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao Ktb {
-            get {
-                return this.KtbField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KtbField, value) != true)) {
-                    this.KtbField = value;
-                    this.RaisePropertyChanged("Ktb");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public int TaiTrong {
-            get {
-                return this.TaiTrongField;
-            }
-            set {
-                if ((this.TaiTrongField.Equals(value) != true)) {
-                    this.TaiTrongField = value;
-                    this.RaisePropertyChanged("TaiTrong");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
-        public System.DateTime NgayHetHan {
-            get {
-                return this.NgayHetHanField;
-            }
-            set {
-                if ((this.NgayHetHanField.Equals(value) != true)) {
-                    this.NgayHetHanField = value;
-                    this.RaisePropertyChanged("NgayHetHan");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BienSoXeMotoDTO", Namespace="http://tempuri.org/")]
-    [System.SerializableAttribute()]
-    public partial class BienSoXeMotoDTO : QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LoaiXeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SoMayField;
-        
-        private int DungTichField;
-        
-        private int CongSuatField;
-        
-        private int SoNguoiDuocPhepChoField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string LoaiXe {
-            get {
-                return this.LoaiXeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LoaiXeField, value) != true)) {
-                    this.LoaiXeField = value;
-                    this.RaisePropertyChanged("LoaiXe");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string SoMay {
-            get {
-                return this.SoMayField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SoMayField, value) != true)) {
-                    this.SoMayField = value;
-                    this.RaisePropertyChanged("SoMay");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public int DungTich {
-            get {
-                return this.DungTichField;
-            }
-            set {
-                if ((this.DungTichField.Equals(value) != true)) {
-                    this.DungTichField = value;
-                    this.RaisePropertyChanged("DungTich");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
-        public int CongSuat {
-            get {
-                return this.CongSuatField;
-            }
-            set {
-                if ((this.CongSuatField.Equals(value) != true)) {
-                    this.CongSuatField = value;
-                    this.RaisePropertyChanged("CongSuat");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
-        public int SoNguoiDuocPhepCho {
-            get {
-                return this.SoNguoiDuocPhepChoField;
-            }
-            set {
-                if ((this.SoNguoiDuocPhepChoField.Equals(value) != true)) {
-                    this.SoNguoiDuocPhepChoField = value;
-                    this.RaisePropertyChanged("SoNguoiDuocPhepCho");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="KichThuocBao", Namespace="http://tempuri.org/")]
-    [System.SerializableAttribute()]
-    public partial class KichThuocBao : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private float DaiField;
-        
-        private float RongField;
-        
-        private float CaoField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public float Dai {
-            get {
-                return this.DaiField;
-            }
-            set {
-                if ((this.DaiField.Equals(value) != true)) {
-                    this.DaiField = value;
-                    this.RaisePropertyChanged("Dai");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public float Rong {
-            get {
-                return this.RongField;
-            }
-            set {
-                if ((this.RongField.Equals(value) != true)) {
-                    this.RongField = value;
-                    this.RaisePropertyChanged("Rong");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public float Cao {
-            get {
-                return this.CaoField;
-            }
-            set {
-                if ((this.CaoField.Equals(value) != true)) {
-                    this.CaoField = value;
-                    this.RaisePropertyChanged("Cao");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SoCho", Namespace="http://tempuri.org/")]
-    [System.SerializableAttribute()]
-    public partial class SoCho : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private int NgoiField;
-        
-        private int DungField;
-        
-        private int NamField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Ngoi {
-            get {
-                return this.NgoiField;
-            }
-            set {
-                if ((this.NgoiField.Equals(value) != true)) {
-                    this.NgoiField = value;
-                    this.RaisePropertyChanged("Ngoi");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
-        public int Dung {
-            get {
-                return this.DungField;
-            }
-            set {
-                if ((this.DungField.Equals(value) != true)) {
-                    this.DungField = value;
-                    this.RaisePropertyChanged("Dung");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public int Nam {
-            get {
-                return this.NamField;
-            }
-            set {
-                if ((this.NamField.Equals(value) != true)) {
-                    this.NamField = value;
-                    this.RaisePropertyChanged("Nam");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="HanhViViPhamDTO", Namespace="http://tempuri.org/")]
-    [System.SerializableAttribute()]
-    public partial class HanhViViPhamDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private int MaHanhViField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TenHanhViField;
-        
-        private bool VoHieuHoaField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int MaHanhVi {
-            get {
-                return this.MaHanhViField;
-            }
-            set {
-                if ((this.MaHanhViField.Equals(value) != true)) {
-                    this.MaHanhViField = value;
-                    this.RaisePropertyChanged("MaHanhVi");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string TenHanhVi {
-            get {
-                return this.TenHanhViField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TenHanhViField, value) != true)) {
-                    this.TenHanhViField = value;
-                    this.RaisePropertyChanged("TenHanhVi");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public bool VoHieuHoa {
-            get {
-                return this.VoHieuHoaField;
-            }
-            set {
-                if ((this.VoHieuHoaField.Equals(value) != true)) {
-                    this.VoHieuHoaField = value;
-                    this.RaisePropertyChanged("VoHieuHoa");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ChiTietHVVPDTO", Namespace="http://tempuri.org/")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO>))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOtoDTO))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.SoCho))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomoocDTO))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMotoDTO))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO>))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO>))]
-    public partial class ChiTietHVVPDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private int MaChiTietField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO HanhViField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private object BienSoField;
-        
-        private System.DateTime ThoiGianField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NguoiLapBienBanField;
-        
-        private double TienPhatField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int MaChiTiet {
-            get {
-                return this.MaChiTietField;
-            }
-            set {
-                if ((this.MaChiTietField.Equals(value) != true)) {
-                    this.MaChiTietField = value;
-                    this.RaisePropertyChanged("MaChiTiet");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO HanhVi {
-            get {
-                return this.HanhViField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.HanhViField, value) != true)) {
-                    this.HanhViField = value;
-                    this.RaisePropertyChanged("HanhVi");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public object BienSo {
-            get {
-                return this.BienSoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.BienSoField, value) != true)) {
-                    this.BienSoField = value;
-                    this.RaisePropertyChanged("BienSo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
-        public System.DateTime ThoiGian {
-            get {
-                return this.ThoiGianField;
-            }
-            set {
-                if ((this.ThoiGianField.Equals(value) != true)) {
-                    this.ThoiGianField = value;
-                    this.RaisePropertyChanged("ThoiGian");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string NguoiLapBienBan {
-            get {
-                return this.NguoiLapBienBanField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NguoiLapBienBanField, value) != true)) {
-                    this.NguoiLapBienBanField = value;
-                    this.RaisePropertyChanged("NguoiLapBienBan");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=5)]
-        public double TienPhat {
-            get {
-                return this.TienPhatField;
-            }
-            set {
-                if ((this.TienPhatField.Equals(value) != true)) {
-                    this.TienPhatField = value;
-                    this.RaisePropertyChanged("TienPhat");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap")]
     public interface QLBSX_DAL_WebServiceSoap {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Connect", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         void Connect();
         
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/Connect", ReplyAction="*")]
+        System.IAsyncResult BeginConnect(System.AsyncCallback callback, object asyncState);
+        
+        void EndConnect(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Disconnect", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         void Disconnect();
         
-        // CODEGEN: Generating message contract since element name LayDanhSachBSXResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/Disconnect", ReplyAction="*")]
+        System.IAsyncResult BeginDisconnect(System.AsyncCallback callback, object asyncState);
+        
+        void EndDisconnect(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/LayDanhSachBSX", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXResponse LayDanhSachBSX(QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        BienSoXe[] LayDanhSachBSX();
         
-        // CODEGEN: Generating message contract since element name LayDanhSachBSXTongQuatResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/LayDanhSachBSX", ReplyAction="*")]
+        System.IAsyncResult BeginLayDanhSachBSX(System.AsyncCallback callback, object asyncState);
+        
+        BienSoXe[] EndLayDanhSachBSX(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/LayDanhSachBSXTongQuat", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXTongQuatResponse LayDanhSachBSXTongQuat(QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXTongQuatRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        BienSoXe[] LayDanhSachBSXTongQuat();
         
-        // CODEGEN: Generating message contract since element name Xe from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/LayDanhSachBSXTongQuat", ReplyAction="*")]
+        System.IAsyncResult BeginLayDanhSachBSXTongQuat(System.AsyncCallback callback, object asyncState);
+        
+        BienSoXe[] EndLayDanhSachBSXTongQuat(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ThemBienSoXe", ReplyAction="*")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO>))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOtoDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.SoCho))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomoocDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMotoDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO>))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO>))]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemBienSoXeResponse ThemBienSoXe(QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemBienSoXeRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool ThemBienSoXe(object Xe);
         
-        // CODEGEN: Generating message contract since element name Xe from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ThemBienSoXe", ReplyAction="*")]
+        System.IAsyncResult BeginThemBienSoXe(object Xe, System.AsyncCallback callback, object asyncState);
+        
+        bool EndThemBienSoXe(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CapNhatBienSoXe", ReplyAction="*")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO>))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOtoDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.SoCho))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomoocDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMotoDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO>))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO>))]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatBienSoXeResponse CapNhatBienSoXe(QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatBienSoXeRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool CapNhatBienSoXe(object Xe);
         
-        // CODEGEN: Generating message contract since element name bs from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/CapNhatBienSoXe", ReplyAction="*")]
+        System.IAsyncResult BeginCapNhatBienSoXe(object Xe, System.AsyncCallback callback, object asyncState);
+        
+        bool EndCapNhatBienSoXe(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/VoHieuHoaBienSoXe", ReplyAction="*")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO>))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOtoDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.SoCho))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomoocDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMotoDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO>))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO>))]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaBienSoXeResponse VoHieuHoaBienSoXe(QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaBienSoXeRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool VoHieuHoaBienSoXe(object bs);
         
-        // CODEGEN: Generating message contract since element name bienso from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/VoHieuHoaBienSoXe", ReplyAction="*")]
+        System.IAsyncResult BeginVoHieuHoaBienSoXe(object bs, System.AsyncCallback callback, object asyncState);
+        
+        bool EndVoHieuHoaBienSoXe(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TraCuuBSXTheoBienSo", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoBienSoResponse TraCuuBSXTheoBienSo(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoBienSoRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXe TraCuuBSXTheoBienSo(string bienso);
         
-        // CODEGEN: Generating message contract since element name TraCuuBSXTheoMaBienSoResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/TraCuuBSXTheoBienSo", ReplyAction="*")]
+        System.IAsyncResult BeginTraCuuBSXTheoBienSo(string bienso, System.AsyncCallback callback, object asyncState);
+        
+        QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXe EndTraCuuBSXTheoBienSo(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TraCuuBSXTheoMaBienSo", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoMaBienSoResponse TraCuuBSXTheoMaBienSo(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoMaBienSoRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXe TraCuuBSXTheoMaBienSo(int mabienso);
         
-        // CODEGEN: Generating message contract since element name bs from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/TraCuuBSXTheoMaBienSo", ReplyAction="*")]
+        System.IAsyncResult BeginTraCuuBSXTheoMaBienSo(int mabienso, System.AsyncCallback callback, object asyncState);
+        
+        QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXe EndTraCuuBSXTheoMaBienSo(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/LaMoto", ReplyAction="*")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO>))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOtoDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.SoCho))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomoocDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMotoDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO>))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO>))]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.LaMotoResponse LaMoto(QLBSX_BUS_WS.QLBSX_DAL_WebService.LaMotoRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMoto LaMoto(object bs);
         
-        // CODEGEN: Generating message contract since element name bs from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/LaMoto", ReplyAction="*")]
+        System.IAsyncResult BeginLaMoto(object bs, System.AsyncCallback callback, object asyncState);
+        
+        QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMoto EndLaMoto(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/LaOto", ReplyAction="*")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO>))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOtoDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.SoCho))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomoocDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMotoDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO>))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO>))]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.LaOtoResponse LaOto(QLBSX_BUS_WS.QLBSX_DAL_WebService.LaOtoRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOto LaOto(object bs);
         
-        // CODEGEN: Generating message contract since element name bs from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/LaOto", ReplyAction="*")]
+        System.IAsyncResult BeginLaOto(object bs, System.AsyncCallback callback, object asyncState);
+        
+        QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOto EndLaOto(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/LaRomooc", ReplyAction="*")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO>))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOtoDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.SoCho))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomoocDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMotoDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO>))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO>))]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.LaRomoocResponse LaRomooc(QLBSX_BUS_WS.QLBSX_DAL_WebService.LaRomoocRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomooc LaRomooc(object bs);
         
-        // CODEGEN: Generating message contract since element name TaoKichThuocBaoResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/LaRomooc", ReplyAction="*")]
+        System.IAsyncResult BeginLaRomooc(object bs, System.AsyncCallback callback, object asyncState);
+        
+        QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomooc EndLaRomooc(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TaoKichThuocBao", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoKichThuocBaoResponse TaoKichThuocBao(QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoKichThuocBaoRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao TaoKichThuocBao(float d, float r, float c);
         
-        // CODEGEN: Generating message contract since element name TaoSoChoResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/TaoKichThuocBao", ReplyAction="*")]
+        System.IAsyncResult BeginTaoKichThuocBao(float d, float r, float c, System.AsyncCallback callback, object asyncState);
+        
+        QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao EndTaoKichThuocBao(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TaoSoCho", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoSoChoResponse TaoSoCho(QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoSoChoRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        QLBSX_BUS_WS.QLBSX_DAL_WebService.SoCho TaoSoCho(int ng, int d, int na);
         
-        // CODEGEN: Generating message contract since element name LayDanhSachHanhViResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/TaoSoCho", ReplyAction="*")]
+        System.IAsyncResult BeginTaoSoCho(int ng, int d, int na, System.AsyncCallback callback, object asyncState);
+        
+        QLBSX_BUS_WS.QLBSX_DAL_WebService.SoCho EndTaoSoCho(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/LayDanhSachHanhVi", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachHanhViResponse LayDanhSachHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachHanhViRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        HanhViViPhamDTO[] LayDanhSachHanhVi();
         
-        // CODEGEN: Generating message contract since element name hv from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/LayDanhSachHanhVi", ReplyAction="*")]
+        System.IAsyncResult BeginLayDanhSachHanhVi(System.AsyncCallback callback, object asyncState);
+        
+        HanhViViPhamDTO[] EndLayDanhSachHanhVi(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ThemHanhVi", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemHanhViResponse ThemHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemHanhViRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool ThemHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv);
         
-        // CODEGEN: Generating message contract since element name hv from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ThemHanhVi", ReplyAction="*")]
+        System.IAsyncResult BeginThemHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv, System.AsyncCallback callback, object asyncState);
+        
+        bool EndThemHanhVi(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/VoHieuHoaHanhVi", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaHanhViResponse VoHieuHoaHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaHanhViRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool VoHieuHoaHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv);
         
-        // CODEGEN: Generating message contract since element name hv from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/VoHieuHoaHanhVi", ReplyAction="*")]
+        System.IAsyncResult BeginVoHieuHoaHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv, System.AsyncCallback callback, object asyncState);
+        
+        bool EndVoHieuHoaHanhVi(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CapNhatHanhVi", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatHanhViResponse CapNhatHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatHanhViRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool CapNhatHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv);
         
-        // CODEGEN: Generating message contract since element name ten from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/CapNhatHanhVi", ReplyAction="*")]
+        System.IAsyncResult BeginCapNhatHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv, System.AsyncCallback callback, object asyncState);
+        
+        bool EndCapNhatHanhVi(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TraCuuHanhViTheoTenHanhVi", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoTenHanhViResponse TraCuuHanhViTheoTenHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoTenHanhViRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO TraCuuHanhViTheoTenHanhVi(string ten);
         
-        // CODEGEN: Generating message contract since element name TraCuuHanhViTheoMaHanhViResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/TraCuuHanhViTheoTenHanhVi", ReplyAction="*")]
+        System.IAsyncResult BeginTraCuuHanhViTheoTenHanhVi(string ten, System.AsyncCallback callback, object asyncState);
+        
+        QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO EndTraCuuHanhViTheoTenHanhVi(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TraCuuHanhViTheoMaHanhVi", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoMaHanhViResponse TraCuuHanhViTheoMaHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoMaHanhViRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO TraCuuHanhViTheoMaHanhVi(int ma);
         
-        // CODEGEN: Generating message contract since element name LayDanhSachChiTietHanhViResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/TraCuuHanhViTheoMaHanhVi", ReplyAction="*")]
+        System.IAsyncResult BeginTraCuuHanhViTheoMaHanhVi(int ma, System.AsyncCallback callback, object asyncState);
+        
+        QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO EndTraCuuHanhViTheoMaHanhVi(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/LayDanhSachChiTietHanhVi", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachChiTietHanhViResponse LayDanhSachChiTietHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachChiTietHanhViRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        ChiTietHVVPDTO[] LayDanhSachChiTietHanhVi();
         
-        // CODEGEN: Generating message contract since element name ct from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/LayDanhSachChiTietHanhVi", ReplyAction="*")]
+        System.IAsyncResult BeginLayDanhSachChiTietHanhVi(System.AsyncCallback callback, object asyncState);
+        
+        ChiTietHVVPDTO[] EndLayDanhSachChiTietHanhVi(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ThemChiTietHanhVi", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemChiTietHanhViResponse ThemChiTietHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemChiTietHanhViRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool ThemChiTietHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO ct);
         
-        // CODEGEN: Generating message contract since element name ct from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/ThemChiTietHanhVi", ReplyAction="*")]
+        System.IAsyncResult BeginThemChiTietHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO ct, System.AsyncCallback callback, object asyncState);
+        
+        bool EndThemChiTietHanhVi(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CapNhatChiTietHanhVi", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatChiTietHanhViResponse CapNhatChiTietHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatChiTietHanhViRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        bool CapNhatChiTietHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO ct);
         
-        // CODEGEN: Generating message contract since element name bienso from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/CapNhatChiTietHanhVi", ReplyAction="*")]
+        System.IAsyncResult BeginCapNhatChiTietHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO ct, System.AsyncCallback callback, object asyncState);
+        
+        bool EndCapNhatChiTietHanhVi(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TraCuuCTHVTheoBienSo", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoBienSoResponse TraCuuCTHVTheoBienSo(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoBienSoRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        ChiTietHVVPDTO[] TraCuuCTHVTheoBienSo(string bienso);
         
-        // CODEGEN: Generating message contract since element name TraCuuCTHVTheoMaBienSoResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/TraCuuCTHVTheoBienSo", ReplyAction="*")]
+        System.IAsyncResult BeginTraCuuCTHVTheoBienSo(string bienso, System.AsyncCallback callback, object asyncState);
+        
+        ChiTietHVVPDTO[] EndTraCuuCTHVTheoBienSo(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TraCuuCTHVTheoMaBienSo", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaBienSoResponse TraCuuCTHVTheoMaBienSo(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaBienSoRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        ChiTietHVVPDTO[] TraCuuCTHVTheoMaBienSo(int _mabs);
         
-        // CODEGEN: Generating message contract since element name tenhv from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/TraCuuCTHVTheoMaBienSo", ReplyAction="*")]
+        System.IAsyncResult BeginTraCuuCTHVTheoMaBienSo(int _mabs, System.AsyncCallback callback, object asyncState);
+        
+        ChiTietHVVPDTO[] EndTraCuuCTHVTheoMaBienSo(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TraCuuCTHVTheoTenHanhVi", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoTenHanhViResponse TraCuuCTHVTheoTenHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoTenHanhViRequest request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        ChiTietHVVPDTO[] TraCuuCTHVTheoTenHanhVi(string tenhv);
         
-        // CODEGEN: Generating message contract since element name TraCuuCTHVTheoMaHanhViResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/TraCuuCTHVTheoTenHanhVi", ReplyAction="*")]
+        System.IAsyncResult BeginTraCuuCTHVTheoTenHanhVi(string tenhv, System.AsyncCallback callback, object asyncState);
+        
+        ChiTietHVVPDTO[] EndTraCuuCTHVTheoTenHanhVi(System.IAsyncResult result);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TraCuuCTHVTheoMaHanhVi", ReplyAction="*")]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaHanhViResponse TraCuuCTHVTheoMaHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaHanhViRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LayDanhSachBSXRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LayDanhSachBSX", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXRequestBody Body;
-        
-        public LayDanhSachBSXRequest() {
-        }
-        
-        public LayDanhSachBSXRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class LayDanhSachBSXRequestBody {
-        
-        public LayDanhSachBSXRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LayDanhSachBSXResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LayDanhSachBSXResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXResponseBody Body;
-        
-        public LayDanhSachBSXResponse() {
-        }
-        
-        public LayDanhSachBSXResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class LayDanhSachBSXResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO> LayDanhSachBSXResult;
-        
-        public LayDanhSachBSXResponseBody() {
-        }
-        
-        public LayDanhSachBSXResponseBody(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO> LayDanhSachBSXResult) {
-            this.LayDanhSachBSXResult = LayDanhSachBSXResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LayDanhSachBSXTongQuatRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LayDanhSachBSXTongQuat", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXTongQuatRequestBody Body;
-        
-        public LayDanhSachBSXTongQuatRequest() {
-        }
-        
-        public LayDanhSachBSXTongQuatRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXTongQuatRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class LayDanhSachBSXTongQuatRequestBody {
-        
-        public LayDanhSachBSXTongQuatRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LayDanhSachBSXTongQuatResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LayDanhSachBSXTongQuatResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXTongQuatResponseBody Body;
-        
-        public LayDanhSachBSXTongQuatResponse() {
-        }
-        
-        public LayDanhSachBSXTongQuatResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXTongQuatResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class LayDanhSachBSXTongQuatResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO> LayDanhSachBSXTongQuatResult;
-        
-        public LayDanhSachBSXTongQuatResponseBody() {
-        }
-        
-        public LayDanhSachBSXTongQuatResponseBody(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO> LayDanhSachBSXTongQuatResult) {
-            this.LayDanhSachBSXTongQuatResult = LayDanhSachBSXTongQuatResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ThemBienSoXeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ThemBienSoXe", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemBienSoXeRequestBody Body;
-        
-        public ThemBienSoXeRequest() {
-        }
-        
-        public ThemBienSoXeRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemBienSoXeRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class ThemBienSoXeRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public object Xe;
-        
-        public ThemBienSoXeRequestBody() {
-        }
-        
-        public ThemBienSoXeRequestBody(object Xe) {
-            this.Xe = Xe;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ThemBienSoXeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ThemBienSoXeResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemBienSoXeResponseBody Body;
-        
-        public ThemBienSoXeResponse() {
-        }
-        
-        public ThemBienSoXeResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemBienSoXeResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class ThemBienSoXeResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public bool ThemBienSoXeResult;
-        
-        public ThemBienSoXeResponseBody() {
-        }
-        
-        public ThemBienSoXeResponseBody(bool ThemBienSoXeResult) {
-            this.ThemBienSoXeResult = ThemBienSoXeResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class CapNhatBienSoXeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CapNhatBienSoXe", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatBienSoXeRequestBody Body;
-        
-        public CapNhatBienSoXeRequest() {
-        }
-        
-        public CapNhatBienSoXeRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatBienSoXeRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class CapNhatBienSoXeRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public object Xe;
-        
-        public CapNhatBienSoXeRequestBody() {
-        }
-        
-        public CapNhatBienSoXeRequestBody(object Xe) {
-            this.Xe = Xe;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class CapNhatBienSoXeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CapNhatBienSoXeResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatBienSoXeResponseBody Body;
-        
-        public CapNhatBienSoXeResponse() {
-        }
-        
-        public CapNhatBienSoXeResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatBienSoXeResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class CapNhatBienSoXeResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public bool CapNhatBienSoXeResult;
-        
-        public CapNhatBienSoXeResponseBody() {
-        }
-        
-        public CapNhatBienSoXeResponseBody(bool CapNhatBienSoXeResult) {
-            this.CapNhatBienSoXeResult = CapNhatBienSoXeResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class VoHieuHoaBienSoXeRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="VoHieuHoaBienSoXe", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaBienSoXeRequestBody Body;
-        
-        public VoHieuHoaBienSoXeRequest() {
-        }
-        
-        public VoHieuHoaBienSoXeRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaBienSoXeRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class VoHieuHoaBienSoXeRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public object bs;
-        
-        public VoHieuHoaBienSoXeRequestBody() {
-        }
-        
-        public VoHieuHoaBienSoXeRequestBody(object bs) {
-            this.bs = bs;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class VoHieuHoaBienSoXeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="VoHieuHoaBienSoXeResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaBienSoXeResponseBody Body;
-        
-        public VoHieuHoaBienSoXeResponse() {
-        }
-        
-        public VoHieuHoaBienSoXeResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaBienSoXeResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class VoHieuHoaBienSoXeResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public bool VoHieuHoaBienSoXeResult;
-        
-        public VoHieuHoaBienSoXeResponseBody() {
-        }
-        
-        public VoHieuHoaBienSoXeResponseBody(bool VoHieuHoaBienSoXeResult) {
-            this.VoHieuHoaBienSoXeResult = VoHieuHoaBienSoXeResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TraCuuBSXTheoBienSoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TraCuuBSXTheoBienSo", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoBienSoRequestBody Body;
-        
-        public TraCuuBSXTheoBienSoRequest() {
-        }
-        
-        public TraCuuBSXTheoBienSoRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoBienSoRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TraCuuBSXTheoBienSoRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string bienso;
-        
-        public TraCuuBSXTheoBienSoRequestBody() {
-        }
-        
-        public TraCuuBSXTheoBienSoRequestBody(string bienso) {
-            this.bienso = bienso;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TraCuuBSXTheoBienSoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TraCuuBSXTheoBienSoResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoBienSoResponseBody Body;
-        
-        public TraCuuBSXTheoBienSoResponse() {
-        }
-        
-        public TraCuuBSXTheoBienSoResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoBienSoResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TraCuuBSXTheoBienSoResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO TraCuuBSXTheoBienSoResult;
-        
-        public TraCuuBSXTheoBienSoResponseBody() {
-        }
-        
-        public TraCuuBSXTheoBienSoResponseBody(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO TraCuuBSXTheoBienSoResult) {
-            this.TraCuuBSXTheoBienSoResult = TraCuuBSXTheoBienSoResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TraCuuBSXTheoMaBienSoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TraCuuBSXTheoMaBienSo", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoMaBienSoRequestBody Body;
-        
-        public TraCuuBSXTheoMaBienSoRequest() {
-        }
-        
-        public TraCuuBSXTheoMaBienSoRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoMaBienSoRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TraCuuBSXTheoMaBienSoRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int mabienso;
-        
-        public TraCuuBSXTheoMaBienSoRequestBody() {
-        }
-        
-        public TraCuuBSXTheoMaBienSoRequestBody(int mabienso) {
-            this.mabienso = mabienso;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TraCuuBSXTheoMaBienSoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TraCuuBSXTheoMaBienSoResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoMaBienSoResponseBody Body;
-        
-        public TraCuuBSXTheoMaBienSoResponse() {
-        }
-        
-        public TraCuuBSXTheoMaBienSoResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoMaBienSoResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TraCuuBSXTheoMaBienSoResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO TraCuuBSXTheoMaBienSoResult;
-        
-        public TraCuuBSXTheoMaBienSoResponseBody() {
-        }
-        
-        public TraCuuBSXTheoMaBienSoResponseBody(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO TraCuuBSXTheoMaBienSoResult) {
-            this.TraCuuBSXTheoMaBienSoResult = TraCuuBSXTheoMaBienSoResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LaMotoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LaMoto", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.LaMotoRequestBody Body;
-        
-        public LaMotoRequest() {
-        }
-        
-        public LaMotoRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.LaMotoRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class LaMotoRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public object bs;
-        
-        public LaMotoRequestBody() {
-        }
-        
-        public LaMotoRequestBody(object bs) {
-            this.bs = bs;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LaMotoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LaMotoResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.LaMotoResponseBody Body;
-        
-        public LaMotoResponse() {
-        }
-        
-        public LaMotoResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.LaMotoResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class LaMotoResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMotoDTO LaMotoResult;
-        
-        public LaMotoResponseBody() {
-        }
-        
-        public LaMotoResponseBody(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMotoDTO LaMotoResult) {
-            this.LaMotoResult = LaMotoResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LaOtoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LaOto", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.LaOtoRequestBody Body;
-        
-        public LaOtoRequest() {
-        }
-        
-        public LaOtoRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.LaOtoRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class LaOtoRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public object bs;
-        
-        public LaOtoRequestBody() {
-        }
-        
-        public LaOtoRequestBody(object bs) {
-            this.bs = bs;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LaOtoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LaOtoResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.LaOtoResponseBody Body;
-        
-        public LaOtoResponse() {
-        }
-        
-        public LaOtoResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.LaOtoResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class LaOtoResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOtoDTO LaOtoResult;
-        
-        public LaOtoResponseBody() {
-        }
-        
-        public LaOtoResponseBody(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOtoDTO LaOtoResult) {
-            this.LaOtoResult = LaOtoResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LaRomoocRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LaRomooc", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.LaRomoocRequestBody Body;
-        
-        public LaRomoocRequest() {
-        }
-        
-        public LaRomoocRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.LaRomoocRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class LaRomoocRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public object bs;
-        
-        public LaRomoocRequestBody() {
-        }
-        
-        public LaRomoocRequestBody(object bs) {
-            this.bs = bs;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LaRomoocResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LaRomoocResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.LaRomoocResponseBody Body;
-        
-        public LaRomoocResponse() {
-        }
-        
-        public LaRomoocResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.LaRomoocResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class LaRomoocResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomoocDTO LaRomoocResult;
-        
-        public LaRomoocResponseBody() {
-        }
-        
-        public LaRomoocResponseBody(QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomoocDTO LaRomoocResult) {
-            this.LaRomoocResult = LaRomoocResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TaoKichThuocBaoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TaoKichThuocBao", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoKichThuocBaoRequestBody Body;
-        
-        public TaoKichThuocBaoRequest() {
-        }
-        
-        public TaoKichThuocBaoRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoKichThuocBaoRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TaoKichThuocBaoRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public float d;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public float r;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-        public float c;
-        
-        public TaoKichThuocBaoRequestBody() {
-        }
-        
-        public TaoKichThuocBaoRequestBody(float d, float r, float c) {
-            this.d = d;
-            this.r = r;
-            this.c = c;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TaoKichThuocBaoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TaoKichThuocBaoResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoKichThuocBaoResponseBody Body;
-        
-        public TaoKichThuocBaoResponse() {
-        }
-        
-        public TaoKichThuocBaoResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoKichThuocBaoResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TaoKichThuocBaoResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao TaoKichThuocBaoResult;
-        
-        public TaoKichThuocBaoResponseBody() {
-        }
-        
-        public TaoKichThuocBaoResponseBody(QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao TaoKichThuocBaoResult) {
-            this.TaoKichThuocBaoResult = TaoKichThuocBaoResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TaoSoChoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TaoSoCho", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoSoChoRequestBody Body;
-        
-        public TaoSoChoRequest() {
-        }
-        
-        public TaoSoChoRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoSoChoRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TaoSoChoRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int ng;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public int d;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-        public int na;
-        
-        public TaoSoChoRequestBody() {
-        }
-        
-        public TaoSoChoRequestBody(int ng, int d, int na) {
-            this.ng = ng;
-            this.d = d;
-            this.na = na;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TaoSoChoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TaoSoChoResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoSoChoResponseBody Body;
-        
-        public TaoSoChoResponse() {
-        }
-        
-        public TaoSoChoResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoSoChoResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TaoSoChoResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.SoCho TaoSoChoResult;
-        
-        public TaoSoChoResponseBody() {
-        }
-        
-        public TaoSoChoResponseBody(QLBSX_BUS_WS.QLBSX_DAL_WebService.SoCho TaoSoChoResult) {
-            this.TaoSoChoResult = TaoSoChoResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LayDanhSachHanhViRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LayDanhSachHanhVi", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachHanhViRequestBody Body;
-        
-        public LayDanhSachHanhViRequest() {
-        }
-        
-        public LayDanhSachHanhViRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachHanhViRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class LayDanhSachHanhViRequestBody {
-        
-        public LayDanhSachHanhViRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LayDanhSachHanhViResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LayDanhSachHanhViResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachHanhViResponseBody Body;
-        
-        public LayDanhSachHanhViResponse() {
-        }
-        
-        public LayDanhSachHanhViResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachHanhViResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class LayDanhSachHanhViResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO> LayDanhSachHanhViResult;
-        
-        public LayDanhSachHanhViResponseBody() {
-        }
-        
-        public LayDanhSachHanhViResponseBody(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO> LayDanhSachHanhViResult) {
-            this.LayDanhSachHanhViResult = LayDanhSachHanhViResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ThemHanhViRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ThemHanhVi", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemHanhViRequestBody Body;
-        
-        public ThemHanhViRequest() {
-        }
-        
-        public ThemHanhViRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemHanhViRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class ThemHanhViRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv;
-        
-        public ThemHanhViRequestBody() {
-        }
-        
-        public ThemHanhViRequestBody(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv) {
-            this.hv = hv;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ThemHanhViResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ThemHanhViResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemHanhViResponseBody Body;
-        
-        public ThemHanhViResponse() {
-        }
-        
-        public ThemHanhViResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemHanhViResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class ThemHanhViResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public bool ThemHanhViResult;
-        
-        public ThemHanhViResponseBody() {
-        }
-        
-        public ThemHanhViResponseBody(bool ThemHanhViResult) {
-            this.ThemHanhViResult = ThemHanhViResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class VoHieuHoaHanhViRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="VoHieuHoaHanhVi", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaHanhViRequestBody Body;
-        
-        public VoHieuHoaHanhViRequest() {
-        }
-        
-        public VoHieuHoaHanhViRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaHanhViRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class VoHieuHoaHanhViRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv;
-        
-        public VoHieuHoaHanhViRequestBody() {
-        }
-        
-        public VoHieuHoaHanhViRequestBody(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv) {
-            this.hv = hv;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class VoHieuHoaHanhViResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="VoHieuHoaHanhViResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaHanhViResponseBody Body;
-        
-        public VoHieuHoaHanhViResponse() {
-        }
-        
-        public VoHieuHoaHanhViResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaHanhViResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class VoHieuHoaHanhViResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public bool VoHieuHoaHanhViResult;
-        
-        public VoHieuHoaHanhViResponseBody() {
-        }
-        
-        public VoHieuHoaHanhViResponseBody(bool VoHieuHoaHanhViResult) {
-            this.VoHieuHoaHanhViResult = VoHieuHoaHanhViResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class CapNhatHanhViRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CapNhatHanhVi", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatHanhViRequestBody Body;
-        
-        public CapNhatHanhViRequest() {
-        }
-        
-        public CapNhatHanhViRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatHanhViRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class CapNhatHanhViRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv;
-        
-        public CapNhatHanhViRequestBody() {
-        }
-        
-        public CapNhatHanhViRequestBody(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv) {
-            this.hv = hv;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class CapNhatHanhViResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CapNhatHanhViResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatHanhViResponseBody Body;
-        
-        public CapNhatHanhViResponse() {
-        }
-        
-        public CapNhatHanhViResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatHanhViResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class CapNhatHanhViResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public bool CapNhatHanhViResult;
-        
-        public CapNhatHanhViResponseBody() {
-        }
-        
-        public CapNhatHanhViResponseBody(bool CapNhatHanhViResult) {
-            this.CapNhatHanhViResult = CapNhatHanhViResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TraCuuHanhViTheoTenHanhViRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TraCuuHanhViTheoTenHanhVi", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoTenHanhViRequestBody Body;
-        
-        public TraCuuHanhViTheoTenHanhViRequest() {
-        }
-        
-        public TraCuuHanhViTheoTenHanhViRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoTenHanhViRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TraCuuHanhViTheoTenHanhViRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string ten;
-        
-        public TraCuuHanhViTheoTenHanhViRequestBody() {
-        }
-        
-        public TraCuuHanhViTheoTenHanhViRequestBody(string ten) {
-            this.ten = ten;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TraCuuHanhViTheoTenHanhViResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TraCuuHanhViTheoTenHanhViResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoTenHanhViResponseBody Body;
-        
-        public TraCuuHanhViTheoTenHanhViResponse() {
-        }
-        
-        public TraCuuHanhViTheoTenHanhViResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoTenHanhViResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TraCuuHanhViTheoTenHanhViResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO TraCuuHanhViTheoTenHanhViResult;
-        
-        public TraCuuHanhViTheoTenHanhViResponseBody() {
-        }
-        
-        public TraCuuHanhViTheoTenHanhViResponseBody(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO TraCuuHanhViTheoTenHanhViResult) {
-            this.TraCuuHanhViTheoTenHanhViResult = TraCuuHanhViTheoTenHanhViResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TraCuuHanhViTheoMaHanhViRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TraCuuHanhViTheoMaHanhVi", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoMaHanhViRequestBody Body;
-        
-        public TraCuuHanhViTheoMaHanhViRequest() {
-        }
-        
-        public TraCuuHanhViTheoMaHanhViRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoMaHanhViRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TraCuuHanhViTheoMaHanhViRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int ma;
-        
-        public TraCuuHanhViTheoMaHanhViRequestBody() {
-        }
-        
-        public TraCuuHanhViTheoMaHanhViRequestBody(int ma) {
-            this.ma = ma;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TraCuuHanhViTheoMaHanhViResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TraCuuHanhViTheoMaHanhViResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoMaHanhViResponseBody Body;
-        
-        public TraCuuHanhViTheoMaHanhViResponse() {
-        }
-        
-        public TraCuuHanhViTheoMaHanhViResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoMaHanhViResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TraCuuHanhViTheoMaHanhViResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO TraCuuHanhViTheoMaHanhViResult;
-        
-        public TraCuuHanhViTheoMaHanhViResponseBody() {
-        }
-        
-        public TraCuuHanhViTheoMaHanhViResponseBody(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO TraCuuHanhViTheoMaHanhViResult) {
-            this.TraCuuHanhViTheoMaHanhViResult = TraCuuHanhViTheoMaHanhViResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LayDanhSachChiTietHanhViRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LayDanhSachChiTietHanhVi", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachChiTietHanhViRequestBody Body;
-        
-        public LayDanhSachChiTietHanhViRequest() {
-        }
-        
-        public LayDanhSachChiTietHanhViRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachChiTietHanhViRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class LayDanhSachChiTietHanhViRequestBody {
-        
-        public LayDanhSachChiTietHanhViRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class LayDanhSachChiTietHanhViResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="LayDanhSachChiTietHanhViResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachChiTietHanhViResponseBody Body;
-        
-        public LayDanhSachChiTietHanhViResponse() {
-        }
-        
-        public LayDanhSachChiTietHanhViResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachChiTietHanhViResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class LayDanhSachChiTietHanhViResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO> LayDanhSachChiTietHanhViResult;
-        
-        public LayDanhSachChiTietHanhViResponseBody() {
-        }
-        
-        public LayDanhSachChiTietHanhViResponseBody(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO> LayDanhSachChiTietHanhViResult) {
-            this.LayDanhSachChiTietHanhViResult = LayDanhSachChiTietHanhViResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ThemChiTietHanhViRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ThemChiTietHanhVi", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemChiTietHanhViRequestBody Body;
-        
-        public ThemChiTietHanhViRequest() {
-        }
-        
-        public ThemChiTietHanhViRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemChiTietHanhViRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class ThemChiTietHanhViRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO ct;
-        
-        public ThemChiTietHanhViRequestBody() {
-        }
-        
-        public ThemChiTietHanhViRequestBody(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO ct) {
-            this.ct = ct;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ThemChiTietHanhViResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ThemChiTietHanhViResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemChiTietHanhViResponseBody Body;
-        
-        public ThemChiTietHanhViResponse() {
-        }
-        
-        public ThemChiTietHanhViResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemChiTietHanhViResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class ThemChiTietHanhViResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public bool ThemChiTietHanhViResult;
-        
-        public ThemChiTietHanhViResponseBody() {
-        }
-        
-        public ThemChiTietHanhViResponseBody(bool ThemChiTietHanhViResult) {
-            this.ThemChiTietHanhViResult = ThemChiTietHanhViResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class CapNhatChiTietHanhViRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CapNhatChiTietHanhVi", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatChiTietHanhViRequestBody Body;
-        
-        public CapNhatChiTietHanhViRequest() {
-        }
-        
-        public CapNhatChiTietHanhViRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatChiTietHanhViRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class CapNhatChiTietHanhViRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO ct;
-        
-        public CapNhatChiTietHanhViRequestBody() {
-        }
-        
-        public CapNhatChiTietHanhViRequestBody(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO ct) {
-            this.ct = ct;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class CapNhatChiTietHanhViResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CapNhatChiTietHanhViResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatChiTietHanhViResponseBody Body;
-        
-        public CapNhatChiTietHanhViResponse() {
-        }
-        
-        public CapNhatChiTietHanhViResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatChiTietHanhViResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class CapNhatChiTietHanhViResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public bool CapNhatChiTietHanhViResult;
-        
-        public CapNhatChiTietHanhViResponseBody() {
-        }
-        
-        public CapNhatChiTietHanhViResponseBody(bool CapNhatChiTietHanhViResult) {
-            this.CapNhatChiTietHanhViResult = CapNhatChiTietHanhViResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TraCuuCTHVTheoBienSoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TraCuuCTHVTheoBienSo", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoBienSoRequestBody Body;
-        
-        public TraCuuCTHVTheoBienSoRequest() {
-        }
-        
-        public TraCuuCTHVTheoBienSoRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoBienSoRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TraCuuCTHVTheoBienSoRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string bienso;
-        
-        public TraCuuCTHVTheoBienSoRequestBody() {
-        }
-        
-        public TraCuuCTHVTheoBienSoRequestBody(string bienso) {
-            this.bienso = bienso;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TraCuuCTHVTheoBienSoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TraCuuCTHVTheoBienSoResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoBienSoResponseBody Body;
-        
-        public TraCuuCTHVTheoBienSoResponse() {
-        }
-        
-        public TraCuuCTHVTheoBienSoResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoBienSoResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TraCuuCTHVTheoBienSoResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO> TraCuuCTHVTheoBienSoResult;
-        
-        public TraCuuCTHVTheoBienSoResponseBody() {
-        }
-        
-        public TraCuuCTHVTheoBienSoResponseBody(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO> TraCuuCTHVTheoBienSoResult) {
-            this.TraCuuCTHVTheoBienSoResult = TraCuuCTHVTheoBienSoResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TraCuuCTHVTheoMaBienSoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TraCuuCTHVTheoMaBienSo", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaBienSoRequestBody Body;
-        
-        public TraCuuCTHVTheoMaBienSoRequest() {
-        }
-        
-        public TraCuuCTHVTheoMaBienSoRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaBienSoRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TraCuuCTHVTheoMaBienSoRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int _mabs;
-        
-        public TraCuuCTHVTheoMaBienSoRequestBody() {
-        }
-        
-        public TraCuuCTHVTheoMaBienSoRequestBody(int _mabs) {
-            this._mabs = _mabs;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TraCuuCTHVTheoMaBienSoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TraCuuCTHVTheoMaBienSoResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaBienSoResponseBody Body;
-        
-        public TraCuuCTHVTheoMaBienSoResponse() {
-        }
-        
-        public TraCuuCTHVTheoMaBienSoResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaBienSoResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TraCuuCTHVTheoMaBienSoResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO> TraCuuCTHVTheoMaBienSoResult;
-        
-        public TraCuuCTHVTheoMaBienSoResponseBody() {
-        }
-        
-        public TraCuuCTHVTheoMaBienSoResponseBody(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO> TraCuuCTHVTheoMaBienSoResult) {
-            this.TraCuuCTHVTheoMaBienSoResult = TraCuuCTHVTheoMaBienSoResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TraCuuCTHVTheoTenHanhViRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TraCuuCTHVTheoTenHanhVi", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoTenHanhViRequestBody Body;
-        
-        public TraCuuCTHVTheoTenHanhViRequest() {
-        }
-        
-        public TraCuuCTHVTheoTenHanhViRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoTenHanhViRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TraCuuCTHVTheoTenHanhViRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string tenhv;
-        
-        public TraCuuCTHVTheoTenHanhViRequestBody() {
-        }
-        
-        public TraCuuCTHVTheoTenHanhViRequestBody(string tenhv) {
-            this.tenhv = tenhv;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TraCuuCTHVTheoTenHanhViResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TraCuuCTHVTheoTenHanhViResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoTenHanhViResponseBody Body;
-        
-        public TraCuuCTHVTheoTenHanhViResponse() {
-        }
-        
-        public TraCuuCTHVTheoTenHanhViResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoTenHanhViResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TraCuuCTHVTheoTenHanhViResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO> TraCuuCTHVTheoTenHanhViResult;
-        
-        public TraCuuCTHVTheoTenHanhViResponseBody() {
-        }
-        
-        public TraCuuCTHVTheoTenHanhViResponseBody(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO> TraCuuCTHVTheoTenHanhViResult) {
-            this.TraCuuCTHVTheoTenHanhViResult = TraCuuCTHVTheoTenHanhViResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TraCuuCTHVTheoMaHanhViRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TraCuuCTHVTheoMaHanhVi", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaHanhViRequestBody Body;
-        
-        public TraCuuCTHVTheoMaHanhViRequest() {
-        }
-        
-        public TraCuuCTHVTheoMaHanhViRequest(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaHanhViRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TraCuuCTHVTheoMaHanhViRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int _mahv;
-        
-        public TraCuuCTHVTheoMaHanhViRequestBody() {
-        }
-        
-        public TraCuuCTHVTheoMaHanhViRequestBody(int _mahv) {
-            this._mahv = _mahv;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class TraCuuCTHVTheoMaHanhViResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TraCuuCTHVTheoMaHanhViResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaHanhViResponseBody Body;
-        
-        public TraCuuCTHVTheoMaHanhViResponse() {
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        ChiTietHVVPDTO[] TraCuuCTHVTheoMaHanhVi(int _mahv);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/TraCuuCTHVTheoMaHanhVi", ReplyAction="*")]
+        System.IAsyncResult BeginTraCuuCTHVTheoMaHanhVi(int _mahv, System.AsyncCallback callback, object asyncState);
+        
+        ChiTietHVVPDTO[] EndTraCuuCTHVTheoMaHanhVi(System.IAsyncResult result);
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BienSoXeRomooc))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BienSoXeOto))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BienSoXeMoto))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.233")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public abstract partial class BienSoXe : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int maBienSoField;
+        
+        private string tenChuXeField;
+        
+        private string diaChiField;
+        
+        private string nhanHieuField;
+        
+        private string mauSonField;
+        
+        private string soKhungField;
+        
+        private string bienSoField;
+        
+        private System.DateTime ngayDangKyLanDauField;
+        
+        private bool voHieuHoaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int MaBienSo {
+            get {
+                return this.maBienSoField;
+            }
+            set {
+                this.maBienSoField = value;
+                this.RaisePropertyChanged("MaBienSo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string TenChuXe {
+            get {
+                return this.tenChuXeField;
+            }
+            set {
+                this.tenChuXeField = value;
+                this.RaisePropertyChanged("TenChuXe");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string DiaChi {
+            get {
+                return this.diaChiField;
+            }
+            set {
+                this.diaChiField = value;
+                this.RaisePropertyChanged("DiaChi");
+            }
         }
-        
-        public TraCuuCTHVTheoMaHanhViResponse(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaHanhViResponseBody Body) {
-            this.Body = Body;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public string NhanHieu {
+            get {
+                return this.nhanHieuField;
+            }
+            set {
+                this.nhanHieuField = value;
+                this.RaisePropertyChanged("NhanHieu");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string MauSon {
+            get {
+                return this.mauSonField;
+            }
+            set {
+                this.mauSonField = value;
+                this.RaisePropertyChanged("MauSon");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string SoKhung {
+            get {
+                return this.soKhungField;
+            }
+            set {
+                this.soKhungField = value;
+                this.RaisePropertyChanged("SoKhung");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string BienSo {
+            get {
+                return this.bienSoField;
+            }
+            set {
+                this.bienSoField = value;
+                this.RaisePropertyChanged("BienSo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public System.DateTime NgayDangKyLanDau {
+            get {
+                return this.ngayDangKyLanDauField;
+            }
+            set {
+                this.ngayDangKyLanDauField = value;
+                this.RaisePropertyChanged("NgayDangKyLanDau");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public bool VoHieuHoa {
+            get {
+                return this.voHieuHoaField;
+            }
+            set {
+                this.voHieuHoaField = value;
+                this.RaisePropertyChanged("VoHieuHoa");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.233")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class ChiTietHVVPDTO : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int maChiTietField;
+        
+        private HanhViViPhamDTO hanhViField;
+        
+        private object bienSoField;
+        
+        private System.DateTime thoiGianField;
+        
+        private string nguoiLapBienBanField;
+        
+        private double tienPhatField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int MaChiTiet {
+            get {
+                return this.maChiTietField;
+            }
+            set {
+                this.maChiTietField = value;
+                this.RaisePropertyChanged("MaChiTiet");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public HanhViViPhamDTO HanhVi {
+            get {
+                return this.hanhViField;
+            }
+            set {
+                this.hanhViField = value;
+                this.RaisePropertyChanged("HanhVi");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public object BienSo {
+            get {
+                return this.bienSoField;
+            }
+            set {
+                this.bienSoField = value;
+                this.RaisePropertyChanged("BienSo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public System.DateTime ThoiGian {
+            get {
+                return this.thoiGianField;
+            }
+            set {
+                this.thoiGianField = value;
+                this.RaisePropertyChanged("ThoiGian");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string NguoiLapBienBan {
+            get {
+                return this.nguoiLapBienBanField;
+            }
+            set {
+                this.nguoiLapBienBanField = value;
+                this.RaisePropertyChanged("NguoiLapBienBan");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public double TienPhat {
+            get {
+                return this.tienPhatField;
+            }
+            set {
+                this.tienPhatField = value;
+                this.RaisePropertyChanged("TienPhat");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.233")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class HanhViViPhamDTO : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int maHanhViField;
+        
+        private string tenHanhViField;
+        
+        private bool voHieuHoaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int MaHanhVi {
+            get {
+                return this.maHanhViField;
+            }
+            set {
+                this.maHanhViField = value;
+                this.RaisePropertyChanged("MaHanhVi");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string TenHanhVi {
+            get {
+                return this.tenHanhViField;
+            }
+            set {
+                this.tenHanhViField = value;
+                this.RaisePropertyChanged("TenHanhVi");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public bool VoHieuHoa {
+            get {
+                return this.voHieuHoaField;
+            }
+            set {
+                this.voHieuHoaField = value;
+                this.RaisePropertyChanged("VoHieuHoa");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.233")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class SoCho : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int ngoiField;
+        
+        private int dungField;
+        
+        private int namField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int Ngoi {
+            get {
+                return this.ngoiField;
+            }
+            set {
+                this.ngoiField = value;
+                this.RaisePropertyChanged("Ngoi");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public int Dung {
+            get {
+                return this.dungField;
+            }
+            set {
+                this.dungField = value;
+                this.RaisePropertyChanged("Dung");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public int Nam {
+            get {
+                return this.namField;
+            }
+            set {
+                this.namField = value;
+                this.RaisePropertyChanged("Nam");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.233")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class KichThuocBao : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private float daiField;
+        
+        private float rongField;
+        
+        private float caoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public float Dai {
+            get {
+                return this.daiField;
+            }
+            set {
+                this.daiField = value;
+                this.RaisePropertyChanged("Dai");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public float Rong {
+            get {
+                return this.rongField;
+            }
+            set {
+                this.rongField = value;
+                this.RaisePropertyChanged("Rong");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public float Cao {
+            get {
+                return this.caoField;
+            }
+            set {
+                this.caoField = value;
+                this.RaisePropertyChanged("Cao");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
         }
     }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class TraCuuCTHVTheoMaHanhViResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO> TraCuuCTHVTheoMaHanhViResult;
-        
-        public TraCuuCTHVTheoMaHanhViResponseBody() {
-        }
-        
-        public TraCuuCTHVTheoMaHanhViResponseBody(System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO> TraCuuCTHVTheoMaHanhViResult) {
-            this.TraCuuCTHVTheoMaHanhViResult = TraCuuCTHVTheoMaHanhViResult;
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.233")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class BienSoXeRomooc : BienSoXe {
+        
+        private int namSanXuatField;
+        
+        private KichThuocBao ktbField;
+        
+        private int taiTrongField;
+        
+        private System.DateTime ngayHetHanField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public int NamSanXuat {
+            get {
+                return this.namSanXuatField;
+            }
+            set {
+                this.namSanXuatField = value;
+                this.RaisePropertyChanged("NamSanXuat");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public KichThuocBao Ktb {
+            get {
+                return this.ktbField;
+            }
+            set {
+                this.ktbField = value;
+                this.RaisePropertyChanged("Ktb");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public int TaiTrong {
+            get {
+                return this.taiTrongField;
+            }
+            set {
+                this.taiTrongField = value;
+                this.RaisePropertyChanged("TaiTrong");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public System.DateTime NgayHetHan {
+            get {
+                return this.ngayHetHanField;
+            }
+            set {
+                this.ngayHetHanField = value;
+                this.RaisePropertyChanged("NgayHetHan");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.233")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class BienSoXeOto : BienSoXe {
+        
+        private string loaiXeField;
+        
+        private string soMayField;
+        
+        private int dungTichField;
+        
+        private int congSuatField;
+        
+        private string tenDongCoField;
+        
+        private int namSanXuatField;
+        
+        private string tuTrongField;
+        
+        private KichThuocBao ktbField;
+        
+        private SoCho scField;
+        
+        private int taiTrongHangHoaField;
+        
+        private System.DateTime ngayHetHanField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string LoaiXe {
+            get {
+                return this.loaiXeField;
+            }
+            set {
+                this.loaiXeField = value;
+                this.RaisePropertyChanged("LoaiXe");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string SoMay {
+            get {
+                return this.soMayField;
+            }
+            set {
+                this.soMayField = value;
+                this.RaisePropertyChanged("SoMay");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public int DungTich {
+            get {
+                return this.dungTichField;
+            }
+            set {
+                this.dungTichField = value;
+                this.RaisePropertyChanged("DungTich");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public int CongSuat {
+            get {
+                return this.congSuatField;
+            }
+            set {
+                this.congSuatField = value;
+                this.RaisePropertyChanged("CongSuat");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public string TenDongCo {
+            get {
+                return this.tenDongCoField;
+            }
+            set {
+                this.tenDongCoField = value;
+                this.RaisePropertyChanged("TenDongCo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public int NamSanXuat {
+            get {
+                return this.namSanXuatField;
+            }
+            set {
+                this.namSanXuatField = value;
+                this.RaisePropertyChanged("NamSanXuat");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string TuTrong {
+            get {
+                return this.tuTrongField;
+            }
+            set {
+                this.tuTrongField = value;
+                this.RaisePropertyChanged("TuTrong");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
+        public KichThuocBao Ktb {
+            get {
+                return this.ktbField;
+            }
+            set {
+                this.ktbField = value;
+                this.RaisePropertyChanged("Ktb");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
+        public SoCho Sc {
+            get {
+                return this.scField;
+            }
+            set {
+                this.scField = value;
+                this.RaisePropertyChanged("Sc");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
+        public int TaiTrongHangHoa {
+            get {
+                return this.taiTrongHangHoaField;
+            }
+            set {
+                this.taiTrongHangHoaField = value;
+                this.RaisePropertyChanged("TaiTrongHangHoa");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=10)]
+        public System.DateTime NgayHetHan {
+            get {
+                return this.ngayHetHanField;
+            }
+            set {
+                this.ngayHetHanField = value;
+                this.RaisePropertyChanged("NgayHetHan");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.233")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class BienSoXeMoto : BienSoXe {
+        
+        private string loaiXeField;
+        
+        private string soMayField;
+        
+        private int dungTichField;
+        
+        private int congSuatField;
+        
+        private int soNguoiDuocPhepChoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string LoaiXe {
+            get {
+                return this.loaiXeField;
+            }
+            set {
+                this.loaiXeField = value;
+                this.RaisePropertyChanged("LoaiXe");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string SoMay {
+            get {
+                return this.soMayField;
+            }
+            set {
+                this.soMayField = value;
+                this.RaisePropertyChanged("SoMay");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public int DungTich {
+            get {
+                return this.dungTichField;
+            }
+            set {
+                this.dungTichField = value;
+                this.RaisePropertyChanged("DungTich");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public int CongSuat {
+            get {
+                return this.congSuatField;
+            }
+            set {
+                this.congSuatField = value;
+                this.RaisePropertyChanged("CongSuat");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public int SoNguoiDuocPhepCho {
+            get {
+                return this.soNguoiDuocPhepChoField;
+            }
+            set {
+                this.soNguoiDuocPhepChoField = value;
+                this.RaisePropertyChanged("SoNguoiDuocPhepCho");
+            }
         }
     }
     
@@ -2742,7 +1001,644 @@ namespace QLBSX_BUS_WS.QLBSX_DAL_WebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class LayDanhSachBSXCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public LayDanhSachBSXCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public BienSoXe[] Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((BienSoXe[])(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class LayDanhSachBSXTongQuatCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public LayDanhSachBSXTongQuatCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public BienSoXe[] Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((BienSoXe[])(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ThemBienSoXeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ThemBienSoXeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CapNhatBienSoXeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public CapNhatBienSoXeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class VoHieuHoaBienSoXeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public VoHieuHoaBienSoXeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class TraCuuBSXTheoBienSoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public TraCuuBSXTheoBienSoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXe Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXe)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class TraCuuBSXTheoMaBienSoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public TraCuuBSXTheoMaBienSoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXe Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXe)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class LaMotoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public LaMotoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMoto Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMoto)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class LaOtoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public LaOtoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOto Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOto)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class LaRomoocCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public LaRomoocCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomooc Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomooc)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class TaoKichThuocBaoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public TaoKichThuocBaoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class TaoSoChoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public TaoSoChoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.SoCho Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((QLBSX_BUS_WS.QLBSX_DAL_WebService.SoCho)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class LayDanhSachHanhViCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public LayDanhSachHanhViCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public HanhViViPhamDTO[] Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((HanhViViPhamDTO[])(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ThemHanhViCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ThemHanhViCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class VoHieuHoaHanhViCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public VoHieuHoaHanhViCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CapNhatHanhViCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public CapNhatHanhViCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class TraCuuHanhViTheoTenHanhViCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public TraCuuHanhViTheoTenHanhViCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class TraCuuHanhViTheoMaHanhViCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public TraCuuHanhViTheoMaHanhViCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class LayDanhSachChiTietHanhViCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public LayDanhSachChiTietHanhViCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public ChiTietHVVPDTO[] Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((ChiTietHVVPDTO[])(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ThemChiTietHanhViCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public ThemChiTietHanhViCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class CapNhatChiTietHanhViCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public CapNhatChiTietHanhViCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public bool Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class TraCuuCTHVTheoBienSoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public TraCuuCTHVTheoBienSoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public ChiTietHVVPDTO[] Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((ChiTietHVVPDTO[])(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class TraCuuCTHVTheoMaBienSoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public TraCuuCTHVTheoMaBienSoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public ChiTietHVVPDTO[] Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((ChiTietHVVPDTO[])(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class TraCuuCTHVTheoTenHanhViCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public TraCuuCTHVTheoTenHanhViCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public ChiTietHVVPDTO[] Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((ChiTietHVVPDTO[])(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class TraCuuCTHVTheoMaHanhViCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public TraCuuCTHVTheoMaHanhViCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public ChiTietHVVPDTO[] Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((ChiTietHVVPDTO[])(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class QLBSX_DAL_WebServiceSoapClient : System.ServiceModel.ClientBase<QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap>, QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap {
+        
+        private BeginOperationDelegate onBeginConnectDelegate;
+        
+        private EndOperationDelegate onEndConnectDelegate;
+        
+        private System.Threading.SendOrPostCallback onConnectCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginDisconnectDelegate;
+        
+        private EndOperationDelegate onEndDisconnectDelegate;
+        
+        private System.Threading.SendOrPostCallback onDisconnectCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginLayDanhSachBSXDelegate;
+        
+        private EndOperationDelegate onEndLayDanhSachBSXDelegate;
+        
+        private System.Threading.SendOrPostCallback onLayDanhSachBSXCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginLayDanhSachBSXTongQuatDelegate;
+        
+        private EndOperationDelegate onEndLayDanhSachBSXTongQuatDelegate;
+        
+        private System.Threading.SendOrPostCallback onLayDanhSachBSXTongQuatCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginThemBienSoXeDelegate;
+        
+        private EndOperationDelegate onEndThemBienSoXeDelegate;
+        
+        private System.Threading.SendOrPostCallback onThemBienSoXeCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCapNhatBienSoXeDelegate;
+        
+        private EndOperationDelegate onEndCapNhatBienSoXeDelegate;
+        
+        private System.Threading.SendOrPostCallback onCapNhatBienSoXeCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginVoHieuHoaBienSoXeDelegate;
+        
+        private EndOperationDelegate onEndVoHieuHoaBienSoXeDelegate;
+        
+        private System.Threading.SendOrPostCallback onVoHieuHoaBienSoXeCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginTraCuuBSXTheoBienSoDelegate;
+        
+        private EndOperationDelegate onEndTraCuuBSXTheoBienSoDelegate;
+        
+        private System.Threading.SendOrPostCallback onTraCuuBSXTheoBienSoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginTraCuuBSXTheoMaBienSoDelegate;
+        
+        private EndOperationDelegate onEndTraCuuBSXTheoMaBienSoDelegate;
+        
+        private System.Threading.SendOrPostCallback onTraCuuBSXTheoMaBienSoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginLaMotoDelegate;
+        
+        private EndOperationDelegate onEndLaMotoDelegate;
+        
+        private System.Threading.SendOrPostCallback onLaMotoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginLaOtoDelegate;
+        
+        private EndOperationDelegate onEndLaOtoDelegate;
+        
+        private System.Threading.SendOrPostCallback onLaOtoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginLaRomoocDelegate;
+        
+        private EndOperationDelegate onEndLaRomoocDelegate;
+        
+        private System.Threading.SendOrPostCallback onLaRomoocCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginTaoKichThuocBaoDelegate;
+        
+        private EndOperationDelegate onEndTaoKichThuocBaoDelegate;
+        
+        private System.Threading.SendOrPostCallback onTaoKichThuocBaoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginTaoSoChoDelegate;
+        
+        private EndOperationDelegate onEndTaoSoChoDelegate;
+        
+        private System.Threading.SendOrPostCallback onTaoSoChoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginLayDanhSachHanhViDelegate;
+        
+        private EndOperationDelegate onEndLayDanhSachHanhViDelegate;
+        
+        private System.Threading.SendOrPostCallback onLayDanhSachHanhViCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginThemHanhViDelegate;
+        
+        private EndOperationDelegate onEndThemHanhViDelegate;
+        
+        private System.Threading.SendOrPostCallback onThemHanhViCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginVoHieuHoaHanhViDelegate;
+        
+        private EndOperationDelegate onEndVoHieuHoaHanhViDelegate;
+        
+        private System.Threading.SendOrPostCallback onVoHieuHoaHanhViCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCapNhatHanhViDelegate;
+        
+        private EndOperationDelegate onEndCapNhatHanhViDelegate;
+        
+        private System.Threading.SendOrPostCallback onCapNhatHanhViCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginTraCuuHanhViTheoTenHanhViDelegate;
+        
+        private EndOperationDelegate onEndTraCuuHanhViTheoTenHanhViDelegate;
+        
+        private System.Threading.SendOrPostCallback onTraCuuHanhViTheoTenHanhViCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginTraCuuHanhViTheoMaHanhViDelegate;
+        
+        private EndOperationDelegate onEndTraCuuHanhViTheoMaHanhViDelegate;
+        
+        private System.Threading.SendOrPostCallback onTraCuuHanhViTheoMaHanhViCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginLayDanhSachChiTietHanhViDelegate;
+        
+        private EndOperationDelegate onEndLayDanhSachChiTietHanhViDelegate;
+        
+        private System.Threading.SendOrPostCallback onLayDanhSachChiTietHanhViCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginThemChiTietHanhViDelegate;
+        
+        private EndOperationDelegate onEndThemChiTietHanhViDelegate;
+        
+        private System.Threading.SendOrPostCallback onThemChiTietHanhViCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginCapNhatChiTietHanhViDelegate;
+        
+        private EndOperationDelegate onEndCapNhatChiTietHanhViDelegate;
+        
+        private System.Threading.SendOrPostCallback onCapNhatChiTietHanhViCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginTraCuuCTHVTheoBienSoDelegate;
+        
+        private EndOperationDelegate onEndTraCuuCTHVTheoBienSoDelegate;
+        
+        private System.Threading.SendOrPostCallback onTraCuuCTHVTheoBienSoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginTraCuuCTHVTheoMaBienSoDelegate;
+        
+        private EndOperationDelegate onEndTraCuuCTHVTheoMaBienSoDelegate;
+        
+        private System.Threading.SendOrPostCallback onTraCuuCTHVTheoMaBienSoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginTraCuuCTHVTheoTenHanhViDelegate;
+        
+        private EndOperationDelegate onEndTraCuuCTHVTheoTenHanhViDelegate;
+        
+        private System.Threading.SendOrPostCallback onTraCuuCTHVTheoTenHanhViCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginTraCuuCTHVTheoMaHanhViDelegate;
+        
+        private EndOperationDelegate onEndTraCuuCTHVTheoMaHanhViDelegate;
+        
+        private System.Threading.SendOrPostCallback onTraCuuCTHVTheoMaHanhViCompletedDelegate;
         
         public QLBSX_DAL_WebServiceSoapClient() {
         }
@@ -2763,8 +1659,105 @@ namespace QLBSX_BUS_WS.QLBSX_DAL_WebService {
                 base(binding, remoteAddress) {
         }
         
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> ConnectCompleted;
+        
+        public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> DisconnectCompleted;
+        
+        public event System.EventHandler<LayDanhSachBSXCompletedEventArgs> LayDanhSachBSXCompleted;
+        
+        public event System.EventHandler<LayDanhSachBSXTongQuatCompletedEventArgs> LayDanhSachBSXTongQuatCompleted;
+        
+        public event System.EventHandler<ThemBienSoXeCompletedEventArgs> ThemBienSoXeCompleted;
+        
+        public event System.EventHandler<CapNhatBienSoXeCompletedEventArgs> CapNhatBienSoXeCompleted;
+        
+        public event System.EventHandler<VoHieuHoaBienSoXeCompletedEventArgs> VoHieuHoaBienSoXeCompleted;
+        
+        public event System.EventHandler<TraCuuBSXTheoBienSoCompletedEventArgs> TraCuuBSXTheoBienSoCompleted;
+        
+        public event System.EventHandler<TraCuuBSXTheoMaBienSoCompletedEventArgs> TraCuuBSXTheoMaBienSoCompleted;
+        
+        public event System.EventHandler<LaMotoCompletedEventArgs> LaMotoCompleted;
+        
+        public event System.EventHandler<LaOtoCompletedEventArgs> LaOtoCompleted;
+        
+        public event System.EventHandler<LaRomoocCompletedEventArgs> LaRomoocCompleted;
+        
+        public event System.EventHandler<TaoKichThuocBaoCompletedEventArgs> TaoKichThuocBaoCompleted;
+        
+        public event System.EventHandler<TaoSoChoCompletedEventArgs> TaoSoChoCompleted;
+        
+        public event System.EventHandler<LayDanhSachHanhViCompletedEventArgs> LayDanhSachHanhViCompleted;
+        
+        public event System.EventHandler<ThemHanhViCompletedEventArgs> ThemHanhViCompleted;
+        
+        public event System.EventHandler<VoHieuHoaHanhViCompletedEventArgs> VoHieuHoaHanhViCompleted;
+        
+        public event System.EventHandler<CapNhatHanhViCompletedEventArgs> CapNhatHanhViCompleted;
+        
+        public event System.EventHandler<TraCuuHanhViTheoTenHanhViCompletedEventArgs> TraCuuHanhViTheoTenHanhViCompleted;
+        
+        public event System.EventHandler<TraCuuHanhViTheoMaHanhViCompletedEventArgs> TraCuuHanhViTheoMaHanhViCompleted;
+        
+        public event System.EventHandler<LayDanhSachChiTietHanhViCompletedEventArgs> LayDanhSachChiTietHanhViCompleted;
+        
+        public event System.EventHandler<ThemChiTietHanhViCompletedEventArgs> ThemChiTietHanhViCompleted;
+        
+        public event System.EventHandler<CapNhatChiTietHanhViCompletedEventArgs> CapNhatChiTietHanhViCompleted;
+        
+        public event System.EventHandler<TraCuuCTHVTheoBienSoCompletedEventArgs> TraCuuCTHVTheoBienSoCompleted;
+        
+        public event System.EventHandler<TraCuuCTHVTheoMaBienSoCompletedEventArgs> TraCuuCTHVTheoMaBienSoCompleted;
+        
+        public event System.EventHandler<TraCuuCTHVTheoTenHanhViCompletedEventArgs> TraCuuCTHVTheoTenHanhViCompleted;
+        
+        public event System.EventHandler<TraCuuCTHVTheoMaHanhViCompletedEventArgs> TraCuuCTHVTheoMaHanhViCompleted;
+        
         public void Connect() {
             base.Channel.Connect();
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginConnect(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginConnect(callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public void EndConnect(System.IAsyncResult result) {
+            base.Channel.EndConnect(result);
+        }
+        
+        private System.IAsyncResult OnBeginConnect(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return this.BeginConnect(callback, asyncState);
+        }
+        
+        private object[] OnEndConnect(System.IAsyncResult result) {
+            this.EndConnect(result);
+            return null;
+        }
+        
+        private void OnConnectCompleted(object state) {
+            if ((this.ConnectCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ConnectCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ConnectAsync() {
+            this.ConnectAsync(null);
+        }
+        
+        public void ConnectAsync(object userState) {
+            if ((this.onBeginConnectDelegate == null)) {
+                this.onBeginConnectDelegate = new BeginOperationDelegate(this.OnBeginConnect);
+            }
+            if ((this.onEndConnectDelegate == null)) {
+                this.onEndConnectDelegate = new EndOperationDelegate(this.OnEndConnect);
+            }
+            if ((this.onConnectCompletedDelegate == null)) {
+                this.onConnectCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnConnectCompleted);
+            }
+            base.InvokeAsync(this.onBeginConnectDelegate, null, this.onEndConnectDelegate, this.onConnectCompletedDelegate, userState);
         }
         
         public void Disconnect() {
@@ -2772,328 +1765,1296 @@ namespace QLBSX_BUS_WS.QLBSX_DAL_WebService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.LayDanhSachBSX(QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXRequest request) {
-            return base.Channel.LayDanhSachBSX(request);
-        }
-        
-        public System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO> LayDanhSachBSX() {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXRequestBody();
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).LayDanhSachBSX(inValue);
-            return retVal.Body.LayDanhSachBSXResult;
+        public System.IAsyncResult BeginDisconnect(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginDisconnect(callback, asyncState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXTongQuatResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.LayDanhSachBSXTongQuat(QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXTongQuatRequest request) {
-            return base.Channel.LayDanhSachBSXTongQuat(request);
+        public void EndDisconnect(System.IAsyncResult result) {
+            base.Channel.EndDisconnect(result);
         }
         
-        public System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO> LayDanhSachBSXTongQuat() {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXTongQuatRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXTongQuatRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXTongQuatRequestBody();
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachBSXTongQuatResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).LayDanhSachBSXTongQuat(inValue);
-            return retVal.Body.LayDanhSachBSXTongQuatResult;
+        private System.IAsyncResult OnBeginDisconnect(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return this.BeginDisconnect(callback, asyncState);
+        }
+        
+        private object[] OnEndDisconnect(System.IAsyncResult result) {
+            this.EndDisconnect(result);
+            return null;
+        }
+        
+        private void OnDisconnectCompleted(object state) {
+            if ((this.DisconnectCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.DisconnectCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void DisconnectAsync() {
+            this.DisconnectAsync(null);
+        }
+        
+        public void DisconnectAsync(object userState) {
+            if ((this.onBeginDisconnectDelegate == null)) {
+                this.onBeginDisconnectDelegate = new BeginOperationDelegate(this.OnBeginDisconnect);
+            }
+            if ((this.onEndDisconnectDelegate == null)) {
+                this.onEndDisconnectDelegate = new EndOperationDelegate(this.OnEndDisconnect);
+            }
+            if ((this.onDisconnectCompletedDelegate == null)) {
+                this.onDisconnectCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnDisconnectCompleted);
+            }
+            base.InvokeAsync(this.onBeginDisconnectDelegate, null, this.onEndDisconnectDelegate, this.onDisconnectCompletedDelegate, userState);
+        }
+        
+        public BienSoXe[] LayDanhSachBSX() {
+            return base.Channel.LayDanhSachBSX();
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemBienSoXeResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.ThemBienSoXe(QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemBienSoXeRequest request) {
-            return base.Channel.ThemBienSoXe(request);
+        public System.IAsyncResult BeginLayDanhSachBSX(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginLayDanhSachBSX(callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public BienSoXe[] EndLayDanhSachBSX(System.IAsyncResult result) {
+            return base.Channel.EndLayDanhSachBSX(result);
+        }
+        
+        private System.IAsyncResult OnBeginLayDanhSachBSX(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return this.BeginLayDanhSachBSX(callback, asyncState);
+        }
+        
+        private object[] OnEndLayDanhSachBSX(System.IAsyncResult result) {
+            BienSoXe[] retVal = this.EndLayDanhSachBSX(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnLayDanhSachBSXCompleted(object state) {
+            if ((this.LayDanhSachBSXCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.LayDanhSachBSXCompleted(this, new LayDanhSachBSXCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void LayDanhSachBSXAsync() {
+            this.LayDanhSachBSXAsync(null);
+        }
+        
+        public void LayDanhSachBSXAsync(object userState) {
+            if ((this.onBeginLayDanhSachBSXDelegate == null)) {
+                this.onBeginLayDanhSachBSXDelegate = new BeginOperationDelegate(this.OnBeginLayDanhSachBSX);
+            }
+            if ((this.onEndLayDanhSachBSXDelegate == null)) {
+                this.onEndLayDanhSachBSXDelegate = new EndOperationDelegate(this.OnEndLayDanhSachBSX);
+            }
+            if ((this.onLayDanhSachBSXCompletedDelegate == null)) {
+                this.onLayDanhSachBSXCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnLayDanhSachBSXCompleted);
+            }
+            base.InvokeAsync(this.onBeginLayDanhSachBSXDelegate, null, this.onEndLayDanhSachBSXDelegate, this.onLayDanhSachBSXCompletedDelegate, userState);
+        }
+        
+        public BienSoXe[] LayDanhSachBSXTongQuat() {
+            return base.Channel.LayDanhSachBSXTongQuat();
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginLayDanhSachBSXTongQuat(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginLayDanhSachBSXTongQuat(callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public BienSoXe[] EndLayDanhSachBSXTongQuat(System.IAsyncResult result) {
+            return base.Channel.EndLayDanhSachBSXTongQuat(result);
+        }
+        
+        private System.IAsyncResult OnBeginLayDanhSachBSXTongQuat(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return this.BeginLayDanhSachBSXTongQuat(callback, asyncState);
+        }
+        
+        private object[] OnEndLayDanhSachBSXTongQuat(System.IAsyncResult result) {
+            BienSoXe[] retVal = this.EndLayDanhSachBSXTongQuat(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnLayDanhSachBSXTongQuatCompleted(object state) {
+            if ((this.LayDanhSachBSXTongQuatCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.LayDanhSachBSXTongQuatCompleted(this, new LayDanhSachBSXTongQuatCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void LayDanhSachBSXTongQuatAsync() {
+            this.LayDanhSachBSXTongQuatAsync(null);
+        }
+        
+        public void LayDanhSachBSXTongQuatAsync(object userState) {
+            if ((this.onBeginLayDanhSachBSXTongQuatDelegate == null)) {
+                this.onBeginLayDanhSachBSXTongQuatDelegate = new BeginOperationDelegate(this.OnBeginLayDanhSachBSXTongQuat);
+            }
+            if ((this.onEndLayDanhSachBSXTongQuatDelegate == null)) {
+                this.onEndLayDanhSachBSXTongQuatDelegate = new EndOperationDelegate(this.OnEndLayDanhSachBSXTongQuat);
+            }
+            if ((this.onLayDanhSachBSXTongQuatCompletedDelegate == null)) {
+                this.onLayDanhSachBSXTongQuatCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnLayDanhSachBSXTongQuatCompleted);
+            }
+            base.InvokeAsync(this.onBeginLayDanhSachBSXTongQuatDelegate, null, this.onEndLayDanhSachBSXTongQuatDelegate, this.onLayDanhSachBSXTongQuatCompletedDelegate, userState);
         }
         
         public bool ThemBienSoXe(object Xe) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemBienSoXeRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemBienSoXeRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemBienSoXeRequestBody();
-            inValue.Body.Xe = Xe;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemBienSoXeResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).ThemBienSoXe(inValue);
-            return retVal.Body.ThemBienSoXeResult;
+            return base.Channel.ThemBienSoXe(Xe);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatBienSoXeResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.CapNhatBienSoXe(QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatBienSoXeRequest request) {
-            return base.Channel.CapNhatBienSoXe(request);
+        public System.IAsyncResult BeginThemBienSoXe(object Xe, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginThemBienSoXe(Xe, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public bool EndThemBienSoXe(System.IAsyncResult result) {
+            return base.Channel.EndThemBienSoXe(result);
+        }
+        
+        private System.IAsyncResult OnBeginThemBienSoXe(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            object Xe = ((object)(inValues[0]));
+            return this.BeginThemBienSoXe(Xe, callback, asyncState);
+        }
+        
+        private object[] OnEndThemBienSoXe(System.IAsyncResult result) {
+            bool retVal = this.EndThemBienSoXe(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnThemBienSoXeCompleted(object state) {
+            if ((this.ThemBienSoXeCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ThemBienSoXeCompleted(this, new ThemBienSoXeCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ThemBienSoXeAsync(object Xe) {
+            this.ThemBienSoXeAsync(Xe, null);
+        }
+        
+        public void ThemBienSoXeAsync(object Xe, object userState) {
+            if ((this.onBeginThemBienSoXeDelegate == null)) {
+                this.onBeginThemBienSoXeDelegate = new BeginOperationDelegate(this.OnBeginThemBienSoXe);
+            }
+            if ((this.onEndThemBienSoXeDelegate == null)) {
+                this.onEndThemBienSoXeDelegate = new EndOperationDelegate(this.OnEndThemBienSoXe);
+            }
+            if ((this.onThemBienSoXeCompletedDelegate == null)) {
+                this.onThemBienSoXeCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnThemBienSoXeCompleted);
+            }
+            base.InvokeAsync(this.onBeginThemBienSoXeDelegate, new object[] {
+                        Xe}, this.onEndThemBienSoXeDelegate, this.onThemBienSoXeCompletedDelegate, userState);
         }
         
         public bool CapNhatBienSoXe(object Xe) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatBienSoXeRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatBienSoXeRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatBienSoXeRequestBody();
-            inValue.Body.Xe = Xe;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatBienSoXeResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).CapNhatBienSoXe(inValue);
-            return retVal.Body.CapNhatBienSoXeResult;
+            return base.Channel.CapNhatBienSoXe(Xe);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaBienSoXeResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.VoHieuHoaBienSoXe(QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaBienSoXeRequest request) {
-            return base.Channel.VoHieuHoaBienSoXe(request);
+        public System.IAsyncResult BeginCapNhatBienSoXe(object Xe, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginCapNhatBienSoXe(Xe, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public bool EndCapNhatBienSoXe(System.IAsyncResult result) {
+            return base.Channel.EndCapNhatBienSoXe(result);
+        }
+        
+        private System.IAsyncResult OnBeginCapNhatBienSoXe(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            object Xe = ((object)(inValues[0]));
+            return this.BeginCapNhatBienSoXe(Xe, callback, asyncState);
+        }
+        
+        private object[] OnEndCapNhatBienSoXe(System.IAsyncResult result) {
+            bool retVal = this.EndCapNhatBienSoXe(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnCapNhatBienSoXeCompleted(object state) {
+            if ((this.CapNhatBienSoXeCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CapNhatBienSoXeCompleted(this, new CapNhatBienSoXeCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CapNhatBienSoXeAsync(object Xe) {
+            this.CapNhatBienSoXeAsync(Xe, null);
+        }
+        
+        public void CapNhatBienSoXeAsync(object Xe, object userState) {
+            if ((this.onBeginCapNhatBienSoXeDelegate == null)) {
+                this.onBeginCapNhatBienSoXeDelegate = new BeginOperationDelegate(this.OnBeginCapNhatBienSoXe);
+            }
+            if ((this.onEndCapNhatBienSoXeDelegate == null)) {
+                this.onEndCapNhatBienSoXeDelegate = new EndOperationDelegate(this.OnEndCapNhatBienSoXe);
+            }
+            if ((this.onCapNhatBienSoXeCompletedDelegate == null)) {
+                this.onCapNhatBienSoXeCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCapNhatBienSoXeCompleted);
+            }
+            base.InvokeAsync(this.onBeginCapNhatBienSoXeDelegate, new object[] {
+                        Xe}, this.onEndCapNhatBienSoXeDelegate, this.onCapNhatBienSoXeCompletedDelegate, userState);
         }
         
         public bool VoHieuHoaBienSoXe(object bs) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaBienSoXeRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaBienSoXeRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaBienSoXeRequestBody();
-            inValue.Body.bs = bs;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaBienSoXeResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).VoHieuHoaBienSoXe(inValue);
-            return retVal.Body.VoHieuHoaBienSoXeResult;
+            return base.Channel.VoHieuHoaBienSoXe(bs);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoBienSoResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.TraCuuBSXTheoBienSo(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoBienSoRequest request) {
-            return base.Channel.TraCuuBSXTheoBienSo(request);
-        }
-        
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO TraCuuBSXTheoBienSo(string bienso) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoBienSoRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoBienSoRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoBienSoRequestBody();
-            inValue.Body.bienso = bienso;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoBienSoResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).TraCuuBSXTheoBienSo(inValue);
-            return retVal.Body.TraCuuBSXTheoBienSoResult;
+        public System.IAsyncResult BeginVoHieuHoaBienSoXe(object bs, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginVoHieuHoaBienSoXe(bs, callback, asyncState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoMaBienSoResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.TraCuuBSXTheoMaBienSo(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoMaBienSoRequest request) {
-            return base.Channel.TraCuuBSXTheoMaBienSo(request);
+        public bool EndVoHieuHoaBienSoXe(System.IAsyncResult result) {
+            return base.Channel.EndVoHieuHoaBienSoXe(result);
         }
         
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO TraCuuBSXTheoMaBienSo(int mabienso) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoMaBienSoRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoMaBienSoRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoMaBienSoRequestBody();
-            inValue.Body.mabienso = mabienso;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuBSXTheoMaBienSoResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).TraCuuBSXTheoMaBienSo(inValue);
-            return retVal.Body.TraCuuBSXTheoMaBienSoResult;
+        private System.IAsyncResult OnBeginVoHieuHoaBienSoXe(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            object bs = ((object)(inValues[0]));
+            return this.BeginVoHieuHoaBienSoXe(bs, callback, asyncState);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.LaMotoResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.LaMoto(QLBSX_BUS_WS.QLBSX_DAL_WebService.LaMotoRequest request) {
-            return base.Channel.LaMoto(request);
+        private object[] OnEndVoHieuHoaBienSoXe(System.IAsyncResult result) {
+            bool retVal = this.EndVoHieuHoaBienSoXe(result);
+            return new object[] {
+                    retVal};
         }
         
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMotoDTO LaMoto(object bs) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.LaMotoRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.LaMotoRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.LaMotoRequestBody();
-            inValue.Body.bs = bs;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.LaMotoResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).LaMoto(inValue);
-            return retVal.Body.LaMotoResult;
+        private void OnVoHieuHoaBienSoXeCompleted(object state) {
+            if ((this.VoHieuHoaBienSoXeCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.VoHieuHoaBienSoXeCompleted(this, new VoHieuHoaBienSoXeCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.LaOtoResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.LaOto(QLBSX_BUS_WS.QLBSX_DAL_WebService.LaOtoRequest request) {
-            return base.Channel.LaOto(request);
+        public void VoHieuHoaBienSoXeAsync(object bs) {
+            this.VoHieuHoaBienSoXeAsync(bs, null);
         }
         
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOtoDTO LaOto(object bs) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.LaOtoRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.LaOtoRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.LaOtoRequestBody();
-            inValue.Body.bs = bs;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.LaOtoResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).LaOto(inValue);
-            return retVal.Body.LaOtoResult;
+        public void VoHieuHoaBienSoXeAsync(object bs, object userState) {
+            if ((this.onBeginVoHieuHoaBienSoXeDelegate == null)) {
+                this.onBeginVoHieuHoaBienSoXeDelegate = new BeginOperationDelegate(this.OnBeginVoHieuHoaBienSoXe);
+            }
+            if ((this.onEndVoHieuHoaBienSoXeDelegate == null)) {
+                this.onEndVoHieuHoaBienSoXeDelegate = new EndOperationDelegate(this.OnEndVoHieuHoaBienSoXe);
+            }
+            if ((this.onVoHieuHoaBienSoXeCompletedDelegate == null)) {
+                this.onVoHieuHoaBienSoXeCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnVoHieuHoaBienSoXeCompleted);
+            }
+            base.InvokeAsync(this.onBeginVoHieuHoaBienSoXeDelegate, new object[] {
+                        bs}, this.onEndVoHieuHoaBienSoXeDelegate, this.onVoHieuHoaBienSoXeCompletedDelegate, userState);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.LaRomoocResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.LaRomooc(QLBSX_BUS_WS.QLBSX_DAL_WebService.LaRomoocRequest request) {
-            return base.Channel.LaRomooc(request);
-        }
-        
-        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomoocDTO LaRomooc(object bs) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.LaRomoocRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.LaRomoocRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.LaRomoocRequestBody();
-            inValue.Body.bs = bs;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.LaRomoocResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).LaRomooc(inValue);
-            return retVal.Body.LaRomoocResult;
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXe TraCuuBSXTheoBienSo(string bienso) {
+            return base.Channel.TraCuuBSXTheoBienSo(bienso);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoKichThuocBaoResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.TaoKichThuocBao(QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoKichThuocBaoRequest request) {
-            return base.Channel.TaoKichThuocBao(request);
+        public System.IAsyncResult BeginTraCuuBSXTheoBienSo(string bienso, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginTraCuuBSXTheoBienSo(bienso, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXe EndTraCuuBSXTheoBienSo(System.IAsyncResult result) {
+            return base.Channel.EndTraCuuBSXTheoBienSo(result);
+        }
+        
+        private System.IAsyncResult OnBeginTraCuuBSXTheoBienSo(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string bienso = ((string)(inValues[0]));
+            return this.BeginTraCuuBSXTheoBienSo(bienso, callback, asyncState);
+        }
+        
+        private object[] OnEndTraCuuBSXTheoBienSo(System.IAsyncResult result) {
+            QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXe retVal = this.EndTraCuuBSXTheoBienSo(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnTraCuuBSXTheoBienSoCompleted(object state) {
+            if ((this.TraCuuBSXTheoBienSoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.TraCuuBSXTheoBienSoCompleted(this, new TraCuuBSXTheoBienSoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void TraCuuBSXTheoBienSoAsync(string bienso) {
+            this.TraCuuBSXTheoBienSoAsync(bienso, null);
+        }
+        
+        public void TraCuuBSXTheoBienSoAsync(string bienso, object userState) {
+            if ((this.onBeginTraCuuBSXTheoBienSoDelegate == null)) {
+                this.onBeginTraCuuBSXTheoBienSoDelegate = new BeginOperationDelegate(this.OnBeginTraCuuBSXTheoBienSo);
+            }
+            if ((this.onEndTraCuuBSXTheoBienSoDelegate == null)) {
+                this.onEndTraCuuBSXTheoBienSoDelegate = new EndOperationDelegate(this.OnEndTraCuuBSXTheoBienSo);
+            }
+            if ((this.onTraCuuBSXTheoBienSoCompletedDelegate == null)) {
+                this.onTraCuuBSXTheoBienSoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnTraCuuBSXTheoBienSoCompleted);
+            }
+            base.InvokeAsync(this.onBeginTraCuuBSXTheoBienSoDelegate, new object[] {
+                        bienso}, this.onEndTraCuuBSXTheoBienSoDelegate, this.onTraCuuBSXTheoBienSoCompletedDelegate, userState);
+        }
+        
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXe TraCuuBSXTheoMaBienSo(int mabienso) {
+            return base.Channel.TraCuuBSXTheoMaBienSo(mabienso);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginTraCuuBSXTheoMaBienSo(int mabienso, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginTraCuuBSXTheoMaBienSo(mabienso, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXe EndTraCuuBSXTheoMaBienSo(System.IAsyncResult result) {
+            return base.Channel.EndTraCuuBSXTheoMaBienSo(result);
+        }
+        
+        private System.IAsyncResult OnBeginTraCuuBSXTheoMaBienSo(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int mabienso = ((int)(inValues[0]));
+            return this.BeginTraCuuBSXTheoMaBienSo(mabienso, callback, asyncState);
+        }
+        
+        private object[] OnEndTraCuuBSXTheoMaBienSo(System.IAsyncResult result) {
+            QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXe retVal = this.EndTraCuuBSXTheoMaBienSo(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnTraCuuBSXTheoMaBienSoCompleted(object state) {
+            if ((this.TraCuuBSXTheoMaBienSoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.TraCuuBSXTheoMaBienSoCompleted(this, new TraCuuBSXTheoMaBienSoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void TraCuuBSXTheoMaBienSoAsync(int mabienso) {
+            this.TraCuuBSXTheoMaBienSoAsync(mabienso, null);
+        }
+        
+        public void TraCuuBSXTheoMaBienSoAsync(int mabienso, object userState) {
+            if ((this.onBeginTraCuuBSXTheoMaBienSoDelegate == null)) {
+                this.onBeginTraCuuBSXTheoMaBienSoDelegate = new BeginOperationDelegate(this.OnBeginTraCuuBSXTheoMaBienSo);
+            }
+            if ((this.onEndTraCuuBSXTheoMaBienSoDelegate == null)) {
+                this.onEndTraCuuBSXTheoMaBienSoDelegate = new EndOperationDelegate(this.OnEndTraCuuBSXTheoMaBienSo);
+            }
+            if ((this.onTraCuuBSXTheoMaBienSoCompletedDelegate == null)) {
+                this.onTraCuuBSXTheoMaBienSoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnTraCuuBSXTheoMaBienSoCompleted);
+            }
+            base.InvokeAsync(this.onBeginTraCuuBSXTheoMaBienSoDelegate, new object[] {
+                        mabienso}, this.onEndTraCuuBSXTheoMaBienSoDelegate, this.onTraCuuBSXTheoMaBienSoCompletedDelegate, userState);
+        }
+        
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMoto LaMoto(object bs) {
+            return base.Channel.LaMoto(bs);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginLaMoto(object bs, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginLaMoto(bs, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMoto EndLaMoto(System.IAsyncResult result) {
+            return base.Channel.EndLaMoto(result);
+        }
+        
+        private System.IAsyncResult OnBeginLaMoto(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            object bs = ((object)(inValues[0]));
+            return this.BeginLaMoto(bs, callback, asyncState);
+        }
+        
+        private object[] OnEndLaMoto(System.IAsyncResult result) {
+            QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMoto retVal = this.EndLaMoto(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnLaMotoCompleted(object state) {
+            if ((this.LaMotoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.LaMotoCompleted(this, new LaMotoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void LaMotoAsync(object bs) {
+            this.LaMotoAsync(bs, null);
+        }
+        
+        public void LaMotoAsync(object bs, object userState) {
+            if ((this.onBeginLaMotoDelegate == null)) {
+                this.onBeginLaMotoDelegate = new BeginOperationDelegate(this.OnBeginLaMoto);
+            }
+            if ((this.onEndLaMotoDelegate == null)) {
+                this.onEndLaMotoDelegate = new EndOperationDelegate(this.OnEndLaMoto);
+            }
+            if ((this.onLaMotoCompletedDelegate == null)) {
+                this.onLaMotoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnLaMotoCompleted);
+            }
+            base.InvokeAsync(this.onBeginLaMotoDelegate, new object[] {
+                        bs}, this.onEndLaMotoDelegate, this.onLaMotoCompletedDelegate, userState);
+        }
+        
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOto LaOto(object bs) {
+            return base.Channel.LaOto(bs);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginLaOto(object bs, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginLaOto(bs, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOto EndLaOto(System.IAsyncResult result) {
+            return base.Channel.EndLaOto(result);
+        }
+        
+        private System.IAsyncResult OnBeginLaOto(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            object bs = ((object)(inValues[0]));
+            return this.BeginLaOto(bs, callback, asyncState);
+        }
+        
+        private object[] OnEndLaOto(System.IAsyncResult result) {
+            QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOto retVal = this.EndLaOto(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnLaOtoCompleted(object state) {
+            if ((this.LaOtoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.LaOtoCompleted(this, new LaOtoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void LaOtoAsync(object bs) {
+            this.LaOtoAsync(bs, null);
+        }
+        
+        public void LaOtoAsync(object bs, object userState) {
+            if ((this.onBeginLaOtoDelegate == null)) {
+                this.onBeginLaOtoDelegate = new BeginOperationDelegate(this.OnBeginLaOto);
+            }
+            if ((this.onEndLaOtoDelegate == null)) {
+                this.onEndLaOtoDelegate = new EndOperationDelegate(this.OnEndLaOto);
+            }
+            if ((this.onLaOtoCompletedDelegate == null)) {
+                this.onLaOtoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnLaOtoCompleted);
+            }
+            base.InvokeAsync(this.onBeginLaOtoDelegate, new object[] {
+                        bs}, this.onEndLaOtoDelegate, this.onLaOtoCompletedDelegate, userState);
+        }
+        
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomooc LaRomooc(object bs) {
+            return base.Channel.LaRomooc(bs);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginLaRomooc(object bs, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginLaRomooc(bs, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomooc EndLaRomooc(System.IAsyncResult result) {
+            return base.Channel.EndLaRomooc(result);
+        }
+        
+        private System.IAsyncResult OnBeginLaRomooc(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            object bs = ((object)(inValues[0]));
+            return this.BeginLaRomooc(bs, callback, asyncState);
+        }
+        
+        private object[] OnEndLaRomooc(System.IAsyncResult result) {
+            QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomooc retVal = this.EndLaRomooc(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnLaRomoocCompleted(object state) {
+            if ((this.LaRomoocCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.LaRomoocCompleted(this, new LaRomoocCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void LaRomoocAsync(object bs) {
+            this.LaRomoocAsync(bs, null);
+        }
+        
+        public void LaRomoocAsync(object bs, object userState) {
+            if ((this.onBeginLaRomoocDelegate == null)) {
+                this.onBeginLaRomoocDelegate = new BeginOperationDelegate(this.OnBeginLaRomooc);
+            }
+            if ((this.onEndLaRomoocDelegate == null)) {
+                this.onEndLaRomoocDelegate = new EndOperationDelegate(this.OnEndLaRomooc);
+            }
+            if ((this.onLaRomoocCompletedDelegate == null)) {
+                this.onLaRomoocCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnLaRomoocCompleted);
+            }
+            base.InvokeAsync(this.onBeginLaRomoocDelegate, new object[] {
+                        bs}, this.onEndLaRomoocDelegate, this.onLaRomoocCompletedDelegate, userState);
         }
         
         public QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao TaoKichThuocBao(float d, float r, float c) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoKichThuocBaoRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoKichThuocBaoRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoKichThuocBaoRequestBody();
-            inValue.Body.d = d;
-            inValue.Body.r = r;
-            inValue.Body.c = c;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoKichThuocBaoResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).TaoKichThuocBao(inValue);
-            return retVal.Body.TaoKichThuocBaoResult;
+            return base.Channel.TaoKichThuocBao(d, r, c);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoSoChoResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.TaoSoCho(QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoSoChoRequest request) {
-            return base.Channel.TaoSoCho(request);
+        public System.IAsyncResult BeginTaoKichThuocBao(float d, float r, float c, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginTaoKichThuocBao(d, r, c, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao EndTaoKichThuocBao(System.IAsyncResult result) {
+            return base.Channel.EndTaoKichThuocBao(result);
+        }
+        
+        private System.IAsyncResult OnBeginTaoKichThuocBao(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            float d = ((float)(inValues[0]));
+            float r = ((float)(inValues[1]));
+            float c = ((float)(inValues[2]));
+            return this.BeginTaoKichThuocBao(d, r, c, callback, asyncState);
+        }
+        
+        private object[] OnEndTaoKichThuocBao(System.IAsyncResult result) {
+            QLBSX_BUS_WS.QLBSX_DAL_WebService.KichThuocBao retVal = this.EndTaoKichThuocBao(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnTaoKichThuocBaoCompleted(object state) {
+            if ((this.TaoKichThuocBaoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.TaoKichThuocBaoCompleted(this, new TaoKichThuocBaoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void TaoKichThuocBaoAsync(float d, float r, float c) {
+            this.TaoKichThuocBaoAsync(d, r, c, null);
+        }
+        
+        public void TaoKichThuocBaoAsync(float d, float r, float c, object userState) {
+            if ((this.onBeginTaoKichThuocBaoDelegate == null)) {
+                this.onBeginTaoKichThuocBaoDelegate = new BeginOperationDelegate(this.OnBeginTaoKichThuocBao);
+            }
+            if ((this.onEndTaoKichThuocBaoDelegate == null)) {
+                this.onEndTaoKichThuocBaoDelegate = new EndOperationDelegate(this.OnEndTaoKichThuocBao);
+            }
+            if ((this.onTaoKichThuocBaoCompletedDelegate == null)) {
+                this.onTaoKichThuocBaoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnTaoKichThuocBaoCompleted);
+            }
+            base.InvokeAsync(this.onBeginTaoKichThuocBaoDelegate, new object[] {
+                        d,
+                        r,
+                        c}, this.onEndTaoKichThuocBaoDelegate, this.onTaoKichThuocBaoCompletedDelegate, userState);
         }
         
         public QLBSX_BUS_WS.QLBSX_DAL_WebService.SoCho TaoSoCho(int ng, int d, int na) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoSoChoRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoSoChoRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoSoChoRequestBody();
-            inValue.Body.ng = ng;
-            inValue.Body.d = d;
-            inValue.Body.na = na;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TaoSoChoResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).TaoSoCho(inValue);
-            return retVal.Body.TaoSoChoResult;
+            return base.Channel.TaoSoCho(ng, d, na);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachHanhViResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.LayDanhSachHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachHanhViRequest request) {
-            return base.Channel.LayDanhSachHanhVi(request);
-        }
-        
-        public System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO> LayDanhSachHanhVi() {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachHanhViRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachHanhViRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachHanhViRequestBody();
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachHanhViResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).LayDanhSachHanhVi(inValue);
-            return retVal.Body.LayDanhSachHanhViResult;
+        public System.IAsyncResult BeginTaoSoCho(int ng, int d, int na, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginTaoSoCho(ng, d, na, callback, asyncState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemHanhViResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.ThemHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemHanhViRequest request) {
-            return base.Channel.ThemHanhVi(request);
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.SoCho EndTaoSoCho(System.IAsyncResult result) {
+            return base.Channel.EndTaoSoCho(result);
+        }
+        
+        private System.IAsyncResult OnBeginTaoSoCho(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int ng = ((int)(inValues[0]));
+            int d = ((int)(inValues[1]));
+            int na = ((int)(inValues[2]));
+            return this.BeginTaoSoCho(ng, d, na, callback, asyncState);
+        }
+        
+        private object[] OnEndTaoSoCho(System.IAsyncResult result) {
+            QLBSX_BUS_WS.QLBSX_DAL_WebService.SoCho retVal = this.EndTaoSoCho(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnTaoSoChoCompleted(object state) {
+            if ((this.TaoSoChoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.TaoSoChoCompleted(this, new TaoSoChoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void TaoSoChoAsync(int ng, int d, int na) {
+            this.TaoSoChoAsync(ng, d, na, null);
+        }
+        
+        public void TaoSoChoAsync(int ng, int d, int na, object userState) {
+            if ((this.onBeginTaoSoChoDelegate == null)) {
+                this.onBeginTaoSoChoDelegate = new BeginOperationDelegate(this.OnBeginTaoSoCho);
+            }
+            if ((this.onEndTaoSoChoDelegate == null)) {
+                this.onEndTaoSoChoDelegate = new EndOperationDelegate(this.OnEndTaoSoCho);
+            }
+            if ((this.onTaoSoChoCompletedDelegate == null)) {
+                this.onTaoSoChoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnTaoSoChoCompleted);
+            }
+            base.InvokeAsync(this.onBeginTaoSoChoDelegate, new object[] {
+                        ng,
+                        d,
+                        na}, this.onEndTaoSoChoDelegate, this.onTaoSoChoCompletedDelegate, userState);
+        }
+        
+        public HanhViViPhamDTO[] LayDanhSachHanhVi() {
+            return base.Channel.LayDanhSachHanhVi();
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginLayDanhSachHanhVi(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginLayDanhSachHanhVi(callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public HanhViViPhamDTO[] EndLayDanhSachHanhVi(System.IAsyncResult result) {
+            return base.Channel.EndLayDanhSachHanhVi(result);
+        }
+        
+        private System.IAsyncResult OnBeginLayDanhSachHanhVi(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return this.BeginLayDanhSachHanhVi(callback, asyncState);
+        }
+        
+        private object[] OnEndLayDanhSachHanhVi(System.IAsyncResult result) {
+            HanhViViPhamDTO[] retVal = this.EndLayDanhSachHanhVi(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnLayDanhSachHanhViCompleted(object state) {
+            if ((this.LayDanhSachHanhViCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.LayDanhSachHanhViCompleted(this, new LayDanhSachHanhViCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void LayDanhSachHanhViAsync() {
+            this.LayDanhSachHanhViAsync(null);
+        }
+        
+        public void LayDanhSachHanhViAsync(object userState) {
+            if ((this.onBeginLayDanhSachHanhViDelegate == null)) {
+                this.onBeginLayDanhSachHanhViDelegate = new BeginOperationDelegate(this.OnBeginLayDanhSachHanhVi);
+            }
+            if ((this.onEndLayDanhSachHanhViDelegate == null)) {
+                this.onEndLayDanhSachHanhViDelegate = new EndOperationDelegate(this.OnEndLayDanhSachHanhVi);
+            }
+            if ((this.onLayDanhSachHanhViCompletedDelegate == null)) {
+                this.onLayDanhSachHanhViCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnLayDanhSachHanhViCompleted);
+            }
+            base.InvokeAsync(this.onBeginLayDanhSachHanhViDelegate, null, this.onEndLayDanhSachHanhViDelegate, this.onLayDanhSachHanhViCompletedDelegate, userState);
         }
         
         public bool ThemHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemHanhViRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemHanhViRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemHanhViRequestBody();
-            inValue.Body.hv = hv;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemHanhViResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).ThemHanhVi(inValue);
-            return retVal.Body.ThemHanhViResult;
+            return base.Channel.ThemHanhVi(hv);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaHanhViResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.VoHieuHoaHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaHanhViRequest request) {
-            return base.Channel.VoHieuHoaHanhVi(request);
+        public System.IAsyncResult BeginThemHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginThemHanhVi(hv, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public bool EndThemHanhVi(System.IAsyncResult result) {
+            return base.Channel.EndThemHanhVi(result);
+        }
+        
+        private System.IAsyncResult OnBeginThemHanhVi(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO)(inValues[0]));
+            return this.BeginThemHanhVi(hv, callback, asyncState);
+        }
+        
+        private object[] OnEndThemHanhVi(System.IAsyncResult result) {
+            bool retVal = this.EndThemHanhVi(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnThemHanhViCompleted(object state) {
+            if ((this.ThemHanhViCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ThemHanhViCompleted(this, new ThemHanhViCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ThemHanhViAsync(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv) {
+            this.ThemHanhViAsync(hv, null);
+        }
+        
+        public void ThemHanhViAsync(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv, object userState) {
+            if ((this.onBeginThemHanhViDelegate == null)) {
+                this.onBeginThemHanhViDelegate = new BeginOperationDelegate(this.OnBeginThemHanhVi);
+            }
+            if ((this.onEndThemHanhViDelegate == null)) {
+                this.onEndThemHanhViDelegate = new EndOperationDelegate(this.OnEndThemHanhVi);
+            }
+            if ((this.onThemHanhViCompletedDelegate == null)) {
+                this.onThemHanhViCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnThemHanhViCompleted);
+            }
+            base.InvokeAsync(this.onBeginThemHanhViDelegate, new object[] {
+                        hv}, this.onEndThemHanhViDelegate, this.onThemHanhViCompletedDelegate, userState);
         }
         
         public bool VoHieuHoaHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaHanhViRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaHanhViRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaHanhViRequestBody();
-            inValue.Body.hv = hv;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.VoHieuHoaHanhViResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).VoHieuHoaHanhVi(inValue);
-            return retVal.Body.VoHieuHoaHanhViResult;
+            return base.Channel.VoHieuHoaHanhVi(hv);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatHanhViResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.CapNhatHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatHanhViRequest request) {
-            return base.Channel.CapNhatHanhVi(request);
+        public System.IAsyncResult BeginVoHieuHoaHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginVoHieuHoaHanhVi(hv, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public bool EndVoHieuHoaHanhVi(System.IAsyncResult result) {
+            return base.Channel.EndVoHieuHoaHanhVi(result);
+        }
+        
+        private System.IAsyncResult OnBeginVoHieuHoaHanhVi(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO)(inValues[0]));
+            return this.BeginVoHieuHoaHanhVi(hv, callback, asyncState);
+        }
+        
+        private object[] OnEndVoHieuHoaHanhVi(System.IAsyncResult result) {
+            bool retVal = this.EndVoHieuHoaHanhVi(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnVoHieuHoaHanhViCompleted(object state) {
+            if ((this.VoHieuHoaHanhViCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.VoHieuHoaHanhViCompleted(this, new VoHieuHoaHanhViCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void VoHieuHoaHanhViAsync(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv) {
+            this.VoHieuHoaHanhViAsync(hv, null);
+        }
+        
+        public void VoHieuHoaHanhViAsync(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv, object userState) {
+            if ((this.onBeginVoHieuHoaHanhViDelegate == null)) {
+                this.onBeginVoHieuHoaHanhViDelegate = new BeginOperationDelegate(this.OnBeginVoHieuHoaHanhVi);
+            }
+            if ((this.onEndVoHieuHoaHanhViDelegate == null)) {
+                this.onEndVoHieuHoaHanhViDelegate = new EndOperationDelegate(this.OnEndVoHieuHoaHanhVi);
+            }
+            if ((this.onVoHieuHoaHanhViCompletedDelegate == null)) {
+                this.onVoHieuHoaHanhViCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnVoHieuHoaHanhViCompleted);
+            }
+            base.InvokeAsync(this.onBeginVoHieuHoaHanhViDelegate, new object[] {
+                        hv}, this.onEndVoHieuHoaHanhViDelegate, this.onVoHieuHoaHanhViCompletedDelegate, userState);
         }
         
         public bool CapNhatHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatHanhViRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatHanhViRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatHanhViRequestBody();
-            inValue.Body.hv = hv;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatHanhViResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).CapNhatHanhVi(inValue);
-            return retVal.Body.CapNhatHanhViResult;
+            return base.Channel.CapNhatHanhVi(hv);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoTenHanhViResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.TraCuuHanhViTheoTenHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoTenHanhViRequest request) {
-            return base.Channel.TraCuuHanhViTheoTenHanhVi(request);
+        public System.IAsyncResult BeginCapNhatHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginCapNhatHanhVi(hv, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public bool EndCapNhatHanhVi(System.IAsyncResult result) {
+            return base.Channel.EndCapNhatHanhVi(result);
+        }
+        
+        private System.IAsyncResult OnBeginCapNhatHanhVi(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO)(inValues[0]));
+            return this.BeginCapNhatHanhVi(hv, callback, asyncState);
+        }
+        
+        private object[] OnEndCapNhatHanhVi(System.IAsyncResult result) {
+            bool retVal = this.EndCapNhatHanhVi(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnCapNhatHanhViCompleted(object state) {
+            if ((this.CapNhatHanhViCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CapNhatHanhViCompleted(this, new CapNhatHanhViCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CapNhatHanhViAsync(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv) {
+            this.CapNhatHanhViAsync(hv, null);
+        }
+        
+        public void CapNhatHanhViAsync(QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO hv, object userState) {
+            if ((this.onBeginCapNhatHanhViDelegate == null)) {
+                this.onBeginCapNhatHanhViDelegate = new BeginOperationDelegate(this.OnBeginCapNhatHanhVi);
+            }
+            if ((this.onEndCapNhatHanhViDelegate == null)) {
+                this.onEndCapNhatHanhViDelegate = new EndOperationDelegate(this.OnEndCapNhatHanhVi);
+            }
+            if ((this.onCapNhatHanhViCompletedDelegate == null)) {
+                this.onCapNhatHanhViCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCapNhatHanhViCompleted);
+            }
+            base.InvokeAsync(this.onBeginCapNhatHanhViDelegate, new object[] {
+                        hv}, this.onEndCapNhatHanhViDelegate, this.onCapNhatHanhViCompletedDelegate, userState);
         }
         
         public QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO TraCuuHanhViTheoTenHanhVi(string ten) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoTenHanhViRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoTenHanhViRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoTenHanhViRequestBody();
-            inValue.Body.ten = ten;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoTenHanhViResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).TraCuuHanhViTheoTenHanhVi(inValue);
-            return retVal.Body.TraCuuHanhViTheoTenHanhViResult;
+            return base.Channel.TraCuuHanhViTheoTenHanhVi(ten);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoMaHanhViResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.TraCuuHanhViTheoMaHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoMaHanhViRequest request) {
-            return base.Channel.TraCuuHanhViTheoMaHanhVi(request);
+        public System.IAsyncResult BeginTraCuuHanhViTheoTenHanhVi(string ten, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginTraCuuHanhViTheoTenHanhVi(ten, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO EndTraCuuHanhViTheoTenHanhVi(System.IAsyncResult result) {
+            return base.Channel.EndTraCuuHanhViTheoTenHanhVi(result);
+        }
+        
+        private System.IAsyncResult OnBeginTraCuuHanhViTheoTenHanhVi(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string ten = ((string)(inValues[0]));
+            return this.BeginTraCuuHanhViTheoTenHanhVi(ten, callback, asyncState);
+        }
+        
+        private object[] OnEndTraCuuHanhViTheoTenHanhVi(System.IAsyncResult result) {
+            QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO retVal = this.EndTraCuuHanhViTheoTenHanhVi(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnTraCuuHanhViTheoTenHanhViCompleted(object state) {
+            if ((this.TraCuuHanhViTheoTenHanhViCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.TraCuuHanhViTheoTenHanhViCompleted(this, new TraCuuHanhViTheoTenHanhViCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void TraCuuHanhViTheoTenHanhViAsync(string ten) {
+            this.TraCuuHanhViTheoTenHanhViAsync(ten, null);
+        }
+        
+        public void TraCuuHanhViTheoTenHanhViAsync(string ten, object userState) {
+            if ((this.onBeginTraCuuHanhViTheoTenHanhViDelegate == null)) {
+                this.onBeginTraCuuHanhViTheoTenHanhViDelegate = new BeginOperationDelegate(this.OnBeginTraCuuHanhViTheoTenHanhVi);
+            }
+            if ((this.onEndTraCuuHanhViTheoTenHanhViDelegate == null)) {
+                this.onEndTraCuuHanhViTheoTenHanhViDelegate = new EndOperationDelegate(this.OnEndTraCuuHanhViTheoTenHanhVi);
+            }
+            if ((this.onTraCuuHanhViTheoTenHanhViCompletedDelegate == null)) {
+                this.onTraCuuHanhViTheoTenHanhViCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnTraCuuHanhViTheoTenHanhViCompleted);
+            }
+            base.InvokeAsync(this.onBeginTraCuuHanhViTheoTenHanhViDelegate, new object[] {
+                        ten}, this.onEndTraCuuHanhViTheoTenHanhViDelegate, this.onTraCuuHanhViTheoTenHanhViCompletedDelegate, userState);
         }
         
         public QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO TraCuuHanhViTheoMaHanhVi(int ma) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoMaHanhViRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoMaHanhViRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoMaHanhViRequestBody();
-            inValue.Body.ma = ma;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuHanhViTheoMaHanhViResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).TraCuuHanhViTheoMaHanhVi(inValue);
-            return retVal.Body.TraCuuHanhViTheoMaHanhViResult;
+            return base.Channel.TraCuuHanhViTheoMaHanhVi(ma);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachChiTietHanhViResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.LayDanhSachChiTietHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachChiTietHanhViRequest request) {
-            return base.Channel.LayDanhSachChiTietHanhVi(request);
-        }
-        
-        public System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO> LayDanhSachChiTietHanhVi() {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachChiTietHanhViRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachChiTietHanhViRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachChiTietHanhViRequestBody();
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.LayDanhSachChiTietHanhViResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).LayDanhSachChiTietHanhVi(inValue);
-            return retVal.Body.LayDanhSachChiTietHanhViResult;
+        public System.IAsyncResult BeginTraCuuHanhViTheoMaHanhVi(int ma, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginTraCuuHanhViTheoMaHanhVi(ma, callback, asyncState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemChiTietHanhViResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.ThemChiTietHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemChiTietHanhViRequest request) {
-            return base.Channel.ThemChiTietHanhVi(request);
+        public QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO EndTraCuuHanhViTheoMaHanhVi(System.IAsyncResult result) {
+            return base.Channel.EndTraCuuHanhViTheoMaHanhVi(result);
+        }
+        
+        private System.IAsyncResult OnBeginTraCuuHanhViTheoMaHanhVi(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int ma = ((int)(inValues[0]));
+            return this.BeginTraCuuHanhViTheoMaHanhVi(ma, callback, asyncState);
+        }
+        
+        private object[] OnEndTraCuuHanhViTheoMaHanhVi(System.IAsyncResult result) {
+            QLBSX_BUS_WS.QLBSX_DAL_WebService.HanhViViPhamDTO retVal = this.EndTraCuuHanhViTheoMaHanhVi(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnTraCuuHanhViTheoMaHanhViCompleted(object state) {
+            if ((this.TraCuuHanhViTheoMaHanhViCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.TraCuuHanhViTheoMaHanhViCompleted(this, new TraCuuHanhViTheoMaHanhViCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void TraCuuHanhViTheoMaHanhViAsync(int ma) {
+            this.TraCuuHanhViTheoMaHanhViAsync(ma, null);
+        }
+        
+        public void TraCuuHanhViTheoMaHanhViAsync(int ma, object userState) {
+            if ((this.onBeginTraCuuHanhViTheoMaHanhViDelegate == null)) {
+                this.onBeginTraCuuHanhViTheoMaHanhViDelegate = new BeginOperationDelegate(this.OnBeginTraCuuHanhViTheoMaHanhVi);
+            }
+            if ((this.onEndTraCuuHanhViTheoMaHanhViDelegate == null)) {
+                this.onEndTraCuuHanhViTheoMaHanhViDelegate = new EndOperationDelegate(this.OnEndTraCuuHanhViTheoMaHanhVi);
+            }
+            if ((this.onTraCuuHanhViTheoMaHanhViCompletedDelegate == null)) {
+                this.onTraCuuHanhViTheoMaHanhViCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnTraCuuHanhViTheoMaHanhViCompleted);
+            }
+            base.InvokeAsync(this.onBeginTraCuuHanhViTheoMaHanhViDelegate, new object[] {
+                        ma}, this.onEndTraCuuHanhViTheoMaHanhViDelegate, this.onTraCuuHanhViTheoMaHanhViCompletedDelegate, userState);
+        }
+        
+        public ChiTietHVVPDTO[] LayDanhSachChiTietHanhVi() {
+            return base.Channel.LayDanhSachChiTietHanhVi();
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginLayDanhSachChiTietHanhVi(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginLayDanhSachChiTietHanhVi(callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public ChiTietHVVPDTO[] EndLayDanhSachChiTietHanhVi(System.IAsyncResult result) {
+            return base.Channel.EndLayDanhSachChiTietHanhVi(result);
+        }
+        
+        private System.IAsyncResult OnBeginLayDanhSachChiTietHanhVi(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return this.BeginLayDanhSachChiTietHanhVi(callback, asyncState);
+        }
+        
+        private object[] OnEndLayDanhSachChiTietHanhVi(System.IAsyncResult result) {
+            ChiTietHVVPDTO[] retVal = this.EndLayDanhSachChiTietHanhVi(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnLayDanhSachChiTietHanhViCompleted(object state) {
+            if ((this.LayDanhSachChiTietHanhViCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.LayDanhSachChiTietHanhViCompleted(this, new LayDanhSachChiTietHanhViCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void LayDanhSachChiTietHanhViAsync() {
+            this.LayDanhSachChiTietHanhViAsync(null);
+        }
+        
+        public void LayDanhSachChiTietHanhViAsync(object userState) {
+            if ((this.onBeginLayDanhSachChiTietHanhViDelegate == null)) {
+                this.onBeginLayDanhSachChiTietHanhViDelegate = new BeginOperationDelegate(this.OnBeginLayDanhSachChiTietHanhVi);
+            }
+            if ((this.onEndLayDanhSachChiTietHanhViDelegate == null)) {
+                this.onEndLayDanhSachChiTietHanhViDelegate = new EndOperationDelegate(this.OnEndLayDanhSachChiTietHanhVi);
+            }
+            if ((this.onLayDanhSachChiTietHanhViCompletedDelegate == null)) {
+                this.onLayDanhSachChiTietHanhViCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnLayDanhSachChiTietHanhViCompleted);
+            }
+            base.InvokeAsync(this.onBeginLayDanhSachChiTietHanhViDelegate, null, this.onEndLayDanhSachChiTietHanhViDelegate, this.onLayDanhSachChiTietHanhViCompletedDelegate, userState);
         }
         
         public bool ThemChiTietHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO ct) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemChiTietHanhViRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemChiTietHanhViRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemChiTietHanhViRequestBody();
-            inValue.Body.ct = ct;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.ThemChiTietHanhViResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).ThemChiTietHanhVi(inValue);
-            return retVal.Body.ThemChiTietHanhViResult;
+            return base.Channel.ThemChiTietHanhVi(ct);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatChiTietHanhViResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.CapNhatChiTietHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatChiTietHanhViRequest request) {
-            return base.Channel.CapNhatChiTietHanhVi(request);
+        public System.IAsyncResult BeginThemChiTietHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO ct, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginThemChiTietHanhVi(ct, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public bool EndThemChiTietHanhVi(System.IAsyncResult result) {
+            return base.Channel.EndThemChiTietHanhVi(result);
+        }
+        
+        private System.IAsyncResult OnBeginThemChiTietHanhVi(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO ct = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO)(inValues[0]));
+            return this.BeginThemChiTietHanhVi(ct, callback, asyncState);
+        }
+        
+        private object[] OnEndThemChiTietHanhVi(System.IAsyncResult result) {
+            bool retVal = this.EndThemChiTietHanhVi(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnThemChiTietHanhViCompleted(object state) {
+            if ((this.ThemChiTietHanhViCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.ThemChiTietHanhViCompleted(this, new ThemChiTietHanhViCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void ThemChiTietHanhViAsync(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO ct) {
+            this.ThemChiTietHanhViAsync(ct, null);
+        }
+        
+        public void ThemChiTietHanhViAsync(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO ct, object userState) {
+            if ((this.onBeginThemChiTietHanhViDelegate == null)) {
+                this.onBeginThemChiTietHanhViDelegate = new BeginOperationDelegate(this.OnBeginThemChiTietHanhVi);
+            }
+            if ((this.onEndThemChiTietHanhViDelegate == null)) {
+                this.onEndThemChiTietHanhViDelegate = new EndOperationDelegate(this.OnEndThemChiTietHanhVi);
+            }
+            if ((this.onThemChiTietHanhViCompletedDelegate == null)) {
+                this.onThemChiTietHanhViCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnThemChiTietHanhViCompleted);
+            }
+            base.InvokeAsync(this.onBeginThemChiTietHanhViDelegate, new object[] {
+                        ct}, this.onEndThemChiTietHanhViDelegate, this.onThemChiTietHanhViCompletedDelegate, userState);
         }
         
         public bool CapNhatChiTietHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO ct) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatChiTietHanhViRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatChiTietHanhViRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatChiTietHanhViRequestBody();
-            inValue.Body.ct = ct;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.CapNhatChiTietHanhViResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).CapNhatChiTietHanhVi(inValue);
-            return retVal.Body.CapNhatChiTietHanhViResult;
+            return base.Channel.CapNhatChiTietHanhVi(ct);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoBienSoResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.TraCuuCTHVTheoBienSo(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoBienSoRequest request) {
-            return base.Channel.TraCuuCTHVTheoBienSo(request);
-        }
-        
-        public System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO> TraCuuCTHVTheoBienSo(string bienso) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoBienSoRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoBienSoRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoBienSoRequestBody();
-            inValue.Body.bienso = bienso;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoBienSoResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).TraCuuCTHVTheoBienSo(inValue);
-            return retVal.Body.TraCuuCTHVTheoBienSoResult;
+        public System.IAsyncResult BeginCapNhatChiTietHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO ct, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginCapNhatChiTietHanhVi(ct, callback, asyncState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaBienSoResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.TraCuuCTHVTheoMaBienSo(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaBienSoRequest request) {
-            return base.Channel.TraCuuCTHVTheoMaBienSo(request);
+        public bool EndCapNhatChiTietHanhVi(System.IAsyncResult result) {
+            return base.Channel.EndCapNhatChiTietHanhVi(result);
         }
         
-        public System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO> TraCuuCTHVTheoMaBienSo(int _mabs) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaBienSoRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaBienSoRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaBienSoRequestBody();
-            inValue.Body._mabs = _mabs;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaBienSoResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).TraCuuCTHVTheoMaBienSo(inValue);
-            return retVal.Body.TraCuuCTHVTheoMaBienSoResult;
+        private System.IAsyncResult OnBeginCapNhatChiTietHanhVi(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO ct = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO)(inValues[0]));
+            return this.BeginCapNhatChiTietHanhVi(ct, callback, asyncState);
+        }
+        
+        private object[] OnEndCapNhatChiTietHanhVi(System.IAsyncResult result) {
+            bool retVal = this.EndCapNhatChiTietHanhVi(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnCapNhatChiTietHanhViCompleted(object state) {
+            if ((this.CapNhatChiTietHanhViCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.CapNhatChiTietHanhViCompleted(this, new CapNhatChiTietHanhViCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void CapNhatChiTietHanhViAsync(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO ct) {
+            this.CapNhatChiTietHanhViAsync(ct, null);
+        }
+        
+        public void CapNhatChiTietHanhViAsync(QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO ct, object userState) {
+            if ((this.onBeginCapNhatChiTietHanhViDelegate == null)) {
+                this.onBeginCapNhatChiTietHanhViDelegate = new BeginOperationDelegate(this.OnBeginCapNhatChiTietHanhVi);
+            }
+            if ((this.onEndCapNhatChiTietHanhViDelegate == null)) {
+                this.onEndCapNhatChiTietHanhViDelegate = new EndOperationDelegate(this.OnEndCapNhatChiTietHanhVi);
+            }
+            if ((this.onCapNhatChiTietHanhViCompletedDelegate == null)) {
+                this.onCapNhatChiTietHanhViCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnCapNhatChiTietHanhViCompleted);
+            }
+            base.InvokeAsync(this.onBeginCapNhatChiTietHanhViDelegate, new object[] {
+                        ct}, this.onEndCapNhatChiTietHanhViDelegate, this.onCapNhatChiTietHanhViCompletedDelegate, userState);
+        }
+        
+        public ChiTietHVVPDTO[] TraCuuCTHVTheoBienSo(string bienso) {
+            return base.Channel.TraCuuCTHVTheoBienSo(bienso);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoTenHanhViResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.TraCuuCTHVTheoTenHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoTenHanhViRequest request) {
-            return base.Channel.TraCuuCTHVTheoTenHanhVi(request);
-        }
-        
-        public System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO> TraCuuCTHVTheoTenHanhVi(string tenhv) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoTenHanhViRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoTenHanhViRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoTenHanhViRequestBody();
-            inValue.Body.tenhv = tenhv;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoTenHanhViResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).TraCuuCTHVTheoTenHanhVi(inValue);
-            return retVal.Body.TraCuuCTHVTheoTenHanhViResult;
+        public System.IAsyncResult BeginTraCuuCTHVTheoBienSo(string bienso, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginTraCuuCTHVTheoBienSo(bienso, callback, asyncState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaHanhViResponse QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap.TraCuuCTHVTheoMaHanhVi(QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaHanhViRequest request) {
-            return base.Channel.TraCuuCTHVTheoMaHanhVi(request);
+        public ChiTietHVVPDTO[] EndTraCuuCTHVTheoBienSo(System.IAsyncResult result) {
+            return base.Channel.EndTraCuuCTHVTheoBienSo(result);
         }
         
-        public System.Collections.Generic.List<QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO> TraCuuCTHVTheoMaHanhVi(int _mahv) {
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaHanhViRequest inValue = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaHanhViRequest();
-            inValue.Body = new QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaHanhViRequestBody();
-            inValue.Body._mahv = _mahv;
-            QLBSX_BUS_WS.QLBSX_DAL_WebService.TraCuuCTHVTheoMaHanhViResponse retVal = ((QLBSX_BUS_WS.QLBSX_DAL_WebService.QLBSX_DAL_WebServiceSoap)(this)).TraCuuCTHVTheoMaHanhVi(inValue);
-            return retVal.Body.TraCuuCTHVTheoMaHanhViResult;
+        private System.IAsyncResult OnBeginTraCuuCTHVTheoBienSo(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string bienso = ((string)(inValues[0]));
+            return this.BeginTraCuuCTHVTheoBienSo(bienso, callback, asyncState);
+        }
+        
+        private object[] OnEndTraCuuCTHVTheoBienSo(System.IAsyncResult result) {
+            ChiTietHVVPDTO[] retVal = this.EndTraCuuCTHVTheoBienSo(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnTraCuuCTHVTheoBienSoCompleted(object state) {
+            if ((this.TraCuuCTHVTheoBienSoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.TraCuuCTHVTheoBienSoCompleted(this, new TraCuuCTHVTheoBienSoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void TraCuuCTHVTheoBienSoAsync(string bienso) {
+            this.TraCuuCTHVTheoBienSoAsync(bienso, null);
+        }
+        
+        public void TraCuuCTHVTheoBienSoAsync(string bienso, object userState) {
+            if ((this.onBeginTraCuuCTHVTheoBienSoDelegate == null)) {
+                this.onBeginTraCuuCTHVTheoBienSoDelegate = new BeginOperationDelegate(this.OnBeginTraCuuCTHVTheoBienSo);
+            }
+            if ((this.onEndTraCuuCTHVTheoBienSoDelegate == null)) {
+                this.onEndTraCuuCTHVTheoBienSoDelegate = new EndOperationDelegate(this.OnEndTraCuuCTHVTheoBienSo);
+            }
+            if ((this.onTraCuuCTHVTheoBienSoCompletedDelegate == null)) {
+                this.onTraCuuCTHVTheoBienSoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnTraCuuCTHVTheoBienSoCompleted);
+            }
+            base.InvokeAsync(this.onBeginTraCuuCTHVTheoBienSoDelegate, new object[] {
+                        bienso}, this.onEndTraCuuCTHVTheoBienSoDelegate, this.onTraCuuCTHVTheoBienSoCompletedDelegate, userState);
+        }
+        
+        public ChiTietHVVPDTO[] TraCuuCTHVTheoMaBienSo(int _mabs) {
+            return base.Channel.TraCuuCTHVTheoMaBienSo(_mabs);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginTraCuuCTHVTheoMaBienSo(int _mabs, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginTraCuuCTHVTheoMaBienSo(_mabs, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public ChiTietHVVPDTO[] EndTraCuuCTHVTheoMaBienSo(System.IAsyncResult result) {
+            return base.Channel.EndTraCuuCTHVTheoMaBienSo(result);
+        }
+        
+        private System.IAsyncResult OnBeginTraCuuCTHVTheoMaBienSo(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int _mabs = ((int)(inValues[0]));
+            return this.BeginTraCuuCTHVTheoMaBienSo(_mabs, callback, asyncState);
+        }
+        
+        private object[] OnEndTraCuuCTHVTheoMaBienSo(System.IAsyncResult result) {
+            ChiTietHVVPDTO[] retVal = this.EndTraCuuCTHVTheoMaBienSo(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnTraCuuCTHVTheoMaBienSoCompleted(object state) {
+            if ((this.TraCuuCTHVTheoMaBienSoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.TraCuuCTHVTheoMaBienSoCompleted(this, new TraCuuCTHVTheoMaBienSoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void TraCuuCTHVTheoMaBienSoAsync(int _mabs) {
+            this.TraCuuCTHVTheoMaBienSoAsync(_mabs, null);
+        }
+        
+        public void TraCuuCTHVTheoMaBienSoAsync(int _mabs, object userState) {
+            if ((this.onBeginTraCuuCTHVTheoMaBienSoDelegate == null)) {
+                this.onBeginTraCuuCTHVTheoMaBienSoDelegate = new BeginOperationDelegate(this.OnBeginTraCuuCTHVTheoMaBienSo);
+            }
+            if ((this.onEndTraCuuCTHVTheoMaBienSoDelegate == null)) {
+                this.onEndTraCuuCTHVTheoMaBienSoDelegate = new EndOperationDelegate(this.OnEndTraCuuCTHVTheoMaBienSo);
+            }
+            if ((this.onTraCuuCTHVTheoMaBienSoCompletedDelegate == null)) {
+                this.onTraCuuCTHVTheoMaBienSoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnTraCuuCTHVTheoMaBienSoCompleted);
+            }
+            base.InvokeAsync(this.onBeginTraCuuCTHVTheoMaBienSoDelegate, new object[] {
+                        _mabs}, this.onEndTraCuuCTHVTheoMaBienSoDelegate, this.onTraCuuCTHVTheoMaBienSoCompletedDelegate, userState);
+        }
+        
+        public ChiTietHVVPDTO[] TraCuuCTHVTheoTenHanhVi(string tenhv) {
+            return base.Channel.TraCuuCTHVTheoTenHanhVi(tenhv);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginTraCuuCTHVTheoTenHanhVi(string tenhv, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginTraCuuCTHVTheoTenHanhVi(tenhv, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public ChiTietHVVPDTO[] EndTraCuuCTHVTheoTenHanhVi(System.IAsyncResult result) {
+            return base.Channel.EndTraCuuCTHVTheoTenHanhVi(result);
+        }
+        
+        private System.IAsyncResult OnBeginTraCuuCTHVTheoTenHanhVi(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string tenhv = ((string)(inValues[0]));
+            return this.BeginTraCuuCTHVTheoTenHanhVi(tenhv, callback, asyncState);
+        }
+        
+        private object[] OnEndTraCuuCTHVTheoTenHanhVi(System.IAsyncResult result) {
+            ChiTietHVVPDTO[] retVal = this.EndTraCuuCTHVTheoTenHanhVi(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnTraCuuCTHVTheoTenHanhViCompleted(object state) {
+            if ((this.TraCuuCTHVTheoTenHanhViCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.TraCuuCTHVTheoTenHanhViCompleted(this, new TraCuuCTHVTheoTenHanhViCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void TraCuuCTHVTheoTenHanhViAsync(string tenhv) {
+            this.TraCuuCTHVTheoTenHanhViAsync(tenhv, null);
+        }
+        
+        public void TraCuuCTHVTheoTenHanhViAsync(string tenhv, object userState) {
+            if ((this.onBeginTraCuuCTHVTheoTenHanhViDelegate == null)) {
+                this.onBeginTraCuuCTHVTheoTenHanhViDelegate = new BeginOperationDelegate(this.OnBeginTraCuuCTHVTheoTenHanhVi);
+            }
+            if ((this.onEndTraCuuCTHVTheoTenHanhViDelegate == null)) {
+                this.onEndTraCuuCTHVTheoTenHanhViDelegate = new EndOperationDelegate(this.OnEndTraCuuCTHVTheoTenHanhVi);
+            }
+            if ((this.onTraCuuCTHVTheoTenHanhViCompletedDelegate == null)) {
+                this.onTraCuuCTHVTheoTenHanhViCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnTraCuuCTHVTheoTenHanhViCompleted);
+            }
+            base.InvokeAsync(this.onBeginTraCuuCTHVTheoTenHanhViDelegate, new object[] {
+                        tenhv}, this.onEndTraCuuCTHVTheoTenHanhViDelegate, this.onTraCuuCTHVTheoTenHanhViCompletedDelegate, userState);
+        }
+        
+        public ChiTietHVVPDTO[] TraCuuCTHVTheoMaHanhVi(int _mahv) {
+            return base.Channel.TraCuuCTHVTheoMaHanhVi(_mahv);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginTraCuuCTHVTheoMaHanhVi(int _mahv, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginTraCuuCTHVTheoMaHanhVi(_mahv, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public ChiTietHVVPDTO[] EndTraCuuCTHVTheoMaHanhVi(System.IAsyncResult result) {
+            return base.Channel.EndTraCuuCTHVTheoMaHanhVi(result);
+        }
+        
+        private System.IAsyncResult OnBeginTraCuuCTHVTheoMaHanhVi(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            int _mahv = ((int)(inValues[0]));
+            return this.BeginTraCuuCTHVTheoMaHanhVi(_mahv, callback, asyncState);
+        }
+        
+        private object[] OnEndTraCuuCTHVTheoMaHanhVi(System.IAsyncResult result) {
+            ChiTietHVVPDTO[] retVal = this.EndTraCuuCTHVTheoMaHanhVi(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnTraCuuCTHVTheoMaHanhViCompleted(object state) {
+            if ((this.TraCuuCTHVTheoMaHanhViCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.TraCuuCTHVTheoMaHanhViCompleted(this, new TraCuuCTHVTheoMaHanhViCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void TraCuuCTHVTheoMaHanhViAsync(int _mahv) {
+            this.TraCuuCTHVTheoMaHanhViAsync(_mahv, null);
+        }
+        
+        public void TraCuuCTHVTheoMaHanhViAsync(int _mahv, object userState) {
+            if ((this.onBeginTraCuuCTHVTheoMaHanhViDelegate == null)) {
+                this.onBeginTraCuuCTHVTheoMaHanhViDelegate = new BeginOperationDelegate(this.OnBeginTraCuuCTHVTheoMaHanhVi);
+            }
+            if ((this.onEndTraCuuCTHVTheoMaHanhViDelegate == null)) {
+                this.onEndTraCuuCTHVTheoMaHanhViDelegate = new EndOperationDelegate(this.OnEndTraCuuCTHVTheoMaHanhVi);
+            }
+            if ((this.onTraCuuCTHVTheoMaHanhViCompletedDelegate == null)) {
+                this.onTraCuuCTHVTheoMaHanhViCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnTraCuuCTHVTheoMaHanhViCompleted);
+            }
+            base.InvokeAsync(this.onBeginTraCuuCTHVTheoMaHanhViDelegate, new object[] {
+                        _mahv}, this.onEndTraCuuCTHVTheoMaHanhViDelegate, this.onTraCuuCTHVTheoMaHanhViCompletedDelegate, userState);
         }
     }
 }

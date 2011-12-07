@@ -244,31 +244,31 @@ namespace Presentation
         }
         private void NapDanhSachBienSo()
         {
-            List<BienSoXeDTO> dsbs = new List<BienSoXeDTO>();
-            dsbs = ws.LayDanhSachBienSoXe();
+            List<BienSoXe> dsbs = new List<BienSoXe>();
+            dsbs = ws.LayDanhSachBienSoXe().ToList();
             int iBien = 1;
             dgv_DSBSX.Rows.Clear();
             //dgv_DSBSX.Refresh();
-            foreach (BienSoXeDTO bs in dsbs)
+            foreach (BienSoXe bs in dsbs)
             {
                 if (bs.VoHieuHoa == false)
                 {
-                    if (bs is BienSoXeMotoDTO)
+                    if (bs is BienSoXeMoto)
                     {
-                        BienSoXeMotoDTO temp = new BienSoXeMotoDTO();
-                        temp = (BienSoXeMotoDTO)bs;
+                        BienSoXeMoto temp = new BienSoXeMoto();
+                        temp = (BienSoXeMoto)bs;
                         dgv_DSBSX.Rows.Add(iBien.ToString(), temp.TenChuXe, temp.BienSo, "Môtô", temp.NgayDangKyLanDau.ToShortDateString(), temp.DiaChi);
                     }
-                    else if (bs is BienSoXeOtoDTO)
+                    else if (bs is BienSoXeOto)
                     {
-                        BienSoXeOtoDTO temp = new BienSoXeOtoDTO();
-                        temp = (BienSoXeOtoDTO)bs;
+                        BienSoXeOto temp = new BienSoXeOto();
+                        temp = (BienSoXeOto)bs;
                         dgv_DSBSX.Rows.Add(iBien.ToString(), temp.TenChuXe, temp.BienSo, "Ôtô", temp.NgayDangKyLanDau.ToShortDateString(), temp.DiaChi);
                     }
-                    else if (bs is BienSoXeRomoocDTO)
+                    else if (bs is BienSoXeRomooc)
                     {
-                        BienSoXeRomoocDTO temp = new BienSoXeRomoocDTO();
-                        temp = (BienSoXeRomoocDTO)bs;
+                        BienSoXeRomooc temp = new BienSoXeRomooc();
+                        temp = (BienSoXeRomooc)bs;
                         dgv_DSBSX.Rows.Add(iBien.ToString(), temp.TenChuXe, temp.BienSo, "Rơmoóc", temp.NgayDangKyLanDau.ToShortDateString(), temp.DiaChi);
                     }
                     iBien++;
@@ -280,12 +280,12 @@ namespace Presentation
             dgv_ChiTietHanhVi.Rows.Clear();
             //dgv_ChiTietHanhVi.Refresh();
             List<ChiTietHVVPDTO> ds = new List<ChiTietHVVPDTO>();
-            ds = ws.LayDanhSachChiTietHanhVi();
+            ds = ws.LayDanhSachChiTietHanhVi().ToList();
             int i = 1;
             foreach (ChiTietHVVPDTO ct in ds)
             {
-                BienSoXeDTO temp = new BienSoXeDTO();
-                temp = (BienSoXeDTO)ct.BienSo;
+                BienSoXe temp = new BienSoXeMoto();
+                temp = (BienSoXe)ct.BienSo;
                 dgv_ChiTietHanhVi.Rows.Add(i.ToString(), ct.HanhVi.TenHanhVi, temp.BienSo, ct.ThoiGian.ToString("dd/MM/yyyy hh:mm:ss"), ct.NguoiLapBienBan, ct.TienPhat.ToString("0,0"));
                 i++;
             }
@@ -294,7 +294,7 @@ namespace Presentation
         {
             cbb.Items.Clear();
             List<HanhViViPhamDTO> chiTiet = new List<HanhViViPhamDTO>();            
-            chiTiet = ws.LayDanhSachHanhVi();
+            chiTiet = ws.LayDanhSachHanhVi().ToList();
             var query = from n in chiTiet
                         where n.VoHieuHoa == false
                         orderby n.TenHanhVi

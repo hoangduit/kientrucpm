@@ -66,16 +66,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="QLBSX_BUS_WebService.asmx" />
-    <None Include="Service References\QLBSX_DAL_WebService\QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeDTO.datasource">
+    <None Include="Service References\QLBSX_DAL_WebService\QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXe.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\QLBSX_DAL_WebService\QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMotoDTO.datasource">
+    <None Include="Service References\QLBSX_DAL_WebService\QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeMoto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\QLBSX_DAL_WebService\QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOtoDTO.datasource">
+    <None Include="Service References\QLBSX_DAL_WebService\QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeOto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\QLBSX_DAL_WebService\QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomoocDTO.datasource">
+    <None Include="Service References\QLBSX_DAL_WebService\QLBSX_BUS_WS.QLBSX_DAL_WebService.BienSoXeRomooc.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\QLBSX_DAL_WebService\QLBSX_BUS_WS.QLBSX_DAL_WebService.ChiTietHVVPDTO.datasource">

@@ -30,9 +30,9 @@ namespace Presentation
         {
             NapDanhSachLoi(cbb_TenHanhVi);
 
-            List<BienSoXeDTO> dsBS = new List<BienSoXeDTO>();
-            dsBS = ws.LayDanhSachBSXTongQuat();
-            foreach (BienSoXeDTO bs in dsBS)
+            List<BienSoXe> dsBS = new List<BienSoXe>();
+            dsBS = ws.LayDanhSachBSXTongQuat().ToList();
+            foreach (BienSoXe bs in dsBS)
                 if(bs.VoHieuHoa == false)
                     cbb_BienSo.Items.Add(bs.BienSo);
         }
@@ -88,7 +88,7 @@ namespace Presentation
         {
             cbb.Items.Clear();
             List<HanhViViPhamDTO> chiTiet = new List<HanhViViPhamDTO>();
-            chiTiet = ws.LayDanhSachHanhVi();
+            chiTiet = ws.LayDanhSachHanhVi().ToList();
             var query = from n in chiTiet
                         where n.VoHieuHoa == false
                         orderby n.TenHanhVi

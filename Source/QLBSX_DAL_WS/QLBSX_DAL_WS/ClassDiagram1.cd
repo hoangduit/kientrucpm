@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="QLBSX_DAL_WS.BienSoXe" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEcQAARAAAAAAAgAAAgABAEEAQAACEQAEAAAEZABAQA=</HashCode>
+      <FileName>BienSo\BienSoXe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLBSX_DAL_WS.BienSoXeFactory" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAACAAAAAAIAAAAAEAABAAQgAAAA=</HashCode>
+      <FileName>BienSo\BienSoXeFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLBSX_DAL_WS.BienSoXeMoto" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAIASABAAACAAAAAAAAAAAAAAEBAAAQAAAIAQAA=</HashCode>
+      <FileName>BienSo\BienSoXeMoto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLBSX_DAL_WS.BienSoXeOto" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkEAAAKABEBAAECQEEAAABAAACAAAEBCAAQAAAIQUAA=</HashCode>
+      <FileName>BienSo\BienSoXeOto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLBSX_DAL_WS.BienSoXeRomooc" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABEABIACQEQAAAAAAACAAAEACAAAAAAAAAAA=</HashCode>
+      <FileName>BienSo\BienSoXeRomooc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLBSX_DAL_WS.DataProvider" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAEAAAAAAIAAAAAAAAAAAAAAAAEABAA=</HashCode>
+      <FileName>DataProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLBSX_DAL_WS.ChiTietHVVPDAO" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEQAgAABAAAAAAAAAAAAIAAAAAAAABAAAAAAAI=</HashCode>
+      <FileName>HanhVi\ChiTietHVVPDAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLBSX_DAL_WS.ChiTietHVVPDTO" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAAAAAAAAAQAAgAAAAAAAIAAAAAAIAAAAKAAABAEAII=</HashCode>
+      <FileName>HanhVi\ChiTietHVVPDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLBSX_DAL_WS.HanhViViPhamDAO" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAARAAAAAIAAAAAAAAAAAAAIAAAAAAAABI=</HashCode>
+      <FileName>HanhVi\HanhViViPhamDAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLBSX_DAL_WS.HanhViViPhamDTO" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAgAAEAAAAQAAABAAAEAAAAAAA=</HashCode>
+      <FileName>HanhVi\HanhViViPhamDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLBSX_DAL_WS.KichThuocBao" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIBQAAAAABAAAAAAAAAAAAAAAAAAAAAAhAAA=</HashCode>
+      <FileName>SubInfo\KichThuocBao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLBSX_DAL_WS.QLBSX_DAL_WebService" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEQBACUQAgAAQEAAAAIQAIIgQAAAAAAAIAAIAQBAABA=</HashCode>
+      <FileName>QLBSX_DAL_WebService.asmx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QLBSX_DAL_WS.SoCho" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAIACAAAAAAAAAAAEBAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SubInfo\SoCho.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

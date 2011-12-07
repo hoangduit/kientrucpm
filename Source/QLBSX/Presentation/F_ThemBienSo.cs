@@ -33,9 +33,9 @@ namespace Presentation
         {
             cbb_PhuongTien.SelectedIndex = 1;
 
-            List<BienSoXeDTO> dsBS = new List<BienSoXeDTO>();
-            dsBS = ws.LayDanhSachBSXTongQuat();
-            foreach (BienSoXeDTO bs in dsBS)
+            List<BienSoXe> dsBS = new List<BienSoXe>();
+            dsBS = ws.LayDanhSachBSXTongQuat().ToList();
+            foreach (BienSoXe bs in dsBS)
                 cbbBienSo.Items.Add(bs.BienSo);
         }
         private void cbb_PhuongTien_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,9 +66,9 @@ namespace Presentation
                 if (cbbBienSo.Text != "")
                 {
                     //Kiểm tra coi Biển số xe coi có tồn tại không.
-                    List<BienSoXeDTO> dsBS = new List<BienSoXeDTO>();
-                    dsBS = ws.LayDanhSachBSXTongQuat();
-                    foreach (BienSoXeDTO bss in dsBS)
+                    List<BienSoXe> dsBS = new List<BienSoXe>();
+                    dsBS = ws.LayDanhSachBSXTongQuat().ToList();
+                    foreach (BienSoXe bss in dsBS)
                     {
                         if (cbbBienSo.Text.Trim() == bss.BienSo.Trim())
                         {
@@ -78,7 +78,7 @@ namespace Presentation
                     }
                     if (strCheck1 != cbbBienSo.Text.Trim())
                     {
-                        BienSoXeMotoDTO bs = new BienSoXeMotoDTO();
+                        BienSoXeMoto bs = new BienSoXeMoto();
                         bs.BienSo = cbbBienSo.Text;
                         bs.CongSuat = int.Parse(tb_Moto_CongSuat.Text);
                         bs.DiaChi = tb_DiaChi.Text;
@@ -108,9 +108,9 @@ namespace Presentation
                 if (cbbBienSo.Text != "")
                 {
                     //Kiểm tra coi Biển số xe coi có tồn tại không.
-                    List<BienSoXeDTO> dsBS = new List<BienSoXeDTO>();
-                    dsBS = ws.LayDanhSachBSXTongQuat();
-                    foreach (BienSoXeDTO bss in dsBS)
+                    List<BienSoXe> dsBS = new List<BienSoXe>();
+                    dsBS = ws.LayDanhSachBSXTongQuat().ToList();
+                    foreach (BienSoXe bss in dsBS)
                     {
                         if (cbbBienSo.Text.Trim() == bss.BienSo.Trim())
                         {
@@ -120,7 +120,7 @@ namespace Presentation
                     }
                     if (strCheck2 != cbbBienSo.Text.Trim())
                     {
-                        BienSoXeOtoDTO bs = new BienSoXeOtoDTO();
+                        BienSoXeOto bs = new BienSoXeOto();
                         bs.BienSo = cbbBienSo.Text;
                         bs.CongSuat = int.Parse(tb_Oto_CongSuat.Text);
                         bs.DiaChi = tb_DiaChi.Text;
@@ -157,9 +157,9 @@ namespace Presentation
                 if (cbbBienSo.Text != "")
                 {
                     //Kiểm tra coi Biển số xe coi có tồn tại không.
-                    List<BienSoXeDTO> dsBS = new List<BienSoXeDTO>();
-                    dsBS = ws.LayDanhSachBSXTongQuat();
-                    foreach (BienSoXeDTO bss in dsBS)
+                    List<BienSoXe> dsBS = new List<BienSoXe>();
+                    dsBS = ws.LayDanhSachBSXTongQuat().ToList();
+                    foreach (BienSoXe bss in dsBS)
                     {
                         if (cbbBienSo.Text.Trim() == bss.BienSo.Trim())
                         {
@@ -169,7 +169,7 @@ namespace Presentation
                     }
                     if (strCheck3 != cbbBienSo.Text.Trim())
                     {
-                        BienSoXeRomoocDTO bs = new BienSoXeRomoocDTO();
+                        BienSoXeRomooc bs = new BienSoXeRomooc();
                         bs.BienSo = cbbBienSo.Text;
                         bs.DiaChi = tb_DiaChi.Text;
                         bs.Ktb = ws.TaoKichThuocBao(float.Parse(tb_Romooc_Dai.Text), float.Parse(tb_Romooc_Rong.Text), float.Parse(tb_Romooc_Cao.Text));

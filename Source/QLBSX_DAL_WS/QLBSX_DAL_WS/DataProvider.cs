@@ -40,7 +40,6 @@ namespace QLBSX_DAL_WS
                 if (_connection.State == System.Data.ConnectionState.Open)
                     _connection.Close();
             }
-        }
-        
+        }        
     }
 }

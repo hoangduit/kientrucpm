@@ -147,6 +147,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\QLBSX_BUS_WebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="F_About.resx">
       <DependentUpon>F_About.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -223,27 +228,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Service References\QLBSX_BUS_WebService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="Help.chm">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Service References\QLBSX_BUS_WebService\Presentation.QLBSX_BUS_WebService.BienSoXeDTO.datasource">
+    <None Include="Service References\QLBSX_BUS_WebService\Presentation.QLBSX_BUS_WebService.BienSoXe.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\QLBSX_BUS_WebService\Presentation.QLBSX_BUS_WebService.BienSoXeMotoDTO.datasource">
+    <None Include="Service References\QLBSX_BUS_WebService\Presentation.QLBSX_BUS_WebService.BienSoXeMoto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\QLBSX_BUS_WebService\Presentation.QLBSX_BUS_WebService.BienSoXeOtoDTO.datasource">
+    <None Include="Service References\QLBSX_BUS_WebService\Presentation.QLBSX_BUS_WebService.BienSoXeOto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\QLBSX_BUS_WebService\Presentation.QLBSX_BUS_WebService.BienSoXeRomoocDTO.datasource">
+    <None Include="Service References\QLBSX_BUS_WebService\Presentation.QLBSX_BUS_WebService.BienSoXeRomooc.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\QLBSX_BUS_WebService\Presentation.QLBSX_BUS_WebService.ChiTietHVVPDTO.datasource">
@@ -258,14 +252,20 @@
     <None Include="Service References\QLBSX_BUS_WebService\Presentation.QLBSX_BUS_WebService.SoCho.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\QLBSX_BUS_WebService\QLBSX_BUS_WebService.disco" />
     <None Include="Service References\QLBSX_BUS_WebService\QLBSX_BUS_WebService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Help.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Service References\QLBSX_BUS_WebService\QLBSX_BUS_WebService.disco" />
+    <None Include="Service References\QLBSX_BUS_WebService\configuration91.svcinfo" />
     <None Include="Service References\QLBSX_BUS_WebService\configuration.svcinfo" />
     <None Include="Service References\QLBSX_BUS_WebService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\QLBSX_BUS_WebService\configuration91.svcinfo" />
     <Content Include="Vehicle.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -277,10 +277,10 @@
     <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\QLBSX_BUS_WebService\" />
+    <Folder Include="DistributedObjects\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DistributedObjects\" />
+    <WCFMetadataStorage Include="Service References\QLBSX_BUS_WebService\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

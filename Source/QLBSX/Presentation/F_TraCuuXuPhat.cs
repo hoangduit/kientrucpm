@@ -30,9 +30,9 @@ namespace Presentation
         {
             NapDanhSachLoi(cbb_TenHanhVi);
 
-            List<BienSoXeDTO> dsBS = new List<BienSoXeDTO>();
-            dsBS = ws.LayDanhSachBSXTongQuat();
-            foreach (BienSoXeDTO bs in dsBS)
+            List<BienSoXe> dsBS = new List<BienSoXe>();
+            dsBS = ws.LayDanhSachBSXTongQuat().ToList();
+            foreach (BienSoXe bs in dsBS)
                 if (bs.VoHieuHoa == false)
                     cbb_BienSo.Items.Add(bs.BienSo);
         }
@@ -40,11 +40,11 @@ namespace Presentation
         {
             if (cbb_TenHanhVi.Text != "")
             {
-                ds = ws.TraCuuCTHVTheoTenHanhVi(cbb_TenHanhVi.SelectedItem.ToString());
+                ds = ws.TraCuuCTHVTheoTenHanhVi(cbb_TenHanhVi.SelectedItem.ToString()).ToList();
                 dgv_DanhSachChiTiet.Rows.Clear();
                 foreach (ChiTietHVVPDTO ct in ds)
                 {
-                    BienSoXeDTO temp = (BienSoXeDTO)ct.BienSo;
+                    BienSoXe temp = (BienSoXe)ct.BienSo;
                     dgv_DanhSachChiTiet.Rows.Add(ct.HanhVi.TenHanhVi, temp.BienSo, ct.ThoiGian.ToString("dd/MM/yyyy hh:mm:ss"), ct.NguoiLapBienBan, ct.TienPhat.ToString("0,0"));
                 }
             }
@@ -55,11 +55,11 @@ namespace Presentation
         {
             if (cbb_BienSo.Text != "")
             {
-                ds = ws.TraCuuCTHVTheoBienSo(cbb_BienSo.SelectedItem.ToString());
+                ds = ws.TraCuuCTHVTheoBienSo(cbb_BienSo.SelectedItem.ToString()).ToList();
                 dgv_DanhSachChiTiet.Rows.Clear();
                 foreach (ChiTietHVVPDTO ct in ds)
                 {
-                    BienSoXeDTO temp = (BienSoXeDTO)ct.BienSo;
+                    BienSoXe temp = (BienSoXe)ct.BienSo;
                     dgv_DanhSachChiTiet.Rows.Add(ct.HanhVi.TenHanhVi, temp.BienSo, ct.ThoiGian.ToString("dd/MM/yyyy hh:mm:ss"), ct.NguoiLapBienBan, ct.TienPhat.ToString("0,0"));
                 }
             }
@@ -97,7 +97,7 @@ namespace Presentation
         {
             cbb.Items.Clear();
             List<HanhViViPhamDTO> chiTiet = new List<HanhViViPhamDTO>();
-            chiTiet = ws.LayDanhSachHanhVi();
+            chiTiet = ws.LayDanhSachHanhVi().ToList();
             var query = from n in chiTiet
                         where n.VoHieuHoa == false
                         orderby n.TenHanhVi

@@ -37,7 +37,7 @@ namespace QLBSX_DAL_WS
                     if (!boDoc.IsDBNull(2))
                     {
                         int mabs = boDoc.GetInt32(2);
-                        ct.BienSo = BienSoXeDAO.TraCuuTheoMaBienSo(mabs);
+                        ct.BienSo = BienSoXeFactory.TraCuuTheoMaBienSo(mabs);
                     }
                     if (!boDoc.IsDBNull(3))
                         ct.ThoiGian = boDoc.GetDateTime(3);
@@ -75,7 +75,7 @@ namespace QLBSX_DAL_WS
                 lenh.Parameters.Add(thamSo);
 
                 thamSo = new OleDbParameter("@mabs", OleDbType.Integer);
-                BienSoXeDTO temp = (BienSoXeDTO)ct.BienSo;
+                BienSoXe temp = (BienSoXe)ct.BienSo;
                 thamSo.Value = temp.MaBienSo;
                 lenh.Parameters.Add(thamSo);
 
@@ -108,7 +108,7 @@ namespace QLBSX_DAL_WS
             try
             {
                 DataProvider.Connect();
-                BienSoXeDTO temp = (BienSoXeDTO)ct.BienSo;
+                BienSoXe temp = (BienSoXe)ct.BienSo;
                 string chuoiLenh = "UPDATE ChiTietHVVP SET "
                     + "MaHanhVi = " + ct.HanhVi.MaHanhVi + ", "
                     + "MaBienSo = " + temp.MaBienSo + ", "
@@ -136,7 +136,7 @@ namespace QLBSX_DAL_WS
 
             List<ChiTietHVVPDTO> ds = new List<ChiTietHVVPDTO>();
 
-            BienSoXeDTO bs = (BienSoXeDTO)BienSoXeDAO.TraCuuTheoBienSo(bienso);
+            BienSoXe bs = (BienSoXe)BienSoXeFactory.TraCuuTheoBienSo(bienso);
             try
             {
                 DataProvider.Connect();
@@ -161,7 +161,7 @@ namespace QLBSX_DAL_WS
                     if (!boDoc.IsDBNull(2))
                     {
                         int mabs = boDoc.GetInt32(2);
-                        ct.BienSo = BienSoXeDAO.TraCuuTheoMaBienSo(mabs);
+                        ct.BienSo = BienSoXeFactory.TraCuuTheoMaBienSo(mabs);
                     }
                     if (!boDoc.IsDBNull(3))
                         ct.ThoiGian = boDoc.GetDateTime(3);
@@ -214,7 +214,7 @@ namespace QLBSX_DAL_WS
                     if (!boDoc.IsDBNull(2))
                     {
                         int mabs = boDoc.GetInt32(2);
-                        ct.BienSo = BienSoXeDAO.TraCuuTheoMaBienSo(mabs);
+                        ct.BienSo = BienSoXeFactory.TraCuuTheoMaBienSo(mabs);
                     }
                     if (!boDoc.IsDBNull(3))
                         ct.ThoiGian = boDoc.GetDateTime(3);
@@ -268,7 +268,7 @@ namespace QLBSX_DAL_WS
                     if (!boDoc.IsDBNull(2))
                     {
                         int mabs = boDoc.GetInt32(2);
-                        ct.BienSo = BienSoXeDAO.TraCuuTheoMaBienSo(mabs);
+                        ct.BienSo = BienSoXeFactory.TraCuuTheoMaBienSo(mabs);
                     }
                     if (!boDoc.IsDBNull(3))
                         ct.ThoiGian = boDoc.GetDateTime(3);
@@ -319,7 +319,7 @@ namespace QLBSX_DAL_WS
                     if (!boDoc.IsDBNull(2))
                     {
                         int mabs = boDoc.GetInt32(2);
-                        ct.BienSo = BienSoXeDAO.TraCuuTheoMaBienSo(mabs);
+                        ct.BienSo = BienSoXeFactory.TraCuuTheoMaBienSo(mabs);
                     }
                     if (!boDoc.IsDBNull(3))
                         ct.ThoiGian = boDoc.GetDateTime(3);

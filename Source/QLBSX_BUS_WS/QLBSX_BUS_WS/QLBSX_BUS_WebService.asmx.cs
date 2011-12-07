@@ -22,9 +22,9 @@ namespace QLBSX_BUS_WS
     // [System.Web.Script.Services.ScriptService]
     public class QLBSX_BUS_WebService : System.Web.Services.WebService
     {
-        [System.Xml.Serialization.XmlInclude(typeof(BienSoXeMotoDTO))]
-        [System.Xml.Serialization.XmlInclude(typeof(BienSoXeOtoDTO))]
-        [System.Xml.Serialization.XmlInclude(typeof(BienSoXeRomoocDTO))]
+        [System.Xml.Serialization.XmlInclude(typeof(BienSoXeMoto))]
+        [System.Xml.Serialization.XmlInclude(typeof(BienSoXeOto))]
+        [System.Xml.Serialization.XmlInclude(typeof(BienSoXeRomooc))]
 
         [WebMethod]
         public void Connect()
@@ -42,13 +42,13 @@ namespace QLBSX_BUS_WS
         //////////          Biển số xe              /////////////
         /////////////////////////////////////////////////////////
         [WebMethod]
-        public List<BienSoXeDTO> LayDanhSachBienSoXe()
+        public List<BienSoXe> LayDanhSachBienSoXe()
         {
             BienSoXeBUS bienso = new BienSoXeBUS();
             return bienso.LayDanhSachBienSoXe();            
         }
         [WebMethod]
-        public List<BienSoXeDTO> LayDanhSachBSXTongQuat()
+        public List<BienSoXe> LayDanhSachBSXTongQuat()
         {
             BienSoXeBUS bienso = new BienSoXeBUS();
             return bienso.LayDanhSachTongQuat();
@@ -72,31 +72,31 @@ namespace QLBSX_BUS_WS
             return bienso.VoHieuHoaBienSoXe(bs);
         }
         [WebMethod]
-        public BienSoXeDTO TraCuuBSXTheoBienSo(string bienso)
+        public BienSoXe TraCuuBSXTheoBienSo(string bienso)
         {
             BienSoXeBUS bs = new BienSoXeBUS();
             return bs.TraCuuTheoBienSo(bienso);
         }
         [WebMethod]
-        public BienSoXeDTO TraCuuBSXTheoMaBienSo(int mabienso)
+        public BienSoXe TraCuuBSXTheoMaBienSo(int mabienso)
         {
             BienSoXeBUS bs = new BienSoXeBUS();
             return bs.TraCuuTheoMaBienSo(mabienso);
         }
         [WebMethod]
-        public BienSoXeMotoDTO LaMoto(object bs)
+        public BienSoXeMoto LaMoto(object bs)
         {
             BienSoXeBUS bienso = new BienSoXeBUS();
             return bienso.LaMoto(bs);
         }
         [WebMethod]
-        public BienSoXeOtoDTO LaOto(object bs)
+        public BienSoXeOto LaOto(object bs)
         {
             BienSoXeBUS bienso = new BienSoXeBUS();
             return bienso.LaOto(bs);
         }
         [WebMethod]
-        public BienSoXeRomoocDTO LaRomooc(object bs)
+        public BienSoXeRomooc LaRomooc(object bs)
         {
             BienSoXeBUS bienso = new BienSoXeBUS();
             return bienso.LaRomooc(bs);

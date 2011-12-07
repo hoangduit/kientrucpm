@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c4d896ad-b0ff-4899-b959-4c3c24874c78" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bc6c9ad0-3189-4b47-b90c-5be4f162ee52" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
-    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
     <ExcludedTypes />
     <ImportXmlTypes>false</ImportXmlTypes>
@@ -23,11 +23,11 @@
     <MetadataSource Address="http://localhost:9999/QLBSX_BUS_WebService.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="QLBSX_BUS_WebService.wsdl" MetadataType="Wsdl" ID="2c97078d-c35e-475b-a907-a0889b5d2421" SourceId="1" SourceUrl="http://localhost:9999/QLBSX_BUS_WebService.asmx?wsdl" />
-    <MetadataFile FileName="QLBSX_BUS_WebService.disco" MetadataType="Disco" ID="cd05aa1f-45c8-4e82-a014-ac28a071e22d" SourceId="1" SourceUrl="http://localhost:9999/QLBSX_BUS_WebService.asmx?disco" />
+    <MetadataFile FileName="QLBSX_BUS_WebService.wsdl" MetadataType="Wsdl" ID="0cde19e5-5f8c-4299-af06-cf163fde0fb8" SourceId="1" SourceUrl="http://localhost:9999/QLBSX_BUS_WebService.asmx?wsdl" />
+    <MetadataFile FileName="QLBSX_BUS_WebService.disco" MetadataType="Disco" ID="bfbb0073-9a1d-4f1a-a810-c2fd1b601bd0" SourceId="1" SourceUrl="http://localhost:9999/QLBSX_BUS_WebService.asmx?disco" />
   </Metadata>
   <Extensions>
-    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
   </Extensions>
 </ReferenceGroup>

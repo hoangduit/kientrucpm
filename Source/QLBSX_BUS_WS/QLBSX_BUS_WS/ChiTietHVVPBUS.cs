@@ -19,7 +19,7 @@ namespace QLBSX_BUS_WS
         private QLBSX_DAL_WebServiceSoapClient ws = new QLBSX_DAL_WebServiceSoapClient();
         public List<ChiTietHVVPDTO> LayDanhSachChiTietHanhVi()
         {
-            return ws.LayDanhSachChiTietHanhVi();
+            return ws.LayDanhSachChiTietHanhVi().ToList();
         }
         public bool ThemChiTietHanhVi(ChiTietHVVPDTO ct)
         {
@@ -31,19 +31,19 @@ namespace QLBSX_BUS_WS
         }
         public List<ChiTietHVVPDTO> TraCuuTheoBienSo(string bienso)
         {
-            return ws.TraCuuCTHVTheoBienSo(bienso);
+            return ws.TraCuuCTHVTheoBienSo(bienso).ToList();
         }
         public List<ChiTietHVVPDTO> TraCuuTheoMaBienSo(int _mabs)
         {
-            return ws.TraCuuCTHVTheoMaBienSo(_mabs);
+            return ws.TraCuuCTHVTheoMaBienSo(_mabs).ToList();
         }
         public List<ChiTietHVVPDTO> TraCuuTheoTenHanhVi(string tenhv)
         {
-            return ws.TraCuuCTHVTheoTenHanhVi(tenhv);
+            return ws.TraCuuCTHVTheoTenHanhVi(tenhv).ToList();
         }
         public List<ChiTietHVVPDTO> TraCuuTheoMaHanhVi(int _mahv)
         {
-            return ws.TraCuuCTHVTheoMaHanhVi(_mahv);
+            return ws.TraCuuCTHVTheoMaHanhVi(_mahv).ToList();
         }
     }
 }
