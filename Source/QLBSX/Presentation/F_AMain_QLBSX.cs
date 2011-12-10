@@ -19,8 +19,8 @@ namespace Presentation
 {
     public partial class F_AMain_QLBSX : Form
     {
-        private QLBSX_BUS_WebServiceSoapClient ws = new QLBSX_BUS_WebServiceSoapClient();
-
+        //private QLBSX_BUS_WebServiceSoapClient ws = new QLBSX_BUS_WebServiceSoapClient();
+        private DOMain ws = new DOMain();
         public F_AMain_QLBSX()
         {
             InitializeComponent();
@@ -107,8 +107,7 @@ namespace Presentation
             if (cbbTenVPCu.Text != "")
             {
                 HanhViViPhamDTO hv = new HanhViViPhamDTO();
-
-                hv = ws.TraCuuHanhViTheoTenHanhVi(cbbTenVPCu.Text);
+               hv = ws.TraCuuHanhViTheoTenHanhVi(cbbTenVPCu.Text);
                 if (hv.TenHanhVi != cbbTenVPCu.Text)
                 {
 
