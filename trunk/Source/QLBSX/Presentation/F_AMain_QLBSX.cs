@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Presentation.QLBSX_BUS_WebService;
+using System.Xml;
 /**
  * Tên Đề Tài; Phần Mền Quản Lý Biển Số Xe và Vi Phạm Giao Thông(VLNM (Vehicle license number management))
  * Ho tên sinh viên:
@@ -202,25 +203,26 @@ namespace Presentation
         {
             tb_TenHanhViMoi.Text = cbbTenVPCu.Text;
         }
-        private void bntThemBS_Click(object sender, EventArgs e)
-        {
-            F_ThemBienSo frm = new F_ThemBienSo();
-            frm.Show();
-        }
-        private void bntXoaBS_Click(object sender, EventArgs e)
-        {
-            F_XoaBienSo frm = new F_XoaBienSo();
-            frm.Show();
-        }
-        private void bntCapNhatBS_Click(object sender, EventArgs e)
-        {
-            F_CapNhatBienSoXe frm = new F_CapNhatBienSoXe();
-            frm.Show();
-        }
-        private void bntThoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        //private void bntThemBS_Click(object sender, EventArgs e)
+        //{
+        //    F_ThemBienSo frm = new F_ThemBienSo();
+        //    frm.Show();
+        //}
+        //private void bntXoaBS_Click(object sender, EventArgs e)
+        //{
+        //    F_XoaBienSo frm = new F_XoaBienSo();
+        //    frm.Show();
+        //}
+        //private void bntCapNhatBS_Click(object sender, EventArgs e)
+        //{
+        //    F_CapNhatBienSoXe frm = new F_CapNhatBienSoXe();
+        //    frm.Show();
+        //}
+        //private void bntThoat_Click(object sender, EventArgs e)
+        //{
+        //    this.Close();
+        //}
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -240,6 +242,7 @@ namespace Presentation
         private void F_AMain_QLBSX_Load(object sender, EventArgs e)
         {
             NapDanhSachBienSo();
+            drawButton("configButton.xml", "Button");
         }
         private void NapDanhSachBienSo()
         {
@@ -307,5 +310,74 @@ namespace Presentation
         {
             ws.Disconnect();
         }
+        public XmlNodeList docXML(String fileName, String nameTag)
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load(fileName);
+
+            XmlElement t = doc.DocumentElement;
+            XmlNodeList list;
+            list = t.SelectNodes(nameTag);
+            return list;
+        }
+         public void drawButton(String fileName, String nameTag)
+        {
+            XmlNodeList list = docXML(fileName, nameTag);
+            Button btnMyButton = null;
+            for (int i = 0; i < list.Count; i++)
+            {
+                btnMyButton = new Button();
+                int x = Convert.ToInt32(list[i].SelectNodes("Left")[0].InnerText);
+                int y = Convert.ToInt32(list[i].SelectNodes("Top")[0].InnerText);
+                btnMyButton.Location = new System.Drawing.Point(x, y);
+                btnMyButton.Name = "btn" + i.ToString();
+                int width = Convert.ToInt32(list[i].SelectNodes("Width")[0].InnerText);
+                int height = Convert.ToInt32(list[i].SelectNodes("Height")[0].InnerText);
+                btnMyButton.Size = new Size(width, height);
+                btnMyButton.TabIndex = 65000 + i;
+                btnMyButton.Text = list[i].SelectNodes("Caption")[0].InnerText;
+                btnMyButton.UseVisualStyleBackColor = true;
+                if (i == 0)
+                {
+                    btnMyButton.Click += new EventHandler(btnMyButton_Click_Them);
+                }
+                if (i == 1)
+                {
+                    btnMyButton.Click +=new EventHandler(btnMyButton_Click_Xoa);
+                }
+                if (i == 2)
+                {
+                    btnMyButton.Click += new EventHandler(btnMyButton_Click_CapNhat);
+                }
+                if (i == 3)
+                {
+                    btnMyButton.Click += new EventHandler(btnMyButton_Click_Thoat);
+                }
+                this.Controls.Add(btnMyButton);
+            }
+        }
+
+         void btnMyButton_Click_Thoat(object sender, EventArgs e)
+         {
+             this.Close();
+         }
+
+         void btnMyButton_Click_CapNhat(object sender, EventArgs e)
+         {
+             F_CapNhatBienSoXe frm = new F_CapNhatBienSoXe();
+             frm.Show();
+         }
+
+         void btnMyButton_Click_Them(object sender, EventArgs e)
+         {
+             F_ThemBienSo frm = new F_ThemBienSo();
+             frm.Show();
+         }
+         void btnMyButton_Click_Xoa(object sender, EventArgs e)
+         {
+             F_XoaBienSo frm = new F_XoaBienSo();
+             frm.Show();
+         }
+
     }
 }

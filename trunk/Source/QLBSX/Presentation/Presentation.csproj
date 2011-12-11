@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DOMain.cs" />
     <Compile Include="F_About.cs">
       <SubType>Form</SubType>
     </Compile>

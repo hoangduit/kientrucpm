@@ -77,11 +77,6 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.bntThoat = new System.Windows.Forms.Button();
-            this.bntCapNhatBS = new System.Windows.Forms.Button();
-            this.bntXoaBS = new System.Windows.Forms.Button();
-            this.bntThemBS = new System.Windows.Forms.Button();
             this.dgv_DSBSX = new System.Windows.Forms.DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ChuXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -117,7 +112,6 @@
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSBSX)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -382,74 +376,20 @@
             this.tabControl1.Location = new System.Drawing.Point(27, 95);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(592, 429);
+            this.tabControl1.Size = new System.Drawing.Size(592, 391);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.dgv_DSBSX);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(584, 403);
+            this.tabPage1.Size = new System.Drawing.Size(584, 365);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Danh Sách Biển Số";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.bntThoat);
-            this.panel2.Controls.Add(this.bntCapNhatBS);
-            this.panel2.Controls.Add(this.bntXoaBS);
-            this.panel2.Controls.Add(this.bntThemBS);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(3, 371);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(578, 29);
-            this.panel2.TabIndex = 0;
-            // 
-            // bntThoat
-            // 
-            this.bntThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.bntThoat.Location = new System.Drawing.Point(373, 3);
-            this.bntThoat.Name = "bntThoat";
-            this.bntThoat.Size = new System.Drawing.Size(75, 23);
-            this.bntThoat.TabIndex = 3;
-            this.bntThoat.Text = "Thoát";
-            this.bntThoat.UseVisualStyleBackColor = true;
-            this.bntThoat.Click += new System.EventHandler(this.bntThoat_Click);
-            // 
-            // bntCapNhatBS
-            // 
-            this.bntCapNhatBS.Location = new System.Drawing.Point(292, 3);
-            this.bntCapNhatBS.Name = "bntCapNhatBS";
-            this.bntCapNhatBS.Size = new System.Drawing.Size(75, 23);
-            this.bntCapNhatBS.TabIndex = 2;
-            this.bntCapNhatBS.Text = "Cập Nhật";
-            this.bntCapNhatBS.UseVisualStyleBackColor = true;
-            this.bntCapNhatBS.Click += new System.EventHandler(this.bntCapNhatBS_Click);
-            // 
-            // bntXoaBS
-            // 
-            this.bntXoaBS.Location = new System.Drawing.Point(211, 3);
-            this.bntXoaBS.Name = "bntXoaBS";
-            this.bntXoaBS.Size = new System.Drawing.Size(75, 23);
-            this.bntXoaBS.TabIndex = 1;
-            this.bntXoaBS.Text = "Xóa";
-            this.bntXoaBS.UseVisualStyleBackColor = true;
-            this.bntXoaBS.Click += new System.EventHandler(this.bntXoaBS_Click);
-            // 
-            // bntThemBS
-            // 
-            this.bntThemBS.Location = new System.Drawing.Point(130, 3);
-            this.bntThemBS.Name = "bntThemBS";
-            this.bntThemBS.Size = new System.Drawing.Size(75, 23);
-            this.bntThemBS.TabIndex = 0;
-            this.bntThemBS.Text = "Thêm";
-            this.bntThemBS.UseVisualStyleBackColor = true;
-            this.bntThemBS.Click += new System.EventHandler(this.bntThemBS_Click);
             // 
             // dgv_DSBSX
             // 
@@ -535,7 +475,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(584, 403);
+            this.tabPage2.Size = new System.Drawing.Size(584, 365);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Quản Lý Lỗi";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -642,7 +582,7 @@
             this.tabPage3.Controls.Add(this.dgv_ChiTietHanhVi);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(584, 403);
+            this.tabPage3.Size = new System.Drawing.Size(584, 365);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Quản Lý Xử Phạt";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -785,10 +725,8 @@
             // 
             // F_AMain_QLBSX
             // 
-            this.AcceptButton = this.bntThemBS;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.bntThoat;
             this.ClientSize = new System.Drawing.Size(646, 530);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -807,7 +745,6 @@
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSBSX)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -857,10 +794,6 @@
         private System.Windows.Forms.Button bntCapNhatVP;
         private System.Windows.Forms.Button bntXoaVP;
         private System.Windows.Forms.Button bntThemVP;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button bntCapNhatBS;
-        private System.Windows.Forms.Button bntXoaBS;
-        private System.Windows.Forms.Button bntThemBS;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Num;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenHanhVi;
@@ -882,7 +815,6 @@
         private System.Windows.Forms.ComboBox cbbTenVPCu;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button bntThoat;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
