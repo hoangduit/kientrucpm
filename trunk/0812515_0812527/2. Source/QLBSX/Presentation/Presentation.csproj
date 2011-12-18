@@ -61,7 +61,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HanhViViPham.cs" />
+    <Compile Include="Delegate\FileLogger.cs" />
+    <Compile Include="Delegate\MyClass.cs" />
+    <Compile Include="DistributedObjects\HanhViViPham.cs" />
     <Compile Include="F_About.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,9 +279,7 @@
   <ItemGroup>
     <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DistributedObjects\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\QLBSX_BUS_WebService\" />
   </ItemGroup>

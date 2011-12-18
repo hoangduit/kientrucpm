@@ -26,16 +26,26 @@ namespace Presentation
         {
             InitializeComponent();
         }
+
         private void F_TraCuuLoi_Load(object sender, EventArgs e)
         {
             NapDanhSachLoi(cbb_TenHanhVi);
+            ws.LayDanhSachBienSoXeCompleted += ws_LayDanhSachBienSoXeCompleted;
+            ws.LayDanhSachBienSoXeAsync();            
+        }
 
-            List<BienSoXe> dsBS = new List<BienSoXe>();
-            dsBS = ws.LayDanhSachBSXTongQuat().ToList();
+        void ws_LayDanhSachBienSoXeCompleted(object sender, LayDanhSachBienSoXeCompletedEventArgs e)
+        {
+            if (e.Error != null)
+                return;
+            
+            List<BienSoXe> dsBS = new List<BienSoXe>();            
+            dsBS = e.Result.ToList();
             foreach (BienSoXe bs in dsBS)
                 if (bs.VoHieuHoa == false)
                     cbb_BienSo.Items.Add(bs.BienSo);
         }
+
         private void btn_TraCuu_Click(object sender, EventArgs e)
         {
             if (cbb_TenHanhVi.Text != "")

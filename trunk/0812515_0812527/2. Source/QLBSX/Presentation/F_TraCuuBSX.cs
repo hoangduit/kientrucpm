@@ -116,7 +116,7 @@ namespace Presentation
         }
         private void NapDanhSachBienSo(ComboBox cbb, int loaiphuongtien)
         {
-            cbb.Items.Clear();
+            cbb.Items.Clear();            
             List<BienSoXe> dsBS = new List<BienSoXe>();
             dsBS = ws.LayDanhSachBienSoXe().ToList();
             foreach (BienSoXe bs in dsBS)
@@ -138,5 +138,6 @@ namespace Presentation
                 }
             }
         }
+        
     }
 }

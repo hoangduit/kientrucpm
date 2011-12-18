@@ -133,6 +133,7 @@
             this.dgv_DanhSachChiTiet.AllowUserToAddRows = false;
             this.dgv_DanhSachChiTiet.AllowUserToDeleteRows = false;
             this.dgv_DanhSachChiTiet.AllowUserToOrderColumns = true;
+            this.dgv_DanhSachChiTiet.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgv_DanhSachChiTiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DanhSachChiTiet.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TenHanhVi,
@@ -140,11 +141,11 @@
             this.ThoiGian,
             this.NguoiLap,
             this.TienPhat});
-            this.dgv_DanhSachChiTiet.Location = new System.Drawing.Point(59, 153);
+            this.dgv_DanhSachChiTiet.Location = new System.Drawing.Point(66, 152);
             this.dgv_DanhSachChiTiet.Name = "dgv_DanhSachChiTiet";
             this.dgv_DanhSachChiTiet.ReadOnly = true;
             this.dgv_DanhSachChiTiet.RowHeadersVisible = false;
-            this.dgv_DanhSachChiTiet.Size = new System.Drawing.Size(501, 161);
+            this.dgv_DanhSachChiTiet.Size = new System.Drawing.Size(504, 161);
             this.dgv_DanhSachChiTiet.TabIndex = 38;
             // 
             // TenHanhVi
