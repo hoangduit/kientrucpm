@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using Presentation.QLBSX_BUS_WebService;
 using System.Xml;
+using Presentation.Delegate;
 /**
  * Tên Đề Tài; Phần Mền Quản Lý Biển Số Xe và Vi Phạm Giao Thông(VLNM (Vehicle license number management))
  * Ho tên sinh viên:
@@ -359,6 +360,15 @@ namespace Presentation
 
          void btnMyButton_Click_Thoat(object sender, EventArgs e)
          {
+             FileLogger fl = new FileLogger("process.log");
+             DelegateLog myClass = new DelegateLog();
+             
+             myClass.Log += new DelegateLog.LogHandler(Logger);
+             myClass.Log += new DelegateLog.LogHandler(fl.Logger);
+             
+             myClass.Process();
+
+             fl.Close();
              this.Close();
          }
 
@@ -378,6 +388,9 @@ namespace Presentation
              F_XoaBienSo frm = new F_XoaBienSo();
              frm.Show();
          }
-
+         static void Logger(string s)
+         {
+             MessageBox.Show(s);
+         }
     }
 }

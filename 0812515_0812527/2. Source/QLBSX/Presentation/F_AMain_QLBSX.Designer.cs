@@ -395,6 +395,8 @@
             // 
             this.dgv_DSBSX.AllowUserToAddRows = false;
             this.dgv_DSBSX.AllowUserToDeleteRows = false;
+            this.dgv_DSBSX.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_DSBSX.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_DSBSX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DSBSX.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
@@ -499,7 +501,7 @@
             this.panel1.Controls.Add(this.bntXoaVP);
             this.panel1.Controls.Add(this.bntThemVP);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 368);
+            this.panel1.Location = new System.Drawing.Point(3, 330);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(578, 32);
             this.panel1.TabIndex = 6;
@@ -591,7 +593,7 @@
             // 
             this.panel3.Controls.Add(this.button2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 369);
+            this.panel3.Location = new System.Drawing.Point(0, 331);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(584, 34);
             this.panel3.TabIndex = 1;
@@ -611,6 +613,7 @@
             this.dgv_ChiTietHanhVi.AllowUserToAddRows = false;
             this.dgv_ChiTietHanhVi.AllowUserToDeleteRows = false;
             this.dgv_ChiTietHanhVi.AllowUserToOrderColumns = true;
+            this.dgv_ChiTietHanhVi.BackgroundColor = System.Drawing.Color.White;
             this.dgv_ChiTietHanhVi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ChiTietHanhVi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Num,
