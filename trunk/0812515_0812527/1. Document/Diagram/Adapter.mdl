@@ -97,25 +97,6 @@
 	logical_models 	(list unit_reference_list
 	    (object Instantiated_Class "BienSoXe"
 		quid       	"4EED347700AF"
-		operations 	(list Operations
-		    (object Operation "Clone"
-			quid       	"4EED38720285"
-			stereotype 	"abstract"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "GetInfo"
-			quid       	"4EED39F00348"
-			stereotype 	"abstract"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "Add"
-			quid       	"4EED3BA50081"
-			stereotype 	"virtual"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0))
 		abstract   	TRUE)
 	    (object Class "BienSoXeMoto"
 		quid       	"4EED35AA0306"
@@ -125,18 +106,6 @@
 			supplier   	"Logical View::BienSoXe"
 			quidu      	"4EED347700AF"))
 		operations 	(list Operations
-		    (object Operation "Clone"
-			quid       	"4EED388401E8"
-			stereotype 	"override"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "GetInfo"
-			quid       	"4EED3A0F02F3"
-			stereotype 	"override"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
 		    (object Operation "ConvertToMoto"
 			quid       	"4EED3CCC0081"
 			stereotype 	"static"
@@ -151,19 +120,7 @@
 			supplier   	"Logical View::BienSoXe"
 			quidu      	"4EED347700AF"))
 		operations 	(list Operations
-		    (object Operation "Clone"
-			quid       	"4EED389C00F8"
-			stereotype 	"override"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "GetInfo"
-			quid       	"4EED3A170024"
-			stereotype 	"override"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "ConvertToMoto"
+		    (object Operation "ConvertToOto"
 			quid       	"4EED3CD903A5"
 			stereotype 	"static"
 			concurrency 	"Sequential"
@@ -177,19 +134,7 @@
 			supplier   	"Logical View::BienSoXe"
 			quidu      	"4EED347700AF"))
 		operations 	(list Operations
-		    (object Operation "Clone"
-			quid       	"4EED389F0106"
-			stereotype 	"override"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "GetInfo"
-			quid       	"4EED3A1F01E6"
-			stereotype 	"override"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "ConvertToMoto"
+		    (object Operation "ConvertToRomooc"
 			quid       	"4EED3CDC006C"
 			stereotype 	"static"
 			concurrency 	"Sequential"
@@ -262,7 +207,7 @@
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(2276, 209)
+			location   	(2260, 206)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -274,36 +219,18 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@1
-			    location   	(2041, 78)
+			    location   	(2155, 154)
 			    fill_color 	13434879
 			    nlines     	1
-			    max_width  	470
+			    max_width  	210
 			    justify    	0
 			    label      	"BienSoXe")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"4EED347700AF"
-			compartment 	(object Compartment
-			    Parent_View 	@1
-			    location   	(2041, 139)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	TRUE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    icon_style 	"Icon"
-			    fill_color 	16777215
-			    anchor     	2
-			    nlines     	4
-			    max_width  	466
-			    justify    	1)
-			width      	488
-			height     	286
+			width      	228
+			height     	128
 			annotation 	8
 			autoResize 	TRUE)
 		    (object ClassView "Class" "Logical View::BienSoXeMoto" @2
@@ -322,7 +249,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@2
-			    location   	(1310, 602)
+			    location   	(1310, 652)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	558
@@ -334,7 +261,7 @@
 			quidu      	"4EED35AA0306"
 			compartment 	(object Compartment
 			    Parent_View 	@2
-			    location   	(1310, 663)
+			    location   	(1310, 713)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -347,11 +274,11 @@
 			    icon_style 	"Icon"
 			    fill_color 	16777215
 			    anchor     	2
-			    nlines     	4
+			    nlines     	2
 			    max_width  	556
 			    justify    	1)
 			width      	576
-			height     	286
+			height     	186
 			annotation 	8
 			autoResize 	TRUE)
 		    (object ClassView "Class" "Logical View::BienSoXeOto" @3
@@ -370,10 +297,10 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@3
-			    location   	(1980, 595)
+			    location   	(1992, 645)
 			    fill_color 	13434879
 			    nlines     	1
-			    max_width  	558
+			    max_width  	534
 			    justify    	0
 			    label      	"BienSoXeOto")
 			icon_style 	"Icon"
@@ -382,7 +309,7 @@
 			quidu      	"4EED35CA036D"
 			compartment 	(object Compartment
 			    Parent_View 	@3
-			    location   	(1980, 656)
+			    location   	(1992, 706)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -395,11 +322,11 @@
 			    icon_style 	"Icon"
 			    fill_color 	16777215
 			    anchor     	2
-			    nlines     	4
-			    max_width  	556
+			    nlines     	2
+			    max_width  	531
 			    justify    	1)
-			width      	576
-			height     	286
+			width      	552
+			height     	186
 			annotation 	8
 			autoResize 	TRUE)
 		    (object ClassView "Class" "Logical View::BienSoXeRomooc" @4
@@ -418,10 +345,10 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@4
-			    location   	(2638, 602)
+			    location   	(2605, 652)
 			    fill_color 	13434879
 			    nlines     	1
-			    max_width  	552
+			    max_width  	618
 			    justify    	0
 			    label      	"BienSoXeRomooc")
 			icon_style 	"Icon"
@@ -430,7 +357,7 @@
 			quidu      	"4EED35D202AA"
 			compartment 	(object Compartment
 			    Parent_View 	@4
-			    location   	(2638, 663)
+			    location   	(2605, 713)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -443,11 +370,11 @@
 			    icon_style 	"Icon"
 			    fill_color 	16777215
 			    anchor     	2
-			    nlines     	4
-			    max_width  	556
+			    nlines     	2
+			    max_width  	616
 			    justify    	1)
-			width      	570
-			height     	286
+			width      	636
+			height     	186
 			annotation 	8
 			autoResize 	TRUE)
 		    (object InheritView "" @5
@@ -457,8 +384,8 @@
 			client     	@2
 			supplier   	@1
 			vertices   	(list Points
-			    (1774, 589)
-			    (2087, 352))
+			    (1706, 639)
+			    (2176, 270))
 			line_style 	0)
 		    (object InheritView "" @6
 			stereotype 	TRUE
@@ -467,8 +394,8 @@
 			client     	@3
 			supplier   	@1
 			vertices   	(list Points
-			    (2263, 582)
-			    (2270, 352))
+			    (2259, 632)
+			    (2259, 270))
 			line_style 	0)
 		    (object InheritView "" @7
 			stereotype 	TRUE
@@ -477,8 +404,8 @@
 			client     	@4
 			supplier   	@1
 			vertices   	(list Points
-			    (2739, 589)
-			    (2450, 352))
+			    (2797, 639)
+			    (2340, 270))
 			line_style 	0)
 		    (object NoteView @8
 			location   	(2260, 1356)
@@ -522,7 +449,7 @@
 			supplier   	@3
 			vertices   	(list Points
 			    (2259, 1062)
-			    (2259, 869))
+			    (2259, 819))
 			line_style 	0)))))
     root_subsystem 	(object SubSystem "Component View"
 	quid       	"4EED346C0091"

@@ -11,6 +11,8 @@ namespace QLBSX_DAL_WS
     {
         //private List<BienSoXe> _plates = new List<BienSoXe>();
 
+        public enum Plate { Moto, Oto, Romooc };
+
         public static List<BienSoXe> GetAllPlates()
         {
             DataProvider.Connect();
@@ -341,6 +343,25 @@ namespace QLBSX_DAL_WS
                 return null;
             }
             return null;
+        }
+
+        public static BienSoXe CreatePlate(Plate type)
+        {
+            BienSoXe bsx = null;
+            if (type == Plate.Moto)
+            {
+                bsx = new BienSoXeMoto();
+            }
+            else if (type == Plate.Oto)
+            { 
+                bsx = new BienSoXeOto();
+            }
+            else if (type == Plate.Romooc)
+            {
+                bsx = new BienSoXeRomooc();
+            }
+            
+            return bsx;
         }
     }
 }
