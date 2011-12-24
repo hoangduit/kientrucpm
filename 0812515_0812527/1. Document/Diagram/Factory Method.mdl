@@ -127,51 +127,30 @@
 			supplier   	"Logical View::BienSoXe"
 			quidu      	"4EED347700AF"))
 		operations 	(list Operations
-		    (object Operation "GetAllPlates"
+		    (object Operation "CreatePlate"
 			quid       	"4EED365201A1"
 			stereotype 	"static"
-			result     	"BienSoXe[]"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0
-			quidu      	"4EED347700AF")
-		    (object Operation "GetAllGenralPlates"
-			quid       	"4EED36630364"
-			stereotype 	"static"
-			result     	"BienSoXe[]"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0
-			quidu      	"4EED347700AF")
-		    (object Operation "AddPlate"
-			quid       	"4EED3670034F"
-			stereotype 	"static"
 			parameters 	(list Parameters
-			    (object Parameter "object"
-				quid       	"4EED3676014C"))
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "UpdatePlate"
-			quid       	"4EED3676013A"
-			stereotype 	"static"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "RemovePlate"
-			quid       	"4EED368700D5"
-			stereotype 	"static"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "FindPlate"
-			quid       	"4EED369003D9"
-			stereotype 	"static"
+			    (object Parameter "int type"
+				quid       	"4EF5265C0321"
+				type       	"Plate"))
 			result     	"BienSoXe"
 			concurrency 	"Sequential"
 			opExportControl 	"Public"
 			uid        	0
-			quidu      	"4EED347700AF"))))
+			quidu      	"4EED347700AF")))
+	    (object Association "$UNNAMED$0"
+		quid       	"4EF526B202C2"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"4EF526B301F7"
+			supplier   	"Logical View::BienSoXe"
+			quidu      	"4EED347700AF"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"4EF526B301F9"
+			supplier   	"Logical View::BienSoXeFactory"
+			quidu      	"4EED36190254"))))
 	logical_presentations 	(list unit_reference_list
 	    (object ClassDiagram "Main"
 		quid       	"4EED347000B9"
@@ -182,41 +161,11 @@
 		origin_x   	654
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object ClassView "InstantiatedClass" "Logical View::BienSoXe" @1
+		    (object ClassView "Class" "Logical View::BienSoXeMoto" @1
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(1880, 483)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	TRUE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@1
-			    location   	(1775, 432)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	210
-			    justify    	0
-			    label      	"BienSoXe")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"4EED347700AF"
-			width      	228
-			height     	126
-			annotation 	8
-			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::BienSoXeMoto" @2
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(1367, 968)
+			location   	(1896, 893)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -227,8 +176,8 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@2
-			    location   	(1212, 917)
+			    Parent_View 	@1
+			    location   	(1741, 842)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	310
@@ -242,11 +191,11 @@
 			height     	126
 			annotation 	8
 			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::BienSoXeOto" @3
+		    (object ClassView "Class" "Logical View::BienSoXeOto" @2
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(1879, 968)
+			location   	(2408, 893)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -257,8 +206,8 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@3
-			    location   	(1740, 917)
+			    Parent_View 	@2
+			    location   	(2269, 842)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	278
@@ -272,11 +221,11 @@
 			height     	126
 			annotation 	8
 			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::BienSoXeRomooc" @4
+		    (object ClassView "Class" "Logical View::BienSoXeRomooc" @3
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(2355, 974)
+			location   	(2884, 899)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -287,8 +236,8 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@4
-			    location   	(2171, 923)
+			    Parent_View 	@3
+			    location   	(2700, 848)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	368
@@ -302,41 +251,8 @@
 			height     	126
 			annotation 	8
 			autoResize 	TRUE)
-		    (object InheritView "" @5
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"4EED35DD005E"
-			client     	@2
-			supplier   	@1
-			vertices   	(list Points
-			    (1434, 904)
-			    (1811, 546))
-			line_style 	0)
-		    (object InheritView "" @6
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"4EED35DF01B6"
-			client     	@3
-			supplier   	@1
-			vertices   	(list Points
-			    (1879, 904)
-			    (1879, 546))
-			line_style 	0)
-		    (object InheritView "" @7
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"4EED35EA009E"
-			client     	@4
-			supplier   	@1
-			vertices   	(list Points
-			    (2293, 910)
-			    (1941, 546))
-			line_style 	0)
-		    (object ClassView "Class" "Logical View::BienSoXeFactory" @8
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(822, 481)
+		    (object NoteView @4
+			location   	(1147, 1178)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -347,11 +263,56 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@8
-			    location   	(502, 275)
+			    Parent_View 	@4
+			    location   	(656, 709)
+			    fill_color 	13434879
+			    nlines     	18
+			    max_width  	946
+			    justify    	1
+			    label      	
+|public static BienSoXe CreatePlate(Plate type)
+|{
+|            BienSoXe bsx = null;
+|            if (type == Plate.Moto)
+|            {
+|                bsx = new BienSoXeMoto();
+|            }
+|            else if (type == Plate.Oto)
+|            { 
+|                bsx = new BienSoXeOto();
+|            }
+|            else if (type == Plate.Romooc)
+|            {
+|                bsx = new BienSoXeRomooc();
+|            }
+|            
+|            return bsx;
+| }
+			    )
+			line_color 	3342489
+			fill_color 	13434879
+			width      	1006
+			height     	950)
+		    (object ClassView "Class" "Logical View::BienSoXeFactory" @5
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1139, 409)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@5
+			    location   	(861, 321)
 			    fill_color 	13434879
 			    nlines     	1
-			    max_width  	640
+			    max_width  	557
 			    justify    	0
 			    label      	"BienSoXeFactory")
 			icon_style 	"Icon"
@@ -359,8 +320,8 @@
 			fill_color 	13434879
 			quidu      	"4EED36190254"
 			compartment 	(object Compartment
-			    Parent_View 	@8
-			    location   	(502, 336)
+			    Parent_View 	@5
+			    location   	(861, 382)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -373,22 +334,120 @@
 			    icon_style 	"Icon"
 			    fill_color 	13434879
 			    anchor     	2
-			    nlines     	7
-			    max_width  	643
+			    nlines     	2
+			    max_width  	509
 			    justify    	1)
-			width      	658
-			height     	436
+			width      	575
+			height     	200
 			annotation 	8
 			autoResize 	TRUE)
-		    (object UsesView "" @9
+		    (object ClassView "InstantiatedClass" "Logical View::BienSoXe" @6
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2409, 408)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	TRUE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@6
+			    location   	(2304, 357)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	210
+			    justify    	0
+			    label      	"BienSoXe")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4EED347700AF"
+			width      	228
+			height     	126
+			annotation 	8
+			autoResize 	TRUE)
+		    (object InheritView "" @7
 			stereotype 	TRUE
 			line_color 	3342489
-			quidu      	"4EED362E0005"
-			client     	@8
-			supplier   	@1
+			quidu      	"4EED35DD005E"
+			client     	@1
+			supplier   	@6
 			vertices   	(list Points
-			    (1151, 481)
-			    (1765, 482))
+			    (1963, 829)
+			    (2340, 471))
+			line_style 	0)
+		    (object InheritView "" @8
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4EED35DF01B6"
+			client     	@2
+			supplier   	@6
+			vertices   	(list Points
+			    (2408, 829)
+			    (2408, 471))
+			line_style 	0)
+		    (object InheritView "" @9
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4EED35EA009E"
+			client     	@3
+			supplier   	@6
+			vertices   	(list Points
+			    (2822, 835)
+			    (2470, 471))
+			line_style 	0)
+		    (object AssociationViewNew "$UNNAMED$0" @10
+			location   	(1860, 408)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4EF526B202C2"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @11
+				Parent_View 	@10
+				location   	(514, -11)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4EF526B301F7"
+				client     	@10
+				supplier   	@6
+				vertices   	(list Points
+				    (1860, 408)
+				    (2294, 408))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @12
+				Parent_View 	@10
+				location   	(514, -11)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4EF526B301F9"
+				client     	@10
+				supplier   	@5
+				vertices   	(list Points
+				    (1860, 408)
+				    (1426, 408))
+				line_style 	0)))
+		    (object AttachView "" @13
+			stereotype 	TRUE
+			line_color 	3342489
+			client     	@4
+			supplier   	@5
+			vertices   	(list Points
+			    (1142, 702)
+			    (1140, 509))
 			line_style 	0)))))
     root_subsystem 	(object SubSystem "Component View"
 	quid       	"4EED346C0091"

@@ -98,12 +98,6 @@
 	    (object Instantiated_Class "BienSoXe"
 		quid       	"4EED347700AF"
 		operations 	(list Operations
-		    (object Operation "Clone"
-			quid       	"4EED38720285"
-			stereotype 	"abstract"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
 		    (object Operation "GetInfo"
 			quid       	"4EED39F00348"
 			stereotype 	"abstract"
@@ -125,12 +119,6 @@
 			supplier   	"Logical View::BienSoXe"
 			quidu      	"4EED347700AF"))
 		operations 	(list Operations
-		    (object Operation "Clone"
-			quid       	"4EED388401E8"
-			stereotype 	"override"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
 		    (object Operation "GetInfo"
 			quid       	"4EED3A0F02F3"
 			stereotype 	"override"
@@ -145,12 +133,6 @@
 			supplier   	"Logical View::BienSoXe"
 			quidu      	"4EED347700AF"))
 		operations 	(list Operations
-		    (object Operation "Clone"
-			quid       	"4EED389C00F8"
-			stereotype 	"override"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
 		    (object Operation "GetInfo"
 			quid       	"4EED3A170024"
 			stereotype 	"override"
@@ -165,12 +147,6 @@
 			supplier   	"Logical View::BienSoXe"
 			quidu      	"4EED347700AF"))
 		operations 	(list Operations
-		    (object Operation "Clone"
-			quid       	"4EED389F0106"
-			stereotype 	"override"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
 		    (object Operation "GetInfo"
 			quid       	"4EED3A1F01E6"
 			stereotype 	"override"
@@ -256,7 +232,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@1
-			    location   	(2041, 78)
+			    location   	(2041, 103)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	470
@@ -268,7 +244,7 @@
 			quidu      	"4EED347700AF"
 			compartment 	(object Compartment
 			    Parent_View 	@1
-			    location   	(2041, 139)
+			    location   	(2041, 164)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -281,11 +257,11 @@
 			    icon_style 	"Icon"
 			    fill_color 	16777215
 			    anchor     	2
-			    nlines     	4
+			    nlines     	3
 			    max_width  	466
 			    justify    	1)
 			width      	488
-			height     	286
+			height     	236
 			annotation 	8
 			autoResize 	TRUE)
 		    (object ClassView "Class" "Logical View::BienSoXeMoto" @2
@@ -304,10 +280,10 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@2
-			    location   	(1471, 602)
+			    location   	(1469, 627)
 			    fill_color 	13434879
 			    nlines     	1
-			    max_width  	454
+			    max_width  	458
 			    justify    	0
 			    label      	"BienSoXeMoto")
 			icon_style 	"Icon"
@@ -316,7 +292,7 @@
 			quidu      	"4EED35AA0306"
 			compartment 	(object Compartment
 			    Parent_View 	@2
-			    location   	(1471, 663)
+			    location   	(1469, 688)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -329,11 +305,11 @@
 			    icon_style 	"Icon"
 			    fill_color 	16777215
 			    anchor     	2
-			    nlines     	3
-			    max_width  	462
+			    nlines     	2
+			    max_width  	456
 			    justify    	1)
-			width      	472
-			height     	236
+			width      	476
+			height     	186
 			annotation 	8
 			autoResize 	TRUE)
 		    (object ClassView "Class" "Logical View::BienSoXeOto" @3
@@ -352,10 +328,10 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@3
-			    location   	(1969, 605)
+			    location   	(1967, 630)
 			    fill_color 	13434879
 			    nlines     	1
-			    max_width  	454
+			    max_width  	458
 			    justify    	0
 			    label      	"BienSoXeOto")
 			icon_style 	"Icon"
@@ -364,7 +340,7 @@
 			quidu      	"4EED35CA036D"
 			compartment 	(object Compartment
 			    Parent_View 	@3
-			    location   	(1969, 666)
+			    location   	(1967, 691)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -377,11 +353,11 @@
 			    icon_style 	"Icon"
 			    fill_color 	16777215
 			    anchor     	2
-			    nlines     	3
-			    max_width  	462
+			    nlines     	2
+			    max_width  	456
 			    justify    	1)
-			width      	472
-			height     	236
+			width      	476
+			height     	186
 			annotation 	8
 			autoResize 	TRUE)
 		    (object ClassView "Class" "Logical View::BienSoXeRomooc" @4
@@ -400,7 +376,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@4
-			    location   	(2461, 608)
+			    location   	(2461, 633)
 			    fill_color 	13434879
 			    nlines     	1
 			    max_width  	454
@@ -412,7 +388,7 @@
 			quidu      	"4EED35D202AA"
 			compartment 	(object Compartment
 			    Parent_View 	@4
-			    location   	(2461, 669)
+			    location   	(2461, 694)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -425,11 +401,11 @@
 			    icon_style 	"Icon"
 			    fill_color 	16777215
 			    anchor     	2
-			    nlines     	3
-			    max_width  	462
+			    nlines     	2
+			    max_width  	456
 			    justify    	1)
 			width      	472
-			height     	236
+			height     	186
 			annotation 	8
 			autoResize 	TRUE)
 		    (object InheritView "" @5
@@ -439,8 +415,8 @@
 			client     	@2
 			supplier   	@1
 			vertices   	(list Points
-			    (1834, 589)
-			    (2108, 352))
+			    (1804, 614)
+			    (2137, 327))
 			line_style 	0)
 		    (object InheritView "" @6
 			stereotype 	TRUE
@@ -449,8 +425,8 @@
 			client     	@3
 			supplier   	@1
 			vertices   	(list Points
-			    (2214, 592)
-			    (2252, 352))
+			    (2210, 617)
+			    (2256, 327))
 			line_style 	0)
 		    (object InheritView "" @7
 			stereotype 	TRUE
@@ -459,8 +435,8 @@
 			client     	@4
 			supplier   	@1
 			vertices   	(list Points
-			    (2591, 595)
-			    (2392, 352))
+			    (2611, 620)
+			    (2372, 327))
 			line_style 	0)
 		    (object NoteView @8
 			location   	(2228, 1281)
@@ -504,7 +480,7 @@
 			supplier   	@2
 			vertices   	(list Points
 			    (1958, 989)
-			    (1807, 826))
+			    (1784, 801))
 			line_style 	0)
 		    (object NoteView @10
 			location   	(1428, 209)

@@ -94,6 +94,11 @@ namespace QLBSX_DAL_WS
         {
             return BienSoXe.TaoSoCho(ng, d, na);
         }
+        [WebMethod]
+        public BienSoXe TaoBienSo(BienSoXeFactory.Plate type)
+        {
+            return BienSoXeFactory.CreatePlate(type);
+        }
         /////////////////////////////////////////////////////////
         //////////          Hành vi vi phạm              ////////
         /////////////////////////////////////////////////////////
