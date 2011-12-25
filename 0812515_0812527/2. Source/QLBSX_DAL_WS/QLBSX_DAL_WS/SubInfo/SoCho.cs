@@ -7,41 +7,41 @@ namespace QLBSX_DAL_WS
 {
     public class SoCho
     {
-        private int _Ngoi;
-        private int _Dung;
-        private int _Nam;
+        private int _ngoi;
+        private int _dung;
+        private int _nam;
 
         public int Ngoi
         {
-            get { return _Ngoi; }
-            set { _Ngoi = value; }
+            get { return _ngoi; }
+            set { _ngoi = value; }
         }
         public int Dung
         {
-            get { return _Dung; }
-            set { _Dung = value; }
+            get { return _dung; }
+            set { _dung = value; }
         }
         public int Nam
         {
-            get { return _Nam; }
-            set { _Nam = value; }
+            get { return _nam; }
+            set { _nam = value; }
         }
 
         public SoCho()
         {
-            _Ngoi = _Dung = _Nam = 0;
+            _ngoi = _dung = _nam = 0;
         }
         public SoCho(int ngoi, int dung, int nam)
         {
-            _Ngoi = ngoi;
-            _Dung = dung;
-            _Nam = nam;
+            _ngoi = ngoi;
+            _dung = dung;
+            _nam = nam;
         }
         public SoCho(SoCho sc)
         {
-            _Ngoi = sc.Ngoi;
-            _Dung = sc.Dung;
-            _Nam = sc.Nam;
+            _ngoi = sc.Ngoi;
+            _dung = sc.Dung;
+            _nam = sc.Nam;
         }        
     }
 }

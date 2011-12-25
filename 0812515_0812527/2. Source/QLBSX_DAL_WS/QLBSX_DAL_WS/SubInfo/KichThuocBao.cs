@@ -2,46 +2,66 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
+using QLBSX_DAL_WS.Memento;
 namespace QLBSX_DAL_WS
 {
     public class KichThuocBao
     {
-        private float _Dai;
-        private float _Rong;
-        private float _Cao;
+        private float _dai;
+        private float _rong;
+        private float _cao;
 
         public float Dai
         {
-            get { return _Dai; }
-            set { _Dai = value; }
+            get { return _dai; }
+            set { _dai = value; }
         }
         public float Rong
         {
-            get { return _Rong; }
-            set { _Rong = value; }
+            get { return _rong; }
+            set { _rong = value; }
         }
         public float Cao
         {
-            get { return _Cao; }
-            set { _Cao = value; }
+            get { return _cao; }
+            set { _cao = value; }
         }
 
         public KichThuocBao()
         {
-            _Dai = _Rong = _Cao = 0;
+            _dai = _rong = _cao = 0;
         }
         public KichThuocBao(float dai, float rong, float cao)
         {
-            _Dai = dai;
-            _Rong = rong;
-            _Cao = cao;
+            _dai = dai;
+            _rong = rong;
+            _cao = cao;
         }
         public KichThuocBao(KichThuocBao ktb)
         {
-            _Dai = ktb.Dai;
-            _Rong = ktb.Rong;
-            _Cao = ktb.Cao;
-        }        
+            _dai = ktb.Dai;
+            _rong = ktb.Rong;
+            _cao = ktb.Cao;
+        }
+
+        /// <summary>
+        /// Save memento
+        /// </summary>
+        /// <returns></returns>
+        public MementoKTB SaveMemento()
+        {
+            return new MementoKTB(_dai, _rong, _cao);
+        }
+
+        /// <summary>
+        /// Restore memento
+        /// </summary>
+        /// <param name="memento"></param>
+        public void RestoreMemento(MementoKTB memento)
+        {
+            this.Dai = memento.Dai;
+            this.Rong = memento.Cao;
+            this.Cao = memento.Cao;
+        }
     }
 }
