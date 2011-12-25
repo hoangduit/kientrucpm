@@ -82,6 +82,8 @@
     <Compile Include="Iterator\IAbstractCollection.cs" />
     <Compile Include="Iterator\IAbstractIterator.cs" />
     <Compile Include="Iterator\Iterator.cs" />
+    <Compile Include="Memento\MementoKTB.cs" />
+    <Compile Include="Memento\MemoryKTB.cs" />
     <Compile Include="SubInfo\KichThuocBao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLBSX_DAL_WebService.asmx.cs">
