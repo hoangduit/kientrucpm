@@ -85,6 +85,7 @@
     <Compile Include="Memento\MementoKTB.cs" />
     <Compile Include="Memento\MemoryKTB.cs" />
     <Compile Include="SubInfo\Calculator.cs" />
+    <Compile Include="SubInfo\CalculatorProxy.cs" />
     <Compile Include="SubInfo\ICalculator.cs" />
     <Compile Include="SubInfo\KichThuocBao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
