@@ -48,7 +48,7 @@
 	    tool       	"Java"
 	    name       	"UserDefineTagApply3"
 	    value      	""))
-    quid       	"4EED346C008E"
+    quid       	"4EF3E612006A"
     enforceClosureAutoLoad 	FALSE
     defaults   	(object defaults
 	rightMargin 	0.250000
@@ -74,13 +74,13 @@
 	showClassOfObject 	TRUE
 	notation   	"Unified")
     root_usecase_package 	(object Class_Category "Use Case View"
-	quid       	"4EED346C0090"
+	quid       	"4EF3E612006C"
 	exportControl 	"Public"
 	global     	TRUE
 	logical_models 	(list unit_reference_list)
 	logical_presentations 	(list unit_reference_list
 	    (object UseCaseDiagram "Main"
-		quid       	"4EED347000AF"
+		quid       	"4EF3E6120079"
 		title      	"Main"
 		zoom       	100
 		max_height 	28350
@@ -89,155 +89,198 @@
 		origin_y   	0
 		items      	(list diagram_item_list))))
     root_category 	(object Class_Category "Logical View"
-	quid       	"4EED346C008F"
+	quid       	"4EF3E612006B"
 	exportControl 	"Public"
 	global     	TRUE
 	subsystem  	"Component View"
-	quidu      	"4EED346C0091"
+	quidu      	"4EF3E612006D"
 	logical_models 	(list unit_reference_list
-	    (object Instantiated_Class "BienSoXe"
-		quid       	"4EED347700AF"
+	    (object Class "Client"
+		quid       	"4EF3E7DD0223")
+	    (object Class "Target"
+		quid       	"4EF3E7E20200"
+		operations 	(list Operations
+		    (object Operation "Request"
+			quid       	"4EF3E7EC0078"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0))
 		abstract   	TRUE)
-	    (object Class "BienSoXeMoto"
-		quid       	"4EED35AA0306"
+	    (object Class "Adapter"
+		quid       	"4EF3E7F30314"
 		superclasses 	(list inheritance_relationship_list
 		    (object Inheritance_Relationship
-			quid       	"4EED35DD005E"
-			supplier   	"Logical View::BienSoXe"
-			quidu      	"4EED347700AF"))
+			quid       	"4EF3E83600F8"
+			supplier   	"Logical View::Target"
+			quidu      	"4EF3E7E20200"))
 		operations 	(list Operations
-		    (object Operation "ConvertToMoto"
-			quid       	"4EED3CCC0081"
-			stereotype 	"static"
+		    (object Operation "Request"
+			quid       	"4EF3E7F903D5"
 			concurrency 	"Sequential"
 			opExportControl 	"Public"
 			uid        	0)))
-	    (object Class "BienSoXeOto"
-		quid       	"4EED35CA036D"
-		superclasses 	(list inheritance_relationship_list
-		    (object Inheritance_Relationship
-			quid       	"4EED35DF01B6"
-			supplier   	"Logical View::BienSoXe"
-			quidu      	"4EED347700AF"))
+	    (object Class "Adaptee"
+		quid       	"4EF3E801029F"
 		operations 	(list Operations
-		    (object Operation "ConvertToOto"
-			quid       	"4EED3CD903A5"
-			stereotype 	"static"
+		    (object Operation "SpecificRequest"
+			quid       	"4EF3E807006E"
 			concurrency 	"Sequential"
 			opExportControl 	"Public"
 			uid        	0)))
-	    (object Class "BienSoXeRomooc"
-		quid       	"4EED35D202AA"
+	    (object Class "KichThuocBao"
+		quid       	"4EF3E8B10121"
+		operations 	(list Operations
+		    (object Operation "Display"
+			quid       	"4EF3E8F901C1"
+			stereotype 	"virtual"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "_dai"
+			quid       	"4EF3E8F1021F"
+			type       	"float"
+			exportControl 	"Protected")
+		    (object ClassAttribute "_rong"
+			quid       	"4EF7DA850319"
+			type       	"float"
+			exportControl 	"Protected")
+		    (object ClassAttribute "_cao"
+			quid       	"4EF7DA890067"
+			type       	"float"
+			exportControl 	"Protected")))
+	    (object Class "KichThuocBaoTong"
+		quid       	"4EF3E90D01C5"
 		superclasses 	(list inheritance_relationship_list
 		    (object Inheritance_Relationship
-			quid       	"4EED35EA009E"
-			supplier   	"Logical View::BienSoXe"
-			quidu      	"4EED347700AF"))
+			quid       	"4EF3E9850258"
+			supplier   	"Logical View::KichThuocBao"
+			quidu      	"4EF3E8B10121"))
 		operations 	(list Operations
-		    (object Operation "ConvertToRomooc"
-			quid       	"4EED3CDC006C"
-			stereotype 	"static"
+		    (object Operation "Display"
+			quid       	"4EF3E945005F"
+			stereotype 	"override"
 			concurrency 	"Sequential"
 			opExportControl 	"Public"
 			uid        	0)))
-	    (object Class "BienSoXeFactory"
-		quid       	"4EED36190254"
-		used_nodes 	(list uses_relationship_list
-		    (object Uses_Relationship
-			quid       	"4EED362E0005"
-			supplier   	"Logical View::BienSoXe"
-			quidu      	"4EED347700AF"))
+	    (object Class "Calculator"
+		quid       	"4EF3E91F0201"
 		operations 	(list Operations
-		    (object Operation "GetAllPlates"
-			quid       	"4EED365201A1"
-			stereotype 	"static"
-			result     	"BienSoXe[]"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0
-			quidu      	"4EED347700AF")
-		    (object Operation "GetAllGenralPlates"
-			quid       	"4EED36630364"
-			stereotype 	"static"
-			result     	"BienSoXe[]"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0
-			quidu      	"4EED347700AF")
-		    (object Operation "AddPlate"
-			quid       	"4EED3670034F"
-			stereotype 	"static"
+		    (object Operation "Eval"
+			quid       	"4EF3E96F01CF"
 			parameters 	(list Parameters
-			    (object Parameter "object"
-				quid       	"4EED3676014C"))
+			    (object Parameter "in a"
+				quid       	"4EF7DAAB0266"
+				type       	"double")
+			    (object Parameter "in b"
+				quid       	"4EF7DAAB0284"
+				type       	"double")
+			    (object Parameter "in c"
+				quid       	"4EF7DAAB029D"
+				type       	"double"))
+			result     	"double"
 			concurrency 	"Sequential"
 			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "UpdatePlate"
-			quid       	"4EED3676013A"
-			stereotype 	"static"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "RemovePlate"
-			quid       	"4EED368700D5"
-			stereotype 	"static"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "FindPlate"
-			quid       	"4EED369003D9"
-			stereotype 	"static"
-			result     	"BienSoXe"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0
-			quidu      	"4EED347700AF"))))
+			uid        	0)))
+	    (object Association "$UNNAMED$0"
+		quid       	"4EF3E82F0217"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"4EF3E82F03DB"
+			supplier   	"Logical View::Target"
+			quidu      	"4EF3E7E20200"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"4EF3E82F03DD"
+			supplier   	"Logical View::Client"
+			quidu      	"4EF3E7DD0223")))
+	    (object Association "$UNNAMED$3"
+		quid       	"4EF3E831002A"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"4EF3E8310283"
+			supplier   	"Logical View::Adaptee"
+			quidu      	"4EF3E801029F"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"4EF3E8310285"
+			supplier   	"Logical View::Adapter"
+			quidu      	"4EF3E7F30314")))
+	    (object Association "$UNNAMED$6"
+		quid       	"4EF3E98A0094"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"4EF3E98A024F"
+			supplier   	"Logical View::Calculator"
+			quidu      	"4EF3E91F0201"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"4EF3E98A0251"
+			supplier   	"Logical View::KichThuocBaoTong"
+			quidu      	"4EF3E90D01C5"))))
 	logical_presentations 	(list unit_reference_list
 	    (object ClassDiagram "Main"
-		quid       	"4EED347000B9"
+		quid       	"4EF3E6120071"
 		title      	"Main"
 		zoom       	100
 		max_height 	28350
 		max_width  	21600
 		origin_x   	0
-		origin_y   	0
+		origin_y   	88
 		items      	(list diagram_item_list
-		    (object ClassView "InstantiatedClass" "Logical View::BienSoXe" @1
+		    (object ClassView "Class" "Logical View::KichThuocBao" @1
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(2260, 206)
+			location   	(1925, 511)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
 			    bold       	FALSE
-			    italics    	TRUE
+			    italics    	FALSE
 			    underline  	FALSE
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@1
-			    location   	(2155, 154)
+			    location   	(1712, 355)
 			    fill_color 	13434879
 			    nlines     	1
-			    max_width  	210
+			    max_width  	426
 			    justify    	0
-			    label      	"BienSoXe")
+			    label      	"KichThuocBao")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
-			quidu      	"4EED347700AF"
-			width      	228
-			height     	128
+			quidu      	"4EF3E8B10121"
+			compartment 	(object Compartment
+			    Parent_View 	@1
+			    location   	(1712, 416)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	5
+			    max_width  	434
+			    justify    	1)
+			width      	444
+			height     	336
 			annotation 	8
 			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::BienSoXeMoto" @2
+		    (object ClassView "Class" "Logical View::Calculator" @2
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(1589, 733)
+			location   	(2859, 933)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -249,19 +292,19 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@2
-			    location   	(1310, 652)
+			    location   	(2746, 852)
 			    fill_color 	13434879
 			    nlines     	1
-			    max_width  	558
+			    max_width  	226
 			    justify    	0
-			    label      	"BienSoXeMoto")
+			    label      	"Calculator")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
-			quidu      	"4EED35AA0306"
+			quidu      	"4EF3E91F0201"
 			compartment 	(object Compartment
 			    Parent_View 	@2
-			    location   	(1310, 713)
+			    location   	(2746, 913)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -272,20 +315,20 @@
 				color      	0
 				default_color 	TRUE)
 			    icon_style 	"Icon"
-			    fill_color 	16777215
+			    fill_color 	13434879
 			    anchor     	2
 			    nlines     	2
-			    max_width  	556
+			    max_width  	150
 			    justify    	1)
-			width      	576
+			width      	244
 			height     	186
 			annotation 	8
 			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::BienSoXeOto" @3
+		    (object ClassView "Class" "Logical View::KichThuocBaoTong" @3
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(2259, 726)
+			location   	(1925, 931)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -297,19 +340,19 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@3
-			    location   	(1992, 645)
+			    location   	(1692, 850)
 			    fill_color 	13434879
 			    nlines     	1
-			    max_width  	534
+			    max_width  	466
 			    justify    	0
-			    label      	"BienSoXeOto")
+			    label      	"KichThuocBaoTong")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
-			quidu      	"4EED35CA036D"
+			quidu      	"4EF3E90D01C5"
 			compartment 	(object Compartment
 			    Parent_View 	@3
-			    location   	(1992, 706)
+			    location   	(1692, 911)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -320,95 +363,66 @@
 				color      	0
 				default_color 	TRUE)
 			    icon_style 	"Icon"
-			    fill_color 	16777215
-			    anchor     	2
-			    nlines     	2
-			    max_width  	531
-			    justify    	1)
-			width      	552
-			height     	186
-			annotation 	8
-			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::BienSoXeRomooc" @4
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(2914, 733)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@4
-			    location   	(2605, 652)
 			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	618
-			    justify    	0
-			    label      	"BienSoXeRomooc")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"4EED35D202AA"
-			compartment 	(object Compartment
-			    Parent_View 	@4
-			    location   	(2605, 713)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    icon_style 	"Icon"
-			    fill_color 	16777215
 			    anchor     	2
 			    nlines     	2
-			    max_width  	616
+			    max_width  	463
 			    justify    	1)
-			width      	636
+			width      	484
 			height     	186
 			annotation 	8
 			autoResize 	TRUE)
-		    (object InheritView "" @5
+		    (object InheritView "" @4
 			stereotype 	TRUE
 			line_color 	3342489
-			quidu      	"4EED35DD005E"
-			client     	@2
-			supplier   	@1
-			vertices   	(list Points
-			    (1706, 639)
-			    (2176, 270))
-			line_style 	0)
-		    (object InheritView "" @6
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"4EED35DF01B6"
+			quidu      	"4EF3E9850258"
 			client     	@3
 			supplier   	@1
 			vertices   	(list Points
-			    (2259, 632)
-			    (2259, 270))
+			    (1925, 837)
+			    (1925, 679))
 			line_style 	0)
-		    (object InheritView "" @7
+		    (object AssociationViewNew "$UNNAMED$6" @5
+			location   	(2451, 931)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
 			stereotype 	TRUE
 			line_color 	3342489
-			quidu      	"4EED35EA009E"
-			client     	@4
-			supplier   	@1
-			vertices   	(list Points
-			    (2797, 639)
-			    (2340, 270))
-			line_style 	0)
+			quidu      	"4EF3E98A0094"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$7" @6
+				Parent_View 	@5
+				location   	(820, -806)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4EF3E98A024F"
+				client     	@5
+				supplier   	@2
+				vertices   	(list Points
+				    (2451, 931)
+				    (2736, 932))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$8" @7
+				Parent_View 	@5
+				location   	(820, -806)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4EF3E98A0251"
+				client     	@5
+				supplier   	@3
+				vertices   	(list Points
+				    (2451, 931)
+				    (2167, 931))
+				line_style 	0)))
 		    (object NoteView @8
-			location   	(2260, 1356)
+			location   	(731, 925)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -420,43 +434,78 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@8
-			    location   	(1747, 1069)
+			    location   	(122, 738)
 			    fill_color 	13434879
-			    nlines     	11
-			    max_width  	991
+			    nlines     	7
+			    max_width  	1183
 			    justify    	1
 			    label      	
-|public static BienSoXeOto ConvertToOto(object bs)
+|public override void Display()
 |        {
-|            if (bs is BienSoXeOto)
-|            {
-|                BienSoXeOto temp = new BienSoXeOto();
-|                temp = (BienSoXeOto)bs;
-|                return temp;
-|            }
-|            else
-|                return null;
+|            base.Display();
+|            Calculator c = new Calculator();
+|            double sum = c.Eval(_dai, _rong, _cao);
+|            Console.WriteLine("\nTong kich thuoc: {0} ------ ", sum);
 |        }
 			    )
 			line_color 	3342489
 			fill_color 	13434879
-			width      	1051
-			height     	587)
+			width      	1243
+			height     	387)
 		    (object AttachView "" @9
 			stereotype 	TRUE
 			line_color 	3342489
-			client     	@8
-			supplier   	@3
+			client     	@3
+			supplier   	@8
 			vertices   	(list Points
-			    (2259, 1062)
-			    (2259, 819))
+			    (1682, 929)
+			    (1352, 928))
+			line_style 	0)
+		    (object NoteView @10
+			location   	(678, 513)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@10
+			    location   	(159, 354)
+			    fill_color 	13434879
+			    nlines     	6
+			    max_width  	1002
+			    justify    	1
+			    label      	
+|public virtual void Display()
+|        {
+|            Console.WriteLine("\nDai: {0} ------ ", _dai);
+|            Console.WriteLine("\nRong: {0} ------ ", _rong);
+|            Console.WriteLine("\nCao: {0} ------ ", _cao);
+|        }
+			    )
+			line_color 	3342489
+			fill_color 	13434879
+			width      	1062
+			height     	331)
+		    (object AttachView "" @11
+			stereotype 	TRUE
+			line_color 	3342489
+			client     	@10
+			supplier   	@1
+			vertices   	(list Points
+			    (1209, 512)
+			    (1702, 511))
 			line_style 	0)))))
     root_subsystem 	(object SubSystem "Component View"
-	quid       	"4EED346C0091"
+	quid       	"4EF3E612006D"
 	physical_models 	(list unit_reference_list)
 	physical_presentations 	(list unit_reference_list
 	    (object Module_Diagram "Main"
-		quid       	"4EED347000AE"
+		quid       	"4EF3E6120078"
 		title      	"Main"
 		zoom       	100
 		max_height 	28350
@@ -465,12 +514,12 @@
 		origin_y   	0
 		items      	(list diagram_item_list)))
 	category   	"Logical View"
-	quidu      	"4EED346C008F")
+	quidu      	"4EF3E612006B")
     process_structure 	(object Processes
-	quid       	"4EED346C0092"
+	quid       	"4EF3E612006E"
 	ProcsNDevs 	(list
 	    (object Process_Diagram "Deployment View"
-		quid       	"4EED346C0098"
+		quid       	"4EF3E6120070"
 		title      	"Deployment View"
 		zoom       	100
 		max_height 	28350
@@ -2099,7 +2148,7 @@
 		    (object Attribute
 			tool       	"Java"
 			name       	"ClassPath"
-			value      	";D:\\Program Files\\Java\\jdk1.7.0\\jre\\lib\\rt.jar;D:\\Program Files\\Java\\jdk1.7.0\\lib\\dt.jar;D:\\Program Files\\Java\\jdk1.7.0\\lib\\tools.jar")
+			value      	";D:\\Program Files\\Java\\jdk1.7.0\\jre\\lib\\rt.jar;D:\\Program Files\\Java\\jdk1.7.0\\lib\\dt.jar;D:\\Program Files\\Java\\jdk1.7.0\\lib\\tools.jar;D:\\Program Files\\Java\\jdk1.6.0_30\\jre\\lib\\rt.jar;D:\\Program Files\\Java\\jdk1.6.0_30\\lib\\dt.jar;D:\\Program Files\\Java\\jdk1.6.0_30\\lib\\tools.jar")
 		    (object Attribute
 			tool       	"Java"
 			name       	"ReferenceClasspath"
@@ -4147,4 +4196,4 @@
 		tool       	"XML_DTD"
 		name       	"HiddenTool"
 		value      	FALSE))
-	quid       	"4EED346C0093"))
+	quid       	"4EF3E612006F"))
