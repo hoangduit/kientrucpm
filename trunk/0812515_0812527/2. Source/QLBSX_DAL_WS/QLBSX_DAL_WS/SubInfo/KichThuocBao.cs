@@ -7,9 +7,9 @@ namespace QLBSX_DAL_WS
 {
     public class KichThuocBao
     {
-        private float _dai;
-        private float _rong;
-        private float _cao;
+        protected float _dai;
+        protected float _rong;
+        protected float _cao;
 
         public float Dai
         {
@@ -43,7 +43,12 @@ namespace QLBSX_DAL_WS
             _rong = ktb.Rong;
             _cao = ktb.Cao;
         }
-
+        public virtual void Display()
+        {
+            Console.WriteLine("\nDai: {0} ------ ", _dai);
+            Console.WriteLine("\nRong: {0} ------ ", _rong);
+            Console.WriteLine("\nCao: {0} ------ ", _cao);
+        }
         /// <summary>
         /// Save memento
         /// </summary>
