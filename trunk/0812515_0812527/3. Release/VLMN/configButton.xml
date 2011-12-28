@@ -1,0 +1,30 @@
+<Params>
+	<Button>
+		<Left>169</Left>
+		<Top>495</Top>
+		<Width>75</Width>
+		<Height>23</Height>
+		<Caption>Add</Caption>		
+	</Button>
+	<Button>
+		<Left>250</Left>
+		<Top>495</Top>
+		<Width>75</Width>
+		<Height>23</Height>
+		<Caption>Delete</Caption>		
+	</Button>
+	<Button>
+		<Left>331</Left>
+		<Top>495</Top>
+		<Width>75</Width>
+		<Height>23</Height>
+		<Caption>Update</Caption>		
+	</Button>
+	<Button>
+		<Left>412</Left>
+		<Top>495</Top>
+		<Width>75</Width>
+		<Height>23</Height>
+		<Caption>Exit</Caption>		
+	</Button>
+</Params>
